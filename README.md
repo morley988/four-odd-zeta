@@ -4,6 +4,8 @@ A determinant argument that at least one of **ζ(7), ζ(9), ζ(11), ζ(13)** is 
 
 **Verification status:** the mathematical deduction from explicit finite certificates is checked in Lean. The supplied-certificate theorem uses **eight isolated numerical admissions**, checked externally by exact rational arithmetic and rigorous Arb ball arithmetic. This is **not an admission-free Lean formalization** and has not undergone independent peer review.
 
+
+
 ## Start here
 
 - [Research manuscript (PDF)](manuscript/Four_Odd_Zeta_Manuscript.pdf) and [LaTeX source](manuscript/Four_Odd_Zeta_Manuscript.tex), with historical context and 21 references.
@@ -44,6 +46,10 @@ See [REPRODUCING.md](docs/REPRODUCING.md) for the required dependencies, scope o
 
 The historical Round 29 build reused compiled artifacts. A new clean-checkout build is not claimed merely because the files have been imported into GitHub. Automated workflow results must be read separately from the historical audit.
 
+## Author and contributions
+
+This is the result of an AI & Lean experiment carried out by Morley Davidson using GPT6 Astra on Extra High for ALL research and writing. This follows an earlier corresponding result for nine odd zeta values. Whereas the earlier result was verified fully in Lean, in the current experiment millions of auxiliary numerical checks are not validated through Lean (too slow...) but instead by rational and/or high-precision calculation.
+
 ## Citation and licensing
 
-Author attribution and license selection are pending the repository owner's decision; no new license grant is made by this import. Use a specific commit when referring to this development version. A formal `CITATION.cff` and release tag will be added after the bibliographic details are confirmed. Third-party dependencies retain their own licenses and notices.
+Author attribution and license selection are pending the repository owner's decision (tentatively MIT for the code and CC BY 4.0 for the manuscript and documentation); no new license grant is made by this import. Use a specific commit when referring to this development version. A formal `CITATION.cff` and release tag will be added after the bibliographic details are confirmed. Third-party dependencies retain their own licenses and notices.
