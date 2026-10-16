@@ -1,0 +1,58 @@
+type checking took 301ms
+BatchChecks.lean:29:2: error: Type mismatch: After simplification, term
+  distance_checked (1 / 10000) (Uq j) j (hc j).left (hc j).right
+ has type
+  ‖normalizedContourPoint (↑1 / 10000) ^ 2 - analyticCenter j‖ ≤ ↑(Uq j)
+but is expected to have type
+  ‖normalizedContourPoint (1 / 10000) ^ 2 - analyticCenter j‖ ≤ ↑(Uq j)
+type checking took 623ms
+type checking took 923ms
+BatchChecks.lean:39:2: error: Type mismatch: After simplification, term
+  conjugate_distance_checked (1 / 10000) (Vq j) j (hc j).left (hc j).right
+ has type
+  ‖normalizedContourPoint (↑1 / 10000) ^ 2 - star (analyticCenter j)‖ ≤ ↑(Vq j)
+but is expected to have type
+  ‖normalizedContourPoint (1 / 10000) ^ 2 - star (analyticCenter j)‖ ≤ ↑(Vq j)
+type checking took 1.22s
+type checking took 1.39s
+type checking took 1.58s
+type checking took 4.08s
+BatchChecks.lean:56:45: warning: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+BatchChecks.lean:56:59: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+BatchChecks.lean:56:45: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+BatchChecks.lean:56:59: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+type checking took 10.7s
+BatchChecks.lean:60:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+cumulative profiling times:
+	attribute application 0.147ms
+	compilation (IR) 1.74ms
+	compilation (LCNF base) 30.6ms
+	compilation (LCNF impure) 14ms
+	compilation (LCNF mono) 25.8ms
+	congr simp thm 3.33ms
+	elaboration 185ms
+	fix level params 0.488ms
+	instantiate metavars 0.512ms
+	interpretation 0.25ms
+	let-to-have transformation 1.99ms
+	linting 144ms
+	norm_num 90.3ms
+	overlappingInstancesLinter 8.61ms
+	parsing 14.7ms
+	process pre-definitions 9.64ms
+	share common exprs 3.88ms
+	simp 19.9ms
+	tactic execution 257ms
+	tacticAnalysis 35.6ms
+	type checking 20.9s
+	typeclass inference 326ms

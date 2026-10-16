@@ -1,0 +1,19 @@
+OddZeta.FourValue.FullGrid.certificate : OddZeta.FourValue.Transcendental.GridCertificate 50000
+OddZeta.FourValue.FullGrid.finite_knots : OddZeta.FourValue.Numerical.FiniteKnotCertificate
+OddZeta.FourValue.FullGrid.all_knots : OddZeta.FourValue.Numerical.KnotCertificate
+OddZeta.FourValue.FullGrid.envelope_bound (s y : ℝ) (hs : 0 ≤ s) (hs1 : s ≤ OddZeta.FourValue.basisLimit) (hy : 0 < y) :
+  OddZeta.FourValue.certificateG y - 2 * Real.pi * y +
+      s *
+        OddZeta.FourValue.analyticBasisPotential (OddZeta.FourValue.concreteBasisWeight s)
+          (OddZeta.FourValue.normalizedContourPoint y ^ 2) ≤
+    OddZeta.FourValue.Numerical.envelope s
+OddZeta.FourValue.FullGrid.numerical_rate :
+  ∃ E,
+    Filter.Tendsto (fun n => E n / ↑n ^ 2) Filter.atTop (nhds 0) ∧
+      ∀ (n : ℕ),
+        1 ≤ n →
+          ∀
+            (rows cols :
+              Fin (OddZeta.FourValue.targetHankelDegree n + 1 - 4) ↪ Fin (OddZeta.FourValue.targetHankelDegree n + 1)),
+            ‖((OddZeta.FourValue.analyticZetaMatrix n).submatrix ⇑rows ⇑cols).det‖ ≤
+              Real.exp ((100 * ↑n) ^ 2 * (-577853339 / 50000000) + E n)

@@ -1,0 +1,1451 @@
+BUILD FourValuePadicMinors
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePadicMinors.lean:15:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.PadicLower.zero`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePadicMinors.lean:17:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.PadicLower.mono`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePadicMinors.lean:21:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.PadicLower.of_ne_zero`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePadicMinors.lean:25:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.PadicLower.neg`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueAllocationDual
+BUILD FourValueAllocationBlocks
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueAllocationBlocks.lean:13:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.Allocation.minorLower_reindex`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueLaurentObservations
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLaurentObservations.lean:14:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.rationalShift_fraction`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueLaurentAtoms
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLaurentAtoms.lean:28:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.powerSeries_inv_coe`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLaurentAtoms.lean:50:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.rationalPole_fraction`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLaurentAtoms.lean:58:43: warning: This simp argument is unused:
+  Polynomial.C_1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_one, Polynomial.taylor_one, Polynomial.taylor_pow, map_sub, Polynomial.taylor_X,
+    Polynomial.taylor_C]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLaurentAtoms.lean:60:10: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValuePoleTaylor
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePoleTaylor.lean:12:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.poleTaylorSeries_mul`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePoleTaylor.lean:54:24: warning: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hc, inv_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueHarmonicDifference
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueHarmonicDifference.lean:8:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.finiteHarmonic_succ`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueCoefficientDifference
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCoefficientDifference.lean:69:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.rationalDifference_apply`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueZetaTail
+BUILD FourValueRecurrence
+BUILD FourValueFiniteOrbit
+BUILD FourValueOddLift
+BUILD FourValueFiniteQuotient
+BUILD FourValueCore
+'OddZeta.FourValue.endpoint_sum' depends on axioms: [propext]
+'OddZeta.FourValue.strict_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OddZeta.FourValue.pearson_degree_budget' depends on axioms: [propext, Quot.sound]
+'OddZeta.FourValue.interpolate_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OddZeta.FourValue.no_eventual_two_sided_rates' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD FourValuePearsonOperator
+BUILD FourValuePearsonBridge
+BUILD FourValueMinorSelection
+BUILD FourValueRankAssembly
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRankAssembly.lean:53:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.initial_coordinate_exclusion`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueHankelKernel
+BUILD FourValueFiniteJets
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFiniteJets.lean:138:2: warning: Try this: intro a ha j
+BUILD FourValueJetSupport
+BUILD FourValueJetDecomposition
+BUILD FourValueJetTransport
+BUILD FourValueReflection
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueReflection.lean:20:36: warning: This simp argument is unused:
+  Polynomial.mul_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.sum_comp, Polynomial.C_comp, Polynomial.pow_comp, Polynomial.X_comp,
+    ← Polynomial.smul_eq_C_mul, map_sum, map_smul, ← Finset.sum_neg_distrib]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueReflection.lean:20:57: warning: This simp argument is unused:
+  Polynomial.C_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.sum_comp, Polynomial.mul_comp, Polynomial.pow_comp, Polynomial.X_comp,
+    ← Polynomial.smul_eq_C_mul, map_sum, map_smul, ← Finset.sum_neg_distrib]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueReflection.lean:21:6: warning: This simp argument is unused:
+  Polynomial.pow_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.sum_comp, Polynomial.mul_comp, Polynomial.C_comp, Polynomial.X_comp,
+    ← Polynomial.smul_eq_C_mul, map_sum, map_smul, ← Finset.sum_neg_distrib]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueReflection.lean:21:27: warning: This simp argument is unused:
+  Polynomial.X_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.sum_comp, Polynomial.mul_comp, Polynomial.C_comp, Polynomial.pow_comp,
+    ← Polynomial.smul_eq_C_mul, map_sum, map_smul, ← Finset.sum_neg_distrib]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueJetFamilies
+BUILD FourValueHankelDivisibility
+BUILD FourValueHankelCoordinates
+BUILD FourValueHankelExtension
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueHankelExtension.lean:23:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueHankelExtension.lean:51:12: warning: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueSquareBasis
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSquareBasis.lean:15:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.squareRootProduct_monic`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSquareBasis.lean:18:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.squareRootProduct_degree`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSquareBasis.lean:67:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.polynomial_finite_expansion`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueSeedSystem
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedSystem.lean:32:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.seedAntidifference_basis`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedSystem.lean:41:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.seedCoefficientMatrix_upper`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedSystem.lean:79:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.seedEvenPolynomial_coeff`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedSystem.lean:132:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.seed_centered_substitution`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedSystem.lean:146:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.seedJetMatrix_coeff`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedSystem.lean:154:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.seedJetMatrix_det`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueCenteredProducts
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenteredProducts.lean:16:8: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.centeredDenominator_zero`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenteredProducts.lean:18:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.centeredDenominator_succ`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenteredProducts.lean:32:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.centeredDenominator_monic`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenteredProducts.lean:51:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.centeredDenominator_eval_zero_iff`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenteredProducts.lean:56:74: warning: This simp argument is unused:
+  Int.cast_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [centeredDenominator_zero, Polynomial.eval_X, Nat.cast_zero, neg_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenteredProducts.lean:117:40: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenteredProducts.lean:119:36: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenteredProducts.lean:117:40: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenteredProducts.lean:159:40: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenteredProducts.lean:159:40: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+BUILD FourValueIntervalProducts
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueIntervalProducts.lean:12:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.integerRootProduct_monic`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueIntervalProducts.lean:13:42: warning: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueIntervalProducts.lean:15:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.integerRootProduct_degree`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueIntervalProducts.lean:22:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.integerRootProduct_eval_zero_iff`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueIntervalProducts.lean:58:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.endpointDenominator_dvd`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueProperFractions
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueProperFractions.lean:12:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.IsProperRational.zero`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueProperFractions.lean:22:57: warning: Try `simp at hg` instead of `simpa using hg`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueProperFractions.lean:14:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.IsProperRational.add`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueProperFractions.lean:25:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.IsProperRational.neg`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueProperFractions.lean:43:62: warning: Try `simp at hf` instead of `simpa using hf`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueProperFractions.lean:35:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.IsProperRational.smul`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueProperFractions.lean:56:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.isProperRational_fraction`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueProperFractions.lean:72:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.isProperRational_polynomial_iff`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueBoundaryZero
+BUILD FourValueSupportChains
+BUILD FourValueLatticeSupport
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLatticeSupport.lean:30:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.physicalEndpointRoots_half`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueCenterControl
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenterControl.lean:19:13: warning: This simp argument is unused:
+  Finsupp.sum_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [J, Finsupp.single_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueEndpointTransfer
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueEndpointTransfer.lean:13:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.oddCompress_reassembly`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueEndpointTransfer.lean:86:39: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_one, hroot, mul_one, zero_sub] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueEndpointTransfer.lean:93:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.polynomial_coprime_linear_of_eval`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueTuplePearson
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTuplePearson.lean:16:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.tuplePearson_monic`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTuplePearson.lean:20:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.tuplePearson_degree`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTuplePearson.lean:27:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.tuplePearson_nextCoeff`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTuplePearson.lean:37:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.tuplePearson_endpoint_root`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTuplePearson.lean:74:36: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_one, hr, mul_one, zero_sub] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueRationalFamily
+BUILD FourValuePearsonBoundary
+BUILD FourValueRationalPearson
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRationalPearson.lean:15:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.tuplePearson_forward`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRationalPearson.lean:38:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.tuplePearson_backward_shifted`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRationalPearson.lean:56:49: warning: This simp argument is unused:
+  map_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_add, map_mul, map_neg, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRationalPearson.lean:106:13: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValuePearsonConnection
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePearsonConnection.lean:38:29: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_mul, map_pow, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePearsonConnection.lean:54:29: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_mul, map_pow, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValuePearsonDifference
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePearsonDifference.lean:20:29: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_mul, map_pow, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePearsonDifference.lean:32:15: warning: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_neg, Polynomial.taylor_mul, Polynomial.taylor_C, Polynomial.taylor_X, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePearsonDifference.lean:46:29: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_mul, map_pow, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePearsonDifference.lean:57:15: warning: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_neg, Polynomial.taylor_mul, Polynomial.taylor_C, Polynomial.taylor_X, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePearsonDifference.lean:72:4: warning: This simp argument is unused:
+  Polynomial.C_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.mul_comp, Polynomial.expand_eq_comp_X_pow, Polynomial.comp_assoc, Polynomial.pow_comp,
+    Polynomial.sub_comp, Polynomial.add_comp, Polynomial.neg_comp, Polynomial.one_comp, Polynomial.X_comp] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePearsonDifference.lean:91:29: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_mul, map_sub, map_ofNat, RatFunc.algebraMap_X] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueMomentCompanion
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueMomentCompanion.lean:16:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.linear_recurrence_monomials`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueMomentCompanion.lean:56:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.functional_relation_forces_top_zero`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueMomentCompanion.lean:91:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.initialMoments_sum`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueMomentCompanion.lean:96:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.shiftedInitialMoments_sum`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueTuplePaths
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTuplePaths.lean:70:10: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+BUILD FourValueFamilyIndependence
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFamilyIndependence.lean:90:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.tupleDenominator_seed`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFamilyIndependence.lean:106:39: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_mul, map_pow, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueConcretePearson
+BUILD FourValueWeightFractions
+BUILD FourValueFiniteGrid
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFiniteGrid.lean:18:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.integer_window_difference`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFiniteGrid.lean:34:10: warning: This simp argument is unused:
+  Finset.sum_sub_distrib
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_add_distrib, Finset.sum_neg_distrib, sub_eq_add_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFiniteGrid.lean:80:15: warning: This simp argument is unused:
+  Polynomial.smul_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.smul_eq_C_mul, Polynomial.mul_comp, Polynomial.C_comp, map_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueGridFiniteness
+BUILD FourValueRationalReflection
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRationalReflection.lean:13:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.rationalReflect_fraction`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueSeedPoles
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedPoles.lean:49:62: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_mul, map_pow, rationalPole, pow_one, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedPoles.lean:82:13: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueGridRestrictions
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueGridRestrictions.lean:36:36: warning: This simp argument is unused:
+  Polynomial.comp_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.mul_comp, Polynomial.comp_assoc, Polynomial.pow_comp, Polynomial.X_comp, neg_pow_two,
+    neg_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueResidueSum
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueResidueSum.lean:84:30: warning: `Polynomial.finset_sum_coeff` has been deprecated: Use `Polynomial.finsetSum_coeff` instead
+BUILD FourValueTargetPearson
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTargetPearson.lean:18:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.targetEndpointTuple_pearson`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueResidueKernel
+BUILD FourValueZetaIdentity
+BUILD FourValueTaylorDeriv
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTaylorDeriv.lean:22:71: warning: This simp argument is unused:
+  Pi.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [poleTaylorValue, Nat.add_sub_cancel, id_eq, Pi.pow_apply, Pi.one_apply, mul_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTaylorDeriv.lean:23:4: warning: This simp argument is unused:
+  Pi.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [poleTaylorValue, Nat.add_sub_cancel, id_eq, Pi.pow_apply, Pi.sub_apply, mul_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueSeedTail
+BUILD FourValueSeedObservations
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedObservations.lean:31:69: warning: This simp argument is unused:
+  map_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.taylor_taylor, neg_add_cancel, Polynomial.taylor_zero, neg_div]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedObservations.lean:45:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedObservations.lean:89:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+BUILD FourValueSeedJets
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedJets.lean:38:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.seedTranslationMatrix_det`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedJets.lean:46:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.seed_quadratic_jet_factor`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueSeedTailBlock
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSeedTailBlock.lean:25:4: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.pow_comp, Polynomial.X_comp, Polynomial.smul_eq_C_mul, map_mul, map_ofNat, map_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueSeedIndependence
+BUILD FourValueNormalization
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueNormalization.lean:12:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.normalizedTupleTest_apply`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueNormalization.lean:15:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.normalizedTupleTest_weight`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueNormalization.lean:45:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.targetNormalizedWeight_formula`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueNormalization.lean:144:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueNormalization.lean:140:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.independent_rows_nonzero_coordinate`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueZetaBoundary
+BUILD FourValueGridHarmonics
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueGridHarmonics.lean:59:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.integer_window_split`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueGridCIdentity
+BUILD FourValueCenterOrder
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenterOrder.lean:11:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.linearRootProduct_roots`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenterOrder.lean:24:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.sum_list_counts_on_grid`:
+  [Field K]
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Field K] [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCenterOrder.lean:107:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.positiveTransportProduct_ne_zero`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueCenterReflection
+BUILD FourValueFiniteDimension
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFiniteDimension.lean:14:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.IsFinitePearson.smul`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFiniteDimension.lean:42:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.JetsBound.mono`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFiniteDimension.lean:45:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.JetsBound.add`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFiniteDimension.lean:50:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.JetsBound.smul`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueTargetRestrictions
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTargetRestrictions.lean:22:32: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [targetPhysicalRow, normalizedTargetFunctional_apply, Units.smul_def, smul_eq_mul,
+    targetNormalization_ne_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueFiniteClassification
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFiniteClassification.lean:39:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFiniteClassification.lean:54:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueFiniteClassification.lean:108:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+BUILD FourValueUniformNonvanishing
+BUILD FourValueClassicalZeta
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueClassicalZeta.lean:33:2: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+BUILD FourValueZetaDerivatives
+BUILD FourValueZetaAssembly
+BUILD FourValueCoefficientMap
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCoefficientMap.lean:14:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.coefficientRatFuncMap_fraction`:
+  [CharZero K]
+  [CharZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [CharZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCoefficientMap.lean:33:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.coefficientLaurentMap_polynomial`:
+  [CharZero K]
+  [CharZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [CharZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCoefficientMap.lean:42:124: warning: This simp argument is unused:
+  apply_ite
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PowerSeries.coeff_coe, hj, hn, PowerSeries.coeff_monomial]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueRationalCoefficients
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRationalCoefficients.lean:8:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.centeredDenominator_map`:
+  [CharZero K]
+  [CharZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [CharZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRationalCoefficients.lean:14:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.targetNormalization_map`:
+  [CharZero K]
+  [CharZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [CharZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRationalCoefficients.lean:29:40: warning: This simp argument is unused:
+  coefficientRatFuncMap_fraction
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tupleRationalTest, tupleWeight, coefficientRatFuncMap_polynomial, tupleNumerator, tupleDenominator,
+    Polynomial.map_prod, centeredDenominator_map, Polynomial.map_comp, coefficientRatFuncMap_C, coefficientRatFuncMap_X,
+    map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRationalCoefficients.lean:31:4: warning: This simp argument is unused:
+  Polynomial.map_prod
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tupleRationalTest, tupleWeight, coefficientRatFuncMap_fraction, coefficientRatFuncMap_polynomial,
+    tupleNumerator, tupleDenominator, centeredDenominator_map, Polynomial.map_comp, coefficientRatFuncMap_C,
+    coefficientRatFuncMap_X, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRationalCoefficients.lean:32:4: warning: This simp argument is unused:
+  coefficientRatFuncMap_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tupleRationalTest, tupleWeight, coefficientRatFuncMap_fraction, coefficientRatFuncMap_polynomial,
+    tupleNumerator, tupleDenominator, Polynomial.map_prod, centeredDenominator_map, Polynomial.map_comp,
+    coefficientRatFuncMap_X, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueRationalCoefficients.lean:68:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.squareRootProduct_map`:
+  [CharZero K]
+  [CharZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [CharZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD ReusedCoefficients
+'OddZeta.Coefficients.binomial_valuation_below_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OddZeta.Coefficients.cleared_conv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OddZeta.Coefficients.reciprocal_product_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OddZeta.Coefficients.factorial_valuation_below_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD FourValueConcreteValuations
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueConcreteValuations.lean:52:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.PadicLower.intCast`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueConcreteValuations.lean:57:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.PadicLower.natCast`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueConcreteValuations.lean:73:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.padicValNat_lt_square_le_one`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueLaurentValuations
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLaurentValuations.lean:25:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.LaurentPadicLower.constant`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLaurentValuations.lean:32:10: warning: This simp argument is unused:
+  HahnSeries.C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hj, PadicLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLaurentValuations.lean:57:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.rootResidueWeight_bounds`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLaurentValuations.lean:110:20: warning: This simp argument is unused:
+  hk1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hk, Ne.symm hk, Ne.symm hk1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLaurentValuations.lean:110:25: warning: This simp argument is unused:
+  Ne.symm hk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hk, hk1, Ne.symm hk1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueTargetValuations
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTargetValuations.lean:42:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.target_root_difference_lt_square`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueIndexBounds
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueIndexBounds.lean:82:42: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueIndexBounds.lean:83:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueLocalEntryBounds
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLocalEntryBounds.lean:19:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.rootResidueWeight_congr`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLocalEntryBounds.lean:94:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueLocalRationalForm
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLocalRationalForm.lean:75:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueLocalRationalForm.lean:96:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueArithmeticDenominators
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueArithmeticDenominators.lean:19:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.rationalPencil_integral_at_prime`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueArithmeticDenominators.lean:37:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.PolynomialPadicLower.constant`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueArithmeticDenominators.lean:54:16: warning: This simp argument is unused:
+  Ne.symm hj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hj, Ne.symm hj1, PadicLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueArithmeticDenominators.lean:67:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueArithmeticDenominators.lean:97:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.target_selected_factorial_lt_square`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueResidueArithmetic
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueResidueArithmetic.lean:8:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.centeredResidueCount_eq_card`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueResidueArithmetic.lean:17:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.centeredResidueCount_neg`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueResidueArithmetic.lean:69:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueResidueArithmetic.lean:91:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueResidueFloors
+BUILD FourValueIntegralMinorTransfer
+BUILD FourValueArithmeticAssembly
+BUILD FourValueArithmeticBoundary
+BUILD FourValueWeightedMinorTransfer
+BUILD FourValueTaylorDenominators
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTaylorDenominators.lean:18:6: warning: `Polynomial.finset_sum_coeff` has been deprecated: Use `Polynomial.finsetSum_coeff` instead
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTaylorDenominators.lean:30:22: warning: This simp argument is unused:
+  map_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_sum, map_pow, Polynomial.taylor_C, Polynomial.taylor_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTaylorDenominators.lean:30:31: warning: This simp argument is unused:
+  map_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_sum, map_mul, Polynomial.taylor_C, Polynomial.taylor_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTaylorDenominators.lean:30:40: warning: This simp argument is unused:
+  Polynomial.taylor_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_sum, map_mul, map_pow, Polynomial.taylor_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueTaylorDenominators.lean:30:61: warning: This simp argument is unused:
+  Polynomial.taylor_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_sum, map_mul, map_pow, Polynomial.taylor_C]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueSelectedBasisValuations
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSelectedBasisValuations.lean:14:31: warning: This simp argument is unused:
+  smul_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rationalPhysicalTest, map_smul, Algebra.smul_def, mul_left_comm, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSelectedBasisValuations.lean:14:41: warning: This simp argument is unused:
+  map_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rationalPhysicalTest, smul_comp, Algebra.smul_def, mul_left_comm, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSelectedBasisValuations.lean:14:81: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rationalPhysicalTest, smul_comp, map_smul, Algebra.smul_def, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSelectedBasisValuations.lean:36:36: warning: This simp argument is unused:
+  LinearMap.sum_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [residuePolynomialFunctional, localFourValueLinear_apply, rationalPhysicalTestLinear]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSelectedBasisValuations.lean:62:17: warning: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_comm, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSelectedBasisValuations.lean:97:56: warning: This simp argument is unused:
+  Matrix.of_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Int.cast_mul, Int.cast_ofNat, Int.cast_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueCancelledWeight
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCancelledWeight.lean:14:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.targetDenominator_cancel_five`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCancelledWeight.lean:53:37: warning: This simp argument is unused:
+  List.map_flatten
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [targetReducedDenominator, centeredDenominator_integerProduct, integerRootProduct, linearRootProduct,
+    targetPoleList, List.prod_flatten, List.map_map, Function.comp_def, List.prod_ofFn, Fin.prod_univ_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCancelledWeight.lean:53:54: warning: This simp argument is unused:
+  List.prod_flatten
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [targetReducedDenominator, centeredDenominator_integerProduct, integerRootProduct, linearRootProduct,
+    targetPoleList, List.map_flatten, List.map_map, Function.comp_def, List.prod_ofFn, Fin.prod_univ_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCancelledWeight.lean:54:22: warning: This simp argument is unused:
+  List.prod_ofFn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [targetReducedDenominator, centeredDenominator_integerProduct, integerRootProduct, linearRootProduct,
+    targetPoleList, List.map_flatten, List.prod_flatten, List.map_map, Function.comp_def, Fin.prod_univ_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueUniformLaurent
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueUniformLaurent.lean:21:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.UniformLaurentPadicLower.constant`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueUniformLaurent.lean:28:10: warning: This simp argument is unused:
+  HahnSeries.C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hj, PadicLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueSingleNode
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSingleNode.lean:79:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.PadicLower.max`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueSelectedSingleNode
+BUILD FourValueResidueCapacity
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueResidueCapacity.lean:16:4: warning: This simp argument is unused:
+  List.map_map
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [targetResidueCapacity, targetPoleList, List.filter_flatten, List.length_flatten, List.map_ofFn,
+    List.sum_ofFn, Nat.cast_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueResidueCapacity.lean:50:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.targetResidueAnnihilator_monic`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueResidueCapacity.lean:53:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.targetResidueAnnihilator_degree`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueListRootFactors
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueListRootFactors.lean:19:67: warning: This simp argument is unused:
+  List.filter_cons_of_neg (by simp : ¬decide (a ≠ a) = true)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_cons, List.prod_cons, List.count_cons_self]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueListRootFactors.lean:21:40: warning: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [pow_succ, mul_assoc, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueListRootFactors.lean:24:12: warning: This simp argument is unused:
+  List.count_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ht, Ne.symm ht, mul_assoc, mul_comm, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueListRootFactors.lean:24:31: warning: This simp argument is unused:
+  Ne.symm ht
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.count_cons, ht, mul_assoc, mul_comm, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueListRootFactors.lean:24:42: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.count_cons, ht, Ne.symm ht, mul_comm, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueListRootFactors.lean:24:52: warning: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.count_cons, ht, Ne.symm ht, mul_assoc, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueAnnihilatorRank
+BUILD FourValueResidueAnnihilation
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueResidueAnnihilation.lean:23:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.targetResidueAnnihilator_divisibility`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueScaledLaurent
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueScaledLaurent.lean:25:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.ScaledLaurentPadicLower.constant`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueScaledLaurent.lean:96:15: warning: This simp argument is unused:
+  Ne.symm hk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_sub, taylor_mul, taylor_C, taylor_X, mul_add, coeff_add, coeff_sub, coeff_C_mul, coeff_X,
+    coeff_C, hk, hk1, Ne.symm hk1, ite_false, mul_zero, add_zero, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueScaledLaurent.lean:96:26: warning: This simp argument is unused:
+  hk1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_sub, taylor_mul, taylor_C, taylor_X, mul_add, coeff_add, coeff_sub, coeff_C_mul, coeff_X,
+    coeff_C, hk, Ne.symm hk, Ne.symm hk1, ite_false, mul_zero, add_zero, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValuePrimePowerCounts
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValuePrimePowerCounts.lean:23:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.truncatedRootValuation_le_log`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueAllPrimeWeight
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueAllPrimeWeight.lean:36:41: warning: This simp argument is unused:
+  Finset.prod_inv_distrib
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [integerRootProduct, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueSquareBasisFactorization
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSquareBasisFactorization.lean:8:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.squareRootProduct_succ`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueSmallPrimeBasis
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSmallPrimeBasis.lean:56:37: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [squareBasisPolynomial, ite_true, one_comp, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueSmallPrimeEntries
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSmallPrimeEntries.lean:64:4: warning: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueSmallPrimeEntries.lean:53:85: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueConcreteArithmeticComplete
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueConcreteArithmeticComplete.lean:52:4: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+BUILD FourValueAnalyticCoordinates
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueAnalyticCoordinates.lean:26:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.analyticFunctional_moment`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueCorrectedLocal
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedLocal.lean:106:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedLocal.lean:127:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueCorrectedSelected
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedSelected.lean:17:31: warning: This simp argument is unused:
+  smul_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rationalAnalyticTest, map_smul, Algebra.smul_def, mul_left_comm, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedSelected.lean:17:41: warning: This simp argument is unused:
+  map_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rationalAnalyticTest, smul_comp, Algebra.smul_def, mul_left_comm, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedSelected.lean:17:81: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rationalAnalyticTest, smul_comp, map_smul, Algebra.smul_def, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedSelected.lean:25:36: warning: This simp argument is unused:
+  LinearMap.sum_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [residuePolynomialFunctional, localFourValueLinear_apply, rationalAnalyticTestLinear]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedSelected.lean:58:15: warning: This simp argument is unused:
+  Int.cast_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Int.cast_ofNat, Int.cast_pow, Matrix.of_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedSelected.lean:58:28: warning: This simp argument is unused:
+  Int.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Int.cast_mul, Int.cast_pow, Matrix.of_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedSelected.lean:58:56: warning: This simp argument is unused:
+  Matrix.of_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Int.cast_mul, Int.cast_ofNat, Int.cast_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueCorrectedSmallBasis
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedSmallBasis.lean:51:37: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [squareBasisPolynomial, ite_true, one_comp, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedSmallBasis.lean:62:15: warning: This simp argument is unused:
+  Int.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Int.cast_zero, map_zero, sub_zero, one_mul] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueCorrectedSmallEntries
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedSmallEntries.lean:45:4: warning: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedSmallEntries.lean:34:85: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueCorrectedSingleNode
+BUILD FourValueCorrectedCapacity
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedCapacity.lean:15:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.Corrected.targetResidueAnnihilator_monic`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedCapacity.lean:18:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.Corrected.targetResidueAnnihilator_degree`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueCorrectedCapacity.lean:33:0: warning: automatically included section variable(s) unused in theorem `OddZeta.FourValue.Corrected.targetResidueAnnihilator_divisibility`:
+  [Fact (Nat.Prime p)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fact (Nat.Prime p)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BUILD FourValueCorrectedAssembly
+BUILD FourValueContourKernel
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueContourKernel.lean:82:10: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_pow, norm_mul, abs_of_pos Real.pi_pos]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueContourKernel.lean:82:28: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_div, norm_pow, abs_of_pos Real.pi_pos]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueContourRays
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueContourRays.lean:13:52: warning: Variable name `ht` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ht
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+BUILD FourValueKernelRegularPart
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueKernelRegularPart.lean:58:15: warning: This simp argument is unused:
+  regularKernelTerm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [if_pos hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueKernelRegularPart.lean:65:15: warning: This simp argument is unused:
+  regularKernelTerm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [if_neg hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BUILD FourValueKernelPrincipalPart
+BUILD FourValueAnalyticTail
+BUILD FourValueContourIntegrand
+BUILD FourValueContourConvergence
+/workspace/scratch/ea8855d9ac32/Four_Value_Lean_Round29/lean/FourValueContourConvergence.lean:11:13: warning: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+BUILD FourValueContourResidues

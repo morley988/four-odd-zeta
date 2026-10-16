@@ -1,0 +1,41 @@
+{"checked": 250000, "total": 6900022, "seconds": 2.8}
+{"checked": 500000, "total": 6900022, "seconds": 5.1}
+{"checked": 750000, "total": 6900022, "seconds": 7.14}
+{"checked": 1000000, "total": 6900022, "seconds": 9.04}
+{"checked": 1250000, "total": 6900022, "seconds": 10.12}
+{"checked": 1500000, "total": 6900022, "seconds": 11.82}
+{"checked": 1750000, "total": 6900022, "seconds": 12.84}
+{"checked": 2000000, "total": 6900022, "seconds": 13.8}
+{"checked": 2250000, "total": 6900022, "seconds": 14.76}
+{"checked": 2500000, "total": 6900022, "seconds": 15.73}
+{"checked": 2750000, "total": 6900022, "seconds": 16.72}
+{"checked": 3000000, "total": 6900022, "seconds": 17.69}
+{"checked": 3250000, "total": 6900022, "seconds": 18.65}
+{"checked": 3500000, "total": 6900022, "seconds": 19.62}
+{"checked": 3750000, "total": 6900022, "seconds": 20.56}
+{"checked": 4000000, "total": 6900022, "seconds": 21.51}
+{"checked": 4250000, "total": 6900022, "seconds": 22.46}
+{"checked": 4500000, "total": 6900022, "seconds": 23.43}
+{"checked": 4750000, "total": 6900022, "seconds": 24.48}
+{"checked": 5000000, "total": 6900022, "seconds": 25.47}
+{"checked": 5250000, "total": 6900022, "seconds": 26.46}
+{"checked": 5500000, "total": 6900022, "seconds": 27.5}
+{"checked": 5750000, "total": 6900022, "seconds": 29.33}
+{"checked": 6000000, "total": 6900022, "seconds": 30.63}
+{"checked": 6250000, "total": 6900022, "seconds": 31.65}
+{"checked": 6500000, "total": 6900022, "seconds": 32.63}
+{"checked": 6750000, "total": 6900022, "seconds": 33.62}
+{
+  "status": "PASS",
+  "complete": true,
+  "log_bounds_checked": 5700022,
+  "atan_bounds_checked": 1200000,
+  "total_bounds_checked": 6900022,
+  "sha256": "89ce7741b3c7e5ac48d5f0d12c0ac2a07bf6a12ff47e836c5523e91be1429840",
+  "precision_bits": 256,
+  "python_flint_version": "0.9.0",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "seconds": 34.27994059200137,
+  "method": "Arb outward-rounded ball arithmetic; strict containment in exact rational claimed intervals",
+  "formal_lean_certification": false
+}

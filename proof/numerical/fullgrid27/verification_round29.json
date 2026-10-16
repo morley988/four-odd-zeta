@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "complete": true,
+  "cells": 50000,
+  "rational_argument_identities": 2400022,
+  "expression_upper_checks": 50000,
+  "distance_square_checks": 9000000,
+  "distance_cutoff_checks": 4500000,
+  "log_pair_checks": 2250000,
+  "knot_checks": 2100000,
+  "min_G_slack": "15287095581/250000000000000000000000",
+  "min_pair_slack": "9813/1000000000000000000",
+  "min_knot_slack": "0",
+  "seconds": 70.47953389199938,
+  "grid_sha256": "5686a27a4e1290d335f04b902b4ce4a7906237cba6473de12341811c399ec5ea",
+  "transcendental_sha256": "89ce7741b3c7e5ac48d5f0d12c0ac2a07bf6a12ff47e836c5523e91be1429840",
+  "assumed_rational_families": 5,
+  "transcendental_claims_checked_here": false,
+  "arithmetic": "FLINT exact fmpq and Python arbitrary precision integers"
+}

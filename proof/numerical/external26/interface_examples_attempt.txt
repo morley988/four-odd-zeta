@@ -1,0 +1,47 @@
+import FourValue
+import FourValueExternalTranscendental
+
+noncomputable section
+namespace OddZeta.FourValue.ExternalInterface
+open OddZeta.FourValue.External
+
+/-- Transfer an identified table row to the exact rational constants used by
+an analytic proof. Matching the row to the desired constants is still proved. -/
+theorem log_bound_of_row (i : Fin logCount) (q lo hi : ℚ)
+    (hq : argument i = q) (hl : lower i = lo) (hu : upper i = hi) :
+    (lo:ℝ) ≤ Real.log (q:ℝ) ∧ Real.log (q:ℝ) ≤ (hi:ℝ) := by
+  simpa only [hq,hl,hu] using log_values i
+
+theorem atan_bound_of_row (i : Fin atanCount) (q lo hi : ℚ)
+    (hq : argument (logCount+i) = q) (hl : lower (logCount+i) = lo)
+    (hu : upper (logCount+i) = hi) :
+    (lo:ℝ) ≤ Real.arctan (q:ℝ) ∧ Real.arctan (q:ℝ) ≤ (hi:ℝ) := by
+  simpa only [hq,hl,hu] using atan_values i
+
+set_option maxRecDepth 100000
+set_option maxHeartbeats 800000
+
+/-- A concrete logarithm row is connected to its intended argument and bounds
+by ordinary kernel-checked exact arithmetic, not an additional assumption. -/
+theorem example_log_126 :
+    (231111720963386627/1000000000000000000:ℝ) ≤ Real.log (63/50:ℝ) ∧
+    Real.log (63/50:ℝ) ≤ (231111720963386632/1000000000000000000:ℝ) := by
+  have h := log_bound_of_row ⟨0,by decide⟩ (63/50)
+    (231111720963386627/1000000000000000000)
+    (231111720963386632/1000000000000000000)
+    (by decide +kernel) (by decide +kernel) (by decide +kernel)
+  norm_num at h ⊢
+  exact h
+
+/-- A concrete arctangent row, with the same checked data-to-statement bridge. -/
+theorem example_atan_three_fifths :
+    (540419500270584153/1000000000000000000:ℝ) ≤ Real.arctan (3/5:ℝ) ∧
+    Real.arctan (3/5:ℝ) ≤ (540419500270584158/1000000000000000000:ℝ) := by
+  have h := atan_bound_of_row ⟨1,by decide⟩ (3/5)
+    (540419500270584153/1000000000000000000)
+    (540419500270584158/1000000000000000000)
+    (by decide +kernel) (by decide +kernel) (by decide +kernel)
+  norm_num at h ⊢
+  exact h
+
+end OddZeta.FourValue.ExternalInterface

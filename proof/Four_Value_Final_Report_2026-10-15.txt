@@ -1,0 +1,117 @@
+FOUR-VALUE ZETA PROOF: FINAL CONTRADICTION AND INTEGRATION
+2026-10-15 — Round 29
+
+STATUS
+The final contradiction and integration compile in Lean 4.33.1 under the eight
+previously authorized external finite-calculation admissions. No new admission
+has been added. This is NOT an admission-free Lean formalization.
+
+CONCLUSION
+At least one of zeta(7), zeta(9), zeta(11), zeta(13) is irrational.
+The main supplied-certificate theorem is:
+  OddZeta.FourValue.irrational_zeta7_or_zeta9_or_zeta11_or_zeta13
+in lean/FourValueFinal.lean. It uses Mathlib's Irrational predicate and the real
+parts of Mathlib's riemannZeta values. The proved realZeta_cast and
+realZeta_eq_re lemmas identify these with the ordinary real zeta series at
+integers greater than one; taking real parts does not change these values.
+
+THE FINAL COMPARISON
+Assume all four values are rational. The arithmetic theorem supplies, for all
+sufficiently large n, a nonzero rational q_n equal to a selected minor of the
+actual analytic-coordinate matrix, with
+  log |q_n| >= -(288/25)(100n)^2 = -11.52(100n)^2.
+The analytic theorem applies to every minor of exactly the same size, including
+this one, and gives
+  |q_n| <= exp(-(577853339/50000000)(100n)^2 + E_n),
+where E_n/n^2 tends to zero. For all sufficiently large n, E_n < n^2.
+Since q_n is nonzero, taking logarithms is legitimate. The lower and upper
+bounds would imply
+  370.6678 n^2 <= E_n < n^2,
+which is impossible for n >= 1. The normalized rate gap is exactly
+  1853339/50000000 = 0.03706678.
+There is no additional estimate, numerical assumption, or explicit cutoff
+needed in this final comparison. The proof proves existence of a sufficiently
+large cutoff, not its numerical value.
+
+EXPLICIT-HYPOTHESIS VERSION
+  OddZeta.FourValue.not_all_rational_of_certificates
+  OddZeta.FourValue.irrational_one_of_four_of_certificates
+in lean/FourValueFinalContradiction.lean take a valid finite arithmetic grid
+and Numerical.FiniteKnotCertificate as explicit hypotheses. Their audited
+axioms are contained in propext, Classical.choice, Quot.sound. Neither depends
+on sorryAx. FourValueFinal.lean supplies those certificates through the
+existing isolated numerical interfaces, so its three final theorems also
+have sorryAx in their dependency closures.
+
+ADMISSIONS
+The three external files and their statements are unchanged:
+  FourValueExternalTranscendental.lean: two finite indexed families.
+  FourValueExternalArithmetic.lean: five finite rational calculation families.
+  FourValueExternalGlobalArithmetic.lean: one finite rational grid certificate.
+Total: eight marked proof admissions; zero new admissions in Round 29.
+The audit checks exact locations, marker strings, and pinned file hashes.
+The prime-number-theorem dependency has unrelated admissions outside the
+conditional theorem's dependency closure, as confirmed by the axiom audit.
+
+FRESH NUMERICAL RECHECKS
+All were rerun during this integration stage using python-flint 0.9.0.
+Transcendental bounds: 6,900,022, Arb at 256 bits,
+  20.20 seconds; all passed.
+Analytic grid: 50,000 cells, 2,100,000 knot checks,
+  70.48 seconds; all passed with exact rational arithmetic.
+Arithmetic grid: 171,504 cells, 3,810,331 boxes,
+  241.66 seconds; all passed with exact rational arithmetic.
+Arithmetic normalized certificate lower value: -11.511773493304.
+These computations validate the isolated numerical assumptions externally;
+they do not remove Lean's admitted-proof dependencies.
+
+LEAN VALIDATION
+1,873 declarations passed the fresh axiom audit.
+All 277 Round 28 Lean source files are unchanged.
+Nine new declarations were added, including the real-zeta definition and its
+identification lemmas. Only the three supplied-certificate final conclusions
+among the new declarations depend on sorryAx.
+The build reused 183 byte-identical project modules with the same pinned Lean
+and Mathlib revisions, plus official dependency caches. Remaining dependency
+modules and the final source were compiled in this session. The final axiom
+audit was run afresh. This is not claimed to be a clean rebuild of every
+historical source file.
+
+REPRODUCTION
+Install Lean using lean/lean-toolchain and python-flint 0.9.0, then run:
+  bash numerical/final29/reproduce.sh
+This reruns the three numerical checkers, builds the final dependency chain,
+and regenerates the final axiom audit. Download access is needed for pinned
+Lean dependencies/cache. The archive omits build caches, but includes all
+project sources, finite data, checkers, logs, and SHA-256 manifest.
+For an evidence/source audit without recompiling:
+  python3 numerical/final29/audit_final.py finish
+
+PINS
+Lean 4.33.1.
+Mathlib: 0df444a360eaa60ab8c11dca51a86af692955474.
+PrimeNumberTheoremAnd: 650d31264be65f4cd6e70c45d8b25d86d482a761.
+
+The final contradiction and integration stage is complete under the agreed
+external-calculation policy. Full kernel certification would additionally
+require replacing the eight numerical admissions with Lean proofs.
+
+FINAL AUDIT AND REPRODUCIBILITY ADD-ON
+The original delivered ZIP was extracted into a separate directory: all 524
+manifest entries matched, and the packaged evidence/source audit passed there.
+The operational reproduction and audit scripts have no hard-coded workspace
+paths. The reproduction script now clears old success records at startup and
+rebuilds its numerical summary from the current verifier reports. A controlled
+failure test confirmed that an unsuccessful first verifier stops the script
+and leaves none of the four old success records behind.
+The revised reproduction script completed end to end with fresh numerical
+checks and a fresh 1,873-declaration Lean axiom audit. This run used the restored
+build cache; it was not an empty-cache rebuild of all historical sources.
+An initial add-on run was interrupted by an execution-service disconnect after
+126 build-start entries (including the interrupted compilation). Its logs are
+retained as interrupted evidence. The
+subsequent complete run reused those completed artifacts and compiled
+125 further modules, as recorded in the final build log.
+The updated archive was checked against its regenerated SHA-256 manifest.
+All 280 Lean source files are byte-identical to the original Round 29 release.
+No mathematical source or admission changed during this add-on stage.

@@ -1,0 +1,142 @@
+{
+  "status": "PASS_WITH_EXPLICIT_EXTERNAL_NUMERICAL_ASSUMPTIONS",
+  "stage": "full-grid linkage and remaining calculation interfaces",
+  "stage_complete": true,
+  "fully_lean_certified": false,
+  "full_four_value_zeta_theorem_verified": false,
+  "full_grid_certificate_assembled": true,
+  "finite_and_infinite_contour_bounds_linked": true,
+  "numerical_determinant_rate_linked": true,
+  "explicit_assumption_count": 7,
+  "transcendental_assumption_families": 2,
+  "rational_assumption_families": 5,
+  "core_declarations_unchanged_and_without_sorryAx": 1669,
+  "total_audited_declarations": 1715,
+  "conditional_declarations": [
+    "OddZeta.FourValue.External.atan_values",
+    "OddZeta.FourValue.External.log_values",
+    "OddZeta.FourValue.ExternalInterface.atan_bound_of_row",
+    "OddZeta.FourValue.ExternalInterface.log_bound_of_row",
+    "OddZeta.FourValue.FullGrid.Expr.contains",
+    "OddZeta.FourValue.FullGrid.all_knots",
+    "OddZeta.FourValue.FullGrid.certificate",
+    "OddZeta.FourValue.FullGrid.distances",
+    "OddZeta.FourValue.FullGrid.envelope_bound",
+    "OddZeta.FourValue.FullGrid.expression_rows",
+    "OddZeta.FourValue.FullGrid.expression_upper",
+    "OddZeta.FourValue.FullGrid.finite_knots",
+    "OddZeta.FourValue.FullGrid.g_bound",
+    "OddZeta.FourValue.FullGrid.knot_arithmetic",
+    "OddZeta.FourValue.FullGrid.log_bound",
+    "OddZeta.FourValue.FullGrid.numerical_rate",
+    "OddZeta.FourValue.FullGrid.pair_upper"
+  ],
+  "source_audit": {
+    "status": "PASS",
+    "explicit_assumptions": 7,
+    "locations": [
+      {
+        "file": "FourValueExternalArithmetic.lean",
+        "line": 11,
+        "marker": "EXTERNAL_FINITE_RATIONAL_CERTIFICATION_V1"
+      },
+      {
+        "file": "FourValueExternalArithmetic.lean",
+        "line": 15,
+        "marker": "EXTERNAL_FINITE_RATIONAL_CERTIFICATION_V1"
+      },
+      {
+        "file": "FourValueExternalArithmetic.lean",
+        "line": 24,
+        "marker": "EXTERNAL_FINITE_RATIONAL_CERTIFICATION_V1"
+      },
+      {
+        "file": "FourValueExternalArithmetic.lean",
+        "line": 29,
+        "marker": "EXTERNAL_FINITE_RATIONAL_CERTIFICATION_V1"
+      },
+      {
+        "file": "FourValueExternalArithmetic.lean",
+        "line": 34,
+        "marker": "EXTERNAL_FINITE_RATIONAL_CERTIFICATION_V1"
+      },
+      {
+        "file": "FourValueExternalTranscendental.lean",
+        "line": 94,
+        "marker": "EXTERNAL_TRANSCENDENTAL_VALUE_CERTIFICATION_V1"
+      },
+      {
+        "file": "FourValueExternalTranscendental.lean",
+        "line": 100,
+        "marker": "EXTERNAL_TRANSCENDENTAL_VALUE_CERTIFICATION_V1"
+      }
+    ],
+    "preserved_lean_sources": 234,
+    "old_core_theorems": 1669
+  },
+  "transcendental_verification": {
+    "status": "PASS",
+    "complete": true,
+    "log_bounds_checked": 5700022,
+    "atan_bounds_checked": 1200000,
+    "total_bounds_checked": 6900022,
+    "sha256": "89ce7741b3c7e5ac48d5f0d12c0ac2a07bf6a12ff47e836c5523e91be1429840",
+    "precision_bits": 256,
+    "python_flint_version": "0.9.0",
+    "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "seconds": 34.27994059200137,
+    "method": "Arb outward-rounded ball arithmetic; strict containment in exact rational claimed intervals",
+    "formal_lean_certification": false
+  },
+  "rational_verification": {
+    "status": "PASS",
+    "complete": true,
+    "cells": 50000,
+    "rational_argument_identities": 2400022,
+    "expression_upper_checks": 50000,
+    "distance_square_checks": 9000000,
+    "distance_cutoff_checks": 4500000,
+    "log_pair_checks": 2250000,
+    "knot_checks": 2100000,
+    "min_G_slack": "15287095581/250000000000000000000000",
+    "min_pair_slack": "9813/1000000000000000000",
+    "min_knot_slack": "0",
+    "seconds": 127.67357987099967,
+    "grid_sha256": "5686a27a4e1290d335f04b902b4ce4a7906237cba6473de12341811c399ec5ea",
+    "transcendental_sha256": "89ce7741b3c7e5ac48d5f0d12c0ac2a07bf6a12ff47e836c5523e91be1429840",
+    "assumed_rational_families": 5,
+    "transcendental_claims_checked_here": false,
+    "arithmetic": "FLINT exact fmpq and Python arbitrary precision integers"
+  },
+  "negative_controls": {
+    "status": "PASS",
+    "tests": [
+      {
+        "test": "false_G_upper",
+        "rejected": true,
+        "reason": "G bound 0"
+      },
+      {
+        "test": "false_knot_upper",
+        "rejected": true,
+        "reason": "knot bound 0/0"
+      },
+      {
+        "test": "false_log_pair",
+        "rejected": true,
+        "reason": "pair bound 0/0"
+      },
+      {
+        "test": "wrong_log_argument",
+        "rejected": true,
+        "reason": "J identity 0/0"
+      },
+      {
+        "test": "false_distance_radius",
+        "rejected": true,
+        "reason": "cutoffs 0/0"
+      }
+    ],
+    "scope": "Deliberately corrupted inputs; transient test-only hashes allow testing numerical rejection after the hash guard."
+  }
+}

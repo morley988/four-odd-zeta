@@ -1,0 +1,75 @@
+{"core_declarations": 1669, "new_declarations": 4, "total": 1677}
+{
+  "status": "PASS",
+  "explicit_assumption_count": 2,
+  "locations": [
+    {
+      "file": "FourValueExternalTranscendental.lean",
+      "line": 94
+    },
+    {
+      "file": "FourValueExternalTranscendental.lean",
+      "line": 100
+    }
+  ],
+  "log_value_count": 5700022,
+  "atan_value_count": 1200000,
+  "total_value_count": 6900022,
+  "only_file": "FourValueExternalTranscendental.lean",
+  "lean_file_sha256": "0e9e8a514f4ae2c1727cf6bbcaef944644ac520897bf77ee3e52cf8b5b53174a",
+  "scope": "Source audit; does not replace numerical checking or kernel axiom audit"
+}
+{
+  "status": "PASS_WITH_EXPLICIT_EXTERNAL_NUMERICAL_ASSUMPTIONS",
+  "fully_lean_certified": false,
+  "full_four_value_zeta_theorem_verified": false,
+  "full_grid_certificate_assembled": false,
+  "all_grid_transcendental_rows_externally_verified": true,
+  "explicit_assumption_count": 2,
+  "log_bounds": 5700022,
+  "atan_bounds": 1200000,
+  "core_declarations_unchanged_and_without_sorryAx": 1669,
+  "all_round25_lean_sources_byte_identical": true,
+  "total_audited_declarations": 1677,
+  "new_declarations_depending_on_sorryAx": [
+    "OddZeta.FourValue.External.atan_values",
+    "OddZeta.FourValue.External.log_values",
+    "OddZeta.FourValue.ExternalInterface.atan_bound_of_row",
+    "OddZeta.FourValue.ExternalInterface.log_bound_of_row"
+  ],
+  "source_audit": {
+    "status": "PASS",
+    "explicit_assumption_count": 2,
+    "locations": [
+      {
+        "file": "FourValueExternalTranscendental.lean",
+        "line": 94
+      },
+      {
+        "file": "FourValueExternalTranscendental.lean",
+        "line": 100
+      }
+    ],
+    "log_value_count": 5700022,
+    "atan_value_count": 1200000,
+    "total_value_count": 6900022,
+    "only_file": "FourValueExternalTranscendental.lean",
+    "lean_file_sha256": "0e9e8a514f4ae2c1727cf6bbcaef944644ac520897bf77ee3e52cf8b5b53174a",
+    "scope": "Source audit; does not replace numerical checking or kernel axiom audit"
+  },
+  "table_sha256": "89ce7741b3c7e5ac48d5f0d12c0ac2a07bf6a12ff47e836c5523e91be1429840",
+  "numerical_verification": {
+    "status": "PASS",
+    "complete": true,
+    "log_bounds_checked": 5700022,
+    "atan_bounds_checked": 1200000,
+    "total_bounds_checked": 6900022,
+    "sha256": "89ce7741b3c7e5ac48d5f0d12c0ac2a07bf6a12ff47e836c5523e91be1429840",
+    "precision_bits": 256,
+    "python_flint_version": "0.9.0",
+    "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "seconds": 26.956209775999014,
+    "method": "Arb outward-rounded ball arithmetic; strict containment in exact rational claimed intervals",
+    "formal_lean_certification": false
+  }
+}

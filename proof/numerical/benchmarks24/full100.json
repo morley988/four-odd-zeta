@@ -1,0 +1,9 @@
+{
+  "label": "full100",
+  "file": "FastFullBenchmark.lean",
+  "exit_code": 1,
+  "wall_seconds": 9.386793530000432,
+  "user_seconds": 7.7843219999999995,
+  "system_seconds": 1.6498689999999998,
+  "peak_rss_kib": 3847880
+}

@@ -1,0 +1,10 @@
+{
+  "lean/FourValueCertificate.lean": "98dfd3de571650e54f4ee077a7385a14fb129117d17fc6136a02cbf0850426a2",
+  "lean/FourValueNormalization.lean": "d6cc080dda76baa6db7f2d2dc0b0a30dc5a2965bb622b144910564ee7505b976",
+  "lean/FourValueTargetPearson.lean": "f8e436b569c727c51f08cb1f0001b1e025d3329a12fb33996aac737a443144a7",
+  "lean/FourValueBatchTools.lean": "32b6b512c4d350f59f427d994479185f5a79246c0fc0ce0d3e89e833b0e562da",
+  "lean/FourValueFullGridExpressions.lean": "0f1bce2713f1db316586677ca993b89b5698f0190cafa974c7da28d5c4636e3b",
+  "lean/FourValueFullGridData.lean": "78c5b873a6b3cc8ebfd49959304d061bcb60727a550c4372c91303ac9058a8da",
+  "lean/FourValueExternalArithmetic.lean": "9aae61862260fac9d45fb4b0a15bc38e247fdd6ce14fcdc55049d846357032f5",
+  "lean/FourValueExternalTranscendental.lean": "0e9e8a514f4ae2c1727cf6bbcaef944644ac520897bf77ee3e52cf8b5b53174a"
+}

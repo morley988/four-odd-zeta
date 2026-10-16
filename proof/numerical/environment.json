@@ -1,0 +1,13 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "numpy": "2.3.5",
+  "python_flint": "0.9.0",
+  "source_hashes": {
+    "exact_check.py": "151f2acbb100838ed45ebc2c7c8083ce657b00323398a1ce5247673587f2ee7b",
+    "audit_source_identity.py": "0b6d28c0fca705f3e1d9aed2332792761907de939e96b33255674addc6c9f256",
+    "compare_replay.py": "cd738f36ba0e5b311f2f062fcd2228f5d9ef6b80d63475b4dfa797b14ef78c3c",
+    "round7_real_certificate.py": "700487878b296b02a1eabee9770fc9177e34235ef4ea32d77832ecc57c2354d6",
+    "round7_basis_witness.json": "2090d7e15392e8e540e07a71dd9dd7ba34715f51128c568c6cbcccb5aca62f44"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "source_sha256": {
+    "FourValueBatchFirstCell.lean": "8288bf3753072d22d5f04a6ba622bca407c9f6c1abd47a7b815e61e2e1baf88d",
+    "FourValueBatchCell5669.lean": "f5a19d129755409257c741d44bd64afb9cd01fc493f4b23eea619283b8b0619a",
+    "FourValueBatchCell49999.lean": "f0df4147d34ac5a17e1db6544899589107560bb5b5e050f0748690edaa47534d",
+    "FourValueBatchEnclosures5669.lean": "2612dba4874565ef5046622a7777e9c439122ee0d6a7cf360550a6587059627e",
+    "FourValueBatchEnclosures.lean": "c9f9b84aeb715a4b630d2b90896f913c6031d8224f69e579ed9f5bceb826e861",
+    "FourValueBatchEnclosures49999.lean": "8aa24535db8bf4fbb6b91dac17bfcb0e614ee39698286f6c01b76fc2811d1227"
+  }
+}

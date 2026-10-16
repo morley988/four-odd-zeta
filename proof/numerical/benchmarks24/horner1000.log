@@ -1,0 +1,12 @@
+type checking took 10.8s
+cumulative profiling times:
+	attribute application 0.0149ms
+	fix level params 0.253ms
+	instantiate metavars 0.0512ms
+	overlappingInstancesLinter 3.34ms
+	process pre-definitions 1.22ms
+	share common exprs 0.0825ms
+	tactic execution 2.49ms
+	tacticAnalysis 2ms
+	type checking 10.8s
+	typeclass inference 18.6ms

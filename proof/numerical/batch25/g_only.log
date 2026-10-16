@@ -1,0 +1,28 @@
+tactic execution of Mathlib.Tactic.normNum took 4.06s
+ring took 409ms
+tactic execution of Mathlib.Tactic.linarith took 1.01s
+share common exprs took 178ms
+type checking took 495ms
+cumulative profiling times:
+	attribute application 0.0789ms
+	compilation (IR) 2.03ms
+	compilation (LCNF base) 38.7ms
+	compilation (LCNF impure) 18.2ms
+	compilation (LCNF mono) 24.5ms
+	congr simp thm 11.6ms
+	elaboration 236ms
+	fix level params 9.36ms
+	instantiate metavars 0.148ms
+	let-to-have transformation 2.07ms
+	linting 123ms
+	norm_num 6.69s
+	overlappingInstancesLinter 7.35ms
+	parsing 10.8ms
+	process pre-definitions 98.6ms
+	ring 409ms
+	share common exprs 179ms
+	simp 22.3ms
+	tactic execution 5.17s
+	tacticAnalysis 37.7ms
+	type checking 499ms
+	typeclass inference 1.29s

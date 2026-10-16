@@ -1,0 +1,323 @@
+\section{The real estimate on a tilted contour}\label{sec:real}
+Contour representations of rational-function linear forms are part of the
+classical approximation framework; see \cite{Nesterenko03}. Here only an
+upper bound is needed: nonvanishing was proved algebraically in
+Section~\ref{sec:rank}, so no saddle-point asymptotic is used to establish it.
+\subsection{An integral representation}
+Set $a=b+\tfrac12$ and $\kappa=3/5$.  Let $\Gamma$ consist of the
+two rays $a+(\kappa\pm i)t$, $t\ge0$, oriented as the left boundary
+of the region containing the real integers greater than $b$.  Define
+\[
+ K_5(z)=\frac1{24}\frac{\mathrm d^4}{\mathrm dz^4}(\pi\cot\pi z).
+\]
+Its principal part at an integer $m$ is exactly $(z-m)^{-5}$.
+\begin{lemma}\label{lem:contour}
+For $\deg P\le\beta+3$, up to an orientation sign independent of $P$,
+\begin{equation}\label{eq:contour}
+ F_4(P)=\frac1{2\pi i}\int_\Gamma w_n(z)P(z^2)K_5(z)\dd z.
+\end{equation}
+On the two rays, $|K_5(a+(\kappa\pm i)t)|\le c_\kappa e^{-2\pi t}$.
+\end{lemma}
+\begin{proof}
+Close the truncated rays at imaginary heights $\pm T$ by horizontal
+segments and a far vertical segment at a half-integer real part
+$R_T\asymp(\kappa+1)T$.  The rational factor has no pole in the
+enclosed region, and the kernel poles there give precisely the Taylor
+coefficients in~\eqref{eq:F}.  The horizontal segments have exponentially
+small integrals.  On the far vertical segment the kernel is bounded
+near the real axis and decays exponentially away from it; the rational
+factor tends to zero at least as $R_T^{-3}$.  The closing integrals
+therefore vanish for each fixed $n$ and $P$.
+
+For $t$ bounded away from zero, differentiation of the elementary
+exponential formula for cotangent gives the stated kernel estimate.
+For small $t$, the ray starts at a half-integer and stays away from
+the pole set.  Compactness supplies a bound on that remaining segment.
+The conjugate ray has the same modulus.  This also proves absolute
+convergence of the improper integrals.
+\end{proof}
+
+\subsection{The limiting root-product potential}
+Write $\alpha_i=a_i/M$, so the fixed list is
+\[
+ \alpha=(.67,.67,.67,.67,.67,.63,.60,.58,.57,.54,.52,.49,.47,.44,.42).
+\]
+Let $\beta_0=\sum\alpha_i-5=361/100=2C$, and set
+\[
+ \zeta_y=1+(\kappa+i)y,\qquad Z_y=\zeta_y^2,\qquad c_y=1+\kappa y.
+\]
+The notation $\zeta_y$ in this section denotes a point on a ray, not
+the Riemann zeta function.  Define
+\begin{align}
+ f(u)&=u\log u-u\quad(u>0),\qquad f(0)=0,\notag\\
+ J(u,y)&=\tfrac u2\log(u^2+y^2)-u+y\arctan(u/y),\notag\\
+ S&=\sum_{i=6}^{15}f(2\alpha_i)-2\sum_{i=1}^{5}f(1-\alpha_i),\label{eq:S}\\
+ G(y)&=S+5\{J(c_y+1,y)-J(c_y-1,y)\}\notag\\
+ &\hspace{18mm}-\sum_{i=1}^{15}\{J(c_y+\alpha_i,y)-J(c_y-\alpha_i,y)\}.
+ \label{eq:G}
+\end{align}
+Continuous limiting values are used when $y=0$ or $u=0$.
+Since $\partial J/\partial u=\log|u+iy|$, one can equivalently write
+\begin{equation}\label{eq:G-integral}
+ G(y)=S+5\int_{-1}^{1}\log|\zeta_y+t|\dd t
+                -\sum_i\int_{-\alpha_i}^{\alpha_i}\log|\zeta_y+t|\dd t.
+\end{equation}
+
+\begin{lemma}\label{lem:weight-potential}
+Uniformly for $y\ge0$ and $n\ge1$,
+\begin{equation}\label{eq:weight-potential}
+ \log|w_n(a+M(\kappa+i)y)|
+ \le MG(y)+O(\log(M+1)+\log(1+y)).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Apply Stirling's formula with logarithmic error (cf.~\cite[\S5.11]{DLMF}) to the finitely many
+factorials in $\mathcal N_n$.  The coefficient of $M\log M$ is
+$2\sum_{i=6}^{15}\alpha_i-2\sum_{i=1}^{5}(1-\alpha_i)=2\beta_0$.
+The root products have the opposite coefficient $-2\beta_0$.
+Their remaining Riemann sums give the integrals in~\eqref{eq:G-integral}.
+For the denominator intervals, $\Re\zeta_y-\alpha_i\ge1-.67>0$;
+monotone integral comparison bounds every endpoint error by
+$O(\log(M+1)+\log(1+y))$.  The numerator interval has a possible
+endpoint singularity at $y=0,t=-1$.  Splitting off its first half-cell
+and integrating $\log t$ explicitly bounds the additional error by
+$O(\log(M+1))$.  The half-unit displacement $a-M=1/2$ is handled by
+the same comparisons.  Finally the explicit factor $2x$ and the
+one extra factor in each $D_a$ contribute only logarithmic terms.
+There are a fixed number of products, which proves the uniform bound.
+\end{proof}
+
+\section{A bounded-root basis adapted to the ray}\label{sec:basis}
+\subsection{The exact finite witness}
+The accompanying file \path{numerical/replay/round7_basis_witness.json} specifies
+$L=45$ rational complex centers $\xi_l$, the rational radius
+$\delta=1/50$, and forty vectors $w^{(j)}=(w_l^{(j)})$ of
+nonnegative rational weights.  Each weight vector sums exactly to one;
+its common denominator is $10^8$.  The centers and nonzero weights are
+also reproduced in Appendix~\ref{app:witness}.  All their root disks lie
+in $|z|\le R$, where
+\begin{equation}\label{eq:R}
+ R=\frac{14697}{5000}=2.9394.
+\end{equation}
+It suffices to verify
+$|\Re\xi_l|+|\Im\xi_l|+\delta\le R$, so no numerical square root
+is needed for this check.
+
+Use knots $s_j=C(2j+1)/80$, $0\le j<40$, together with $0,C$.
+At $s_j$, let the masses be $\mu_l(s_j)=s_jw_l^{(j)}$.
+At zero they are all zero; at $C$ use $\mu_l(C)=Cw_l^{(39)}$.
+Interpolate the masses linearly on every interval between consecutive
+knots.  Thus $\mu_l(s)\ge0$ and $\sum_l\mu_l(s)=s$ on $[0,C]$.
+For $s>0$ put $w_l(s)=\mu_l(s)/s$.
+Define the truncated logarithmic potentials
+\begin{equation}\label{eq:Kpot}
+ \mathcal K_l(y)=\log\max\{|Z_y-\xi_l|,\delta\}
+            +\log\max\{|Z_y-\overline{\xi_l}|,\delta\}.
+\end{equation}
+Truncation at $\delta$ removes logarithmic singularities while preserving
+a polynomial construction realizing the resulting upper bound.
+
+\subsection{Construction of actual polynomials}
+For $0\le i<N$, let $s=i/M$.  When $i>0$ set
+$m_l=\floor{iw_l(s)/2}$; when $i=0$ set every $m_l=0$.
+For each $m_l>0$ take the real monic block
+\begin{equation}\label{eq:block}
+ \bigl[(Y-M^2\xi_l)^{m_l}-(M^2\delta)^{m_l}\bigr]
+ \bigl[(Y-M^2\overline{\xi_l})^{m_l}-(M^2\delta)^{m_l}\bigr].
+\end{equation}
+Let $d=i-2\sum_lm_l$, so $0\le d<2L$, and multiply these blocks
+by $(Y-M^2)^d$.  Denote the resulting monic degree-$i$ polynomial
+by $P_i(Y)$, and put $q_i(Y)=P_i(Y)/(2i)!$.
+Its roots have modulus at most $RM^2$; the filler root $M^2$ also
+satisfies this bound.  The construction is algebraic and explicit.
+It makes no assumption about the roots of an unknown orthogonal polynomial.
+
+\begin{lemma}\label{lem:basis-potential}
+Uniformly for $0\le i<N$ and $y\ge0$,
+\begin{align}
+ \log|q_i(M^2Z_y)|^2
+ \le{}&4i\log M-2\log((2i)!)\notag\\
+ &+M\sum_{l=1}^L\mu_l(i/M)\mathcal K_l(y)+O(1+\log(1+y)).
+ \label{eq:basis-potential}
+\end{align}
+The same estimate, with an additional uniform $O(1)$ error, holds
+when $M\zeta_y$ is replaced by $a+M(\kappa+i)y$ before squaring.
+\end{lemma}
+\begin{proof}
+For each block use $|u^m-v^m|\le2\max(|u|,|v|)^m$.
+In the squared modulus this contributes $2m_l\mathcal K_l(y)$
+after the common powers of $M$ are removed.  Replacing $2m_l$ by
+$iw_l(s)$ costs a bounded amount when $\mathcal K_l$ is negative,
+because $\mathcal K_l\ge2\log\delta$; when it is positive the
+replacement only enlarges the upper bound.  There are at most $L$
+blocks and fewer than $2L$ filler roots.  Their constants and the
+filler factors cost $O(1+\log(1+y))$.  This proves the first assertion.
+
+For the displacement, write
+$Z'_y=(\zeta_y+1/(2M))^2$.  On any fixed bounded $y$ interval,
+$|Z'_y-Z_y|=O(M^{-1})$.  The function
+$\log\max(|z-\xi|,\delta)$ is globally $\delta^{-1}$-Lipschitz,
+so multiplying the change by a total degree $O(M)$ costs $O(1)$.
+For large $y$, the denominators in the logarithmic difference grow
+as $y^2$, whereas $|Z'_y-Z_y|=O((1+y)/M)$; the same uniform bound
+follows.  The finitely many filler roots can be bounded directly.
+\end{proof}
+
+Let $V(s)$ be a continuous piecewise-linear function obtained by
+interpolating upper bounds at the specified knots, each satisfying
+\begin{equation}\label{eq:V}
+ G(y)-2\pi y+\sum_l\mu_l(s)\mathcal K_l(y)\le V(s)
+ \qquad(y\ge0).
+\end{equation}
+Such interpolation remains valid at intermediate $s$, because the
+masses, rather than the weights themselves, were interpolated linearly.
+Section~\ref{sec:real-cert} supplies explicit valid knot bounds.
+
+\begin{proposition}\label{prop:real-rate}
+For every $K$-square minor in~\eqref{eq:minor},
+\begin{equation}\label{eq:real-rate}
+ \limsup_{n\to\infty}M^{-2}\log|D_n|
+ \le \int_0^C V(s)\dd s-2C^2\log(2C)+3C^2.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Use the positive measure $\dd\mu=|w_n(z)K_5(z)|\,|\dd z|/(2\pi)$
+on the two rays.  The preceding estimates and a Laplace upper bound give
+\begin{equation}\label{eq:norm-bound}
+ \log\int|q_i(z^2)|^2\dd\mu
+ \le4i\log M-2\log((2i)!)+MV(i/M)+O(\log(M+1)).
+\end{equation}
+Uniformity on bounded $y$ follows immediately from the pointwise bounds.
+On the unbounded part, the tail estimate in the next section leaves a
+factor $e^{-2\pi M(y-5)}$ times a fixed polynomial; integration changes
+the logarithm by only $O(\log(M+1))$.
+
+The bilinear moment matrix has entries $\int q_iq_j\dd\nu$ with
+$|\dd\nu|=\dd\mu$.  The integral form of Cauchy--Binet, followed by
+Cauchy--Schwarz and the Gram determinant inequality, bounds any minor
+by the product of the selected row and column $L^2(\mu)$ norms.
+Deleting four indices on each side from the sum of the explicit bounds
+in~\eqref{eq:norm-bound} changes it by $O(M\log(M+1))$.
+Stirling and Riemann summation give
+\[
+ M^{-2}\sum_{i=0}^{N-1}\{4i\log M-2\log((2i)!)\}
+ \longrightarrow\int_0^C\{-4s\log(2s)+4s\}\dd s
+ =-2C^2\log(2C)+3C^2.
+\]
+Thus~\eqref{eq:real-rate} holds first in the $q$ basis.
+
+For completeness, consider the change to the arithmetic basis $E_i$.
+After $Y=M^2Z$, the monic versions of both bases have all roots in a
+fixed disk, of radius at most $R_0=\max(R,C^2,1)$.
+Their coefficient matrices are unitriangular, with entries of degree
+drop $h$ bounded by $\binom{i}{h}R_0^h\le(NR_0)^h$.
+Inverting a unitriangular matrix by degree-drop compositions gives
+inverse entries bounded by $(2NR_0)^h$.  Restoring the powers of $M$
+and factorial diagonal factors still bounds every entry of each
+change-of-basis matrix and its inverse by $\exp(O(N\log(N+1)))$.
+
+Let $T$ be the change from $q_i$ to $E_i$.  Its diagonal is
+$(1,2,\ldots,2)$, so $\det T=2^{N-1}$.  Jacobi's complementary-minor
+identity expresses a $(N-4)$-minor of $T$ as $\det T$ times a
+four-by-four minor of $T^{-1}$, up to sign.  Each is therefore
+$\exp(O(M\log(M+1)))$ in absolute value.  Applying Cauchy--Binet
+on both sides of the moment matrix transfers the bound to every
+$E$-minor.  There are only $\binom N4^2$ terms, which add a smaller
+logarithmic error.  This proves the proposition without any
+assumption about principal minors.
+\end{proof}
+
+\section{Certification of the real exponent}\label{sec:real-cert}
+\subsection{Cell bounds on the finite interval}
+The numerical data are checked using Arb ball arithmetic \cite{Arb} at
+256-bit precision, together with exact rational checks of directed rounding.  It encloses every
+cell; sampled maxima are not used as rigorous suprema.
+For $y>0$, differentiation of~\eqref{eq:G} gives
+\begin{equation}\label{eq:derivative-lower}
+ (G(y)-2\pi y)'\ge-L_0,\qquad
+ L_0=\kappa\sum_i\log\frac{1+\alpha_i}{1-\alpha_i}
+                    +\frac{19\pi}{2}.
+\end{equation}
+Indeed, a symmetric integral of width $2\alpha$ has ray derivative
+\[
+ \frac\kappa2\log\frac{(c_y+\alpha)^2+y^2}{(c_y-\alpha)^2+y^2}
+       +\arctan\frac{c_y+\alpha}{y}-\arctan\frac{c_y-\alpha}{y}.
+\]
+For $\alpha=1$ this is nonnegative.  For $\alpha<1$ it is at most
+$\kappa\log((1+\alpha)/(1-\alpha))+\pi/2$.
+Adding the derivative of $-2\pi y$ proves~\eqref{eq:derivative-lower}.
+Thus, on a cell $[l,h]$ of width $\Delta$,
+\[
+ G(y)-2\pi y\le G(h)-2\pi h+L_0\Delta.
+\]
+Also the quadratic map $Z_y$ differs from linear interpolation between
+$Z_l,Z_h$ by at most $(1+\kappa^2)\Delta^2/4$.  Therefore
+\begin{equation}\label{eq:distance-cell}
+ \max(|Z_y-\xi|,\delta)\le
+ \max(|Z_l-\xi|,|Z_h-\xi|,\delta)+\frac{1+\kappa^2}{4}\Delta^2.
+\end{equation}
+The same applies to $\overline\xi$.  Endpoint squared distances are
+rational; an integer-square-root ceiling gives an upward rational
+bound for each distance, and Arb bounds its logarithm.
+
+We use $50{,}000$ cells of width $\Delta=10^{-4}$ on $[0,5]$.
+Each bound for $G-2\pi y$ and for each $\mathcal K_l$ is rounded
+upward to a multiple of $10^{-8}$.  The distance ceilings use scale
+$10^{10}$.  Nonnegative integer weights allow the weighted potential
+to be evaluated exactly.  The current verification uses arbitrary-precision integer and rational
+arithmetic for the algebraic expressions, squared-distance inequalities,
+cutoffs, log-pair bounds and weighted knot bounds. The two finite families
+of logarithm and arctangent enclosures are checked separately, as described
+in Section~\ref{sec:verification}.
+
+\subsection{The unbounded tail}
+Let $D=(5+\sum_i\alpha_i^3)/3$.  Expanding the symmetric integral
+in~\eqref{eq:G-integral} in powers of $t/\zeta_y$ gives, for
+$|\zeta_y|>1$,
+\begin{equation}\label{eq:G-tail}
+ G(y)\le S-2\beta_0\log|\zeta_y|
+                         +\frac{D}{|\zeta_y|^2-1}.
+\end{equation}
+For example, the absolute value of the correction to
+$2\alpha\log|\zeta_y|$ is bounded by
+$\sum_{h\ge1}\alpha^{2h+1}/(h(2h+1)|\zeta_y|^{2h})
+\le\alpha^3/[3(|\zeta_y|^2-1)]$.
+The root bound~\eqref{eq:R} gives
+\[
+ \sum_l\mu_l(s)\mathcal K_l(y)
+ \le2s\log(|\zeta_y|^2+R)
+ \le4s\log|\zeta_y|+\frac{2sR}{|\zeta_y|^2}.
+\]
+Since $s\le C=\beta_0/2$ and $|\zeta_y|\ge y$, the full expression
+in~\eqref{eq:V}, for $y\ge5$, is at most
+\begin{equation}\label{eq:tail-constant}
+ S+\frac D{24}+\frac{2CR}{25}-10\pi-2\pi(y-5).
+\end{equation}
+The constant part has the certified upper bound $-33.82285507$.
+It is included in every knot maximum, and is below all active maxima.
+The final negative linear term justifies the integrability assertion
+used in~\eqref{eq:norm-bound}.
+
+\subsection{Exact output and its use}
+The full-grid linkage checks the upper potential bound at all 42 knots
+(including $0$ and $C$) on each of the $50{,}000$ cells. The infinite tail
+is bounded analytically. Trapezoidal integration of the resulting
+piecewise-linear knot majorant is exact. The output is
+\begin{align}
+ \int_0^C V(s)\dd s
+ &\le-\frac{13277632257660676586509793}
+                 {1024000000000000000000000},\label{eq:V-integral}\\
+ \int_0^CV(s)\dd s-2C^2\log(2C)+3C^2
+ &\le-\frac{577853339}{50000000}=A_*.
+ \label{eq:A-certified}
+\end{align}
+The final logarithmic constant is bounded by a rational inequality proved
+in Lean. The external tables provide the cell-level elementary-function
+values; the formal interpolation, tail and determinant estimates establish
+their applicability. Equations~\eqref{eq:A-certified} and~\eqref{eq:real-rate}
+prove~\eqref{eq:main-upper}. More precisely, the formal theorem produces a
+single error sequence $E_n$, independent of the selected minor, with
+$E_n/n^2\to0$, such that
+\begin{equation}\label{eq:uniform-upper}
+ |D_n|\le\exp\bigl(A_*(100n)^2+E_n\bigr).
+\end{equation}

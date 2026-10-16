@@ -1,0 +1,36 @@
+name: Finite numerical verification
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  numerical:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/restore_certificates.py
+      - run: python scripts/check_package.py
+      - run: python -m pip install -r requirements.txt
+      - name: Clear historical reports before fresh execution
+        run: rm -f proof/numerical/external26/verification_round29.json proof/numerical/fullgrid27/verification_round29.json proof/numerical/global28/verification.json
+      - name: Transcendental enclosures
+        id: transcendental
+        working-directory: proof
+        run: python numerical/external26/verify_values.py numerical/external26/transcendental_values.txt --report numerical/external26/verification_round29.json
+      - name: Analytic full grid
+        working-directory: proof
+        run: python numerical/fullgrid27/verify_grid.py --out numerical/fullgrid27/verification_round29.json
+      - name: Arithmetic cells
+        working-directory: proof
+        run: python numerical/global28/verify_arithmetic.py
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.transcendental.outcome != 'skipped'
+        with:
+          name: numerical-reports
+          path: |
+            proof/numerical/external26/verification_round29.json
+            proof/numerical/fullgrid27/verification_round29.json
+            proof/numerical/global28/verification.json

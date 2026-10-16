@@ -1,0 +1,100 @@
+GLOBAL ARITHMETIC LOWER BOUND — ROUND 28
+2026-10-15
+
+Status: COMPLETE under the explicitly authorized external finite-calculation assumptions. This is not an assumption-free Lean proof. The final contradiction for the four zeta values is the next assembly step and is not claimed in this release.
+
+The proved result
+
+Assume ζ(7), ζ(9), ζ(11), and ζ(13) are rational. For every sufficiently large natural number n, there is a nonzero rational q_n equal to a selected minor of the actual analytic-coordinate zeta matrix, and
+
+    log |q_n| ≥ −(288/25)(100n)² = −11.52(100n)².
+
+The minor has K_n = floor(361n/2) − 3 rows and columns for n ≥ 1. Its rows and columns are injectively selected from the same matrix used by the existing analytic upper-bound theorem. No change of determinant or unproved coordinate identification is inserted here.
+
+The conditional theorem is
+  OddZeta.FourValue.ArithmeticCertificate.global_arithmetic_lower_of_certificate
+in FourValueGlobalArithmeticLower.lean. Its kernel axiom set is exactly
+  propext, Classical.choice, Quot.sound.
+
+The released wrapper is
+  OddZeta.FourValue.ArithmeticCertificate.global_arithmetic_lower
+in FourValueGlobalArithmeticComplete.lean. It supplies the external finite certificate and therefore also depends on sorryAx.
+
+The previous analytic upper rate is −577853339/50000000 = −11.55706678. The proved arithmetic lower rate leaves the strict separation
+
+    −11.52 − (−11.55706678) = 1853339/50000000 = 0.03706678.
+
+The result is eventual: no explicit numerical cutoff N is claimed. The cutoff can depend on the fixed denominators under the hypothetical rationality assumption and on the finite certificate's error constants.
+
+What was checked independently
+
+arithmetic_cells.txt has 171,504 rows. Each row contains four exact quantities:
+  lower u endpoint, upper u endpoint, integer optimization parameter, claimed rational lower value.
+Here u = p/n. The cells cover (1/20, 361] with exact adjacency and no gaps.
+
+verify_arithmetic.py uses python-flint 0.9.0 for arbitrary-precision exact rational arithmetic. It reconstructs 3,810,331 residue boxes, including boxes with zero capacity, checks the rational corner bounds, normalization and capacity conditions, and computes the finite integer optimization penalties. No floating-point comparison is used.
+
+For each box, the integer cost is either m² + a m or max(m² + a m, ν m). The maximum of price*m minus that cost on 0 ≤ m ≤ capacity is attained at an endpoint, an integer nearest the quadratic vertex, or the integer kink ν−a. The checker evaluates those candidates. It does not enumerate every integer up to every capacity.
+
+Each cell-integral contribution is rounded DOWN at 10^−8. The verified lower bound for the total integral is
+
+    −1434459186663/12500000 = −114756.73493304,
+
+which is greater than the finite certificate's required −114800. After division by 10000 and subtraction of the small-prime allowance 361/10000, the verified normalized lower estimate is
+
+    −1438971686663/125000000000 = −11.511773493304.
+
+The check passed all 171,504 cells in 676.93 seconds with four worker processes, while other restoration/build work was running. The maximum reconstructed box penalty was 52,200,625. Three negative controls were rejected: an impossible lower value, an out-of-domain optimization parameter, and a reversed interval. The program rejects Python's -O mode, which would disable assertion checks.
+
+Data SHA-256:
+  47a47cc92720477944b27b2e5ba7d6959a738d4078e81c096d61ab1a20999e61
+
+Run independently with the text file and program in the same directory:
+  python -m pip install python-flint==0.9.0
+  python verify_arithmetic.py
+Optional: --workers 1 for a single worker. Successful execution writes verification.json.
+
+The isolated calculation interface
+
+There is exactly ONE new admission, in FourValueExternalGlobalArithmetic.lean:
+
+    theorem external_grid_certificate : ∃ G : Grid, G.Valid := by
+     sorry -- EXTERNAL_GLOBAL_ARITHMETIC_CERTIFICATE_V1
+
+Grid.Valid is a finite integer/rational predicate. It fixes 171,504 cells, endpoints, ordering, adjacency, finite box conditions, and the rational integral lower bound. The checker reconstructs the witness from the supplied text data. This admission asserts only the existence of that finite certificate. It does not assert a prime asymptotic, an infinite family of determinant inequalities, or the global lower bound.
+
+The exact marked line occurs once and only in this file. For example, search project Lean sources for
+  ^\s*sorry -- EXTERNAL_GLOBAL_ARITHMETIC_CERTIFICATE_V1$
+
+The project now has EIGHT marked proof admissions: the unchanged two transcendental-value families, unchanged five finite-rational families, and this one global arithmetic certificate. A pre-existing comment in FourValueCore.lean contains the word “sorry”; it is not a proof admission. The source audit strips comments and strings and checks the exact marked proof lines and pinned statements.
+
+The mathematical assembly
+
+Lean proves the transitions from rational corner bounds to integer floor bounds; from those bounds to local corrected-coordinate determinant valuations; the finite sum over residue classes, including all boundary classes; the selected factorial contribution; the large-prime integral tail; and the rational product-formula inequality.
+
+Writing θ and ψ for the Chebyshev functions, the resulting lower bound is a finite weighted sum of
+  n [θ(h_i n) − θ(l_i n)],
+minus a fixed certificate error times θ(361n), a denominator term K_n log Q, and
+  40 K_n [ψ(800n) − θ(800n) + θ(n/20)].
+
+The prime number theorem, K_n/n → 361/2, and the fixed nature of the error constants give, after division by (100n)², a limiting lower rate at least
+  −114800/10000 − 361/10000 = −11.5161.
+The strict slack between −11.5161 and −11.52 yields the stated eventual bound.
+
+The PNT dependency is PrimeNumberTheoremAnd, pinned to commit
+  650d31264be65f4cd6e70c45d8b25d86d482a761.
+Its source contains two unrelated admitted lemmas in Wiener.lean. The axiom audit of the conditional global theorem confirms that neither is in this theorem's dependency closure. Those dependency admissions are not included in the count of eight project admissions.
+
+Validation and reproducibility
+
+All 242 Lean source files from Round 27 are byte-for-byte unchanged. The audit checks 1,864 declarations: the previous 1,715 plus 149 new public declarations. All prior axiom sets are preserved. Among the new declarations, only external_grid_certificate and the supplied-certificate wrapper global_arithmetic_lower depend on sorryAx. The conditional mathematical derivation does not.
+
+The release includes the numerical result, negative controls, baseline source hashes, exact admitted-statement hashes, and the complete axiom audit log. Use numerical/global28/audit_checkpoint.py finish to inspect the packaged evidence. To regenerate the Lean build and axiom audit, install the pinned Lean toolchain, then run from the project root:
+  bash numerical/global28/verify_lean.sh
+The script obtains the dependency cache and uses the included serial build helper to limit concurrent memory use.
+
+Lean: 4.33.1.
+Mathlib commit: 0df444a360eaa60ab8c11dca51a86af692955474.
+The cumulative Round 28 archive includes the earlier numerical data and verification programs as well as this stage's sources. Build caches and transient diagnostics are excluded.
+
+An interruption required recovery of the saved checkpoint and reconstruction of later local source files. This release is validated against the reconstructed, saved source itself; surviving earlier build logs are not used as a substitute for the fresh build and audit.

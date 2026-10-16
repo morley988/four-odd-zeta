@@ -1,0 +1,42 @@
+norm_num took 115ms
+tactic execution of Mathlib.Tactic.normNum took 4.48s
+ring took 405ms
+tactic execution of Mathlib.Tactic.linarith took 879ms
+share common exprs took 180ms
+type checking took 416ms
+type checking took 15.3s
+type checking took 15.5s
+type checking took 15.8s
+type checking took 16.2s
+type checking took 16.4s
+type checking took 16.5s
+type checking took 19.2s
+type checking took 26.2s
+FourValueBatchCell5669.lean:64:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'OddZeta.FourValue.Batch.Cell5669.all_knots_on_cell' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 26.3s
+cumulative profiling times:
+	attribute application 0.211ms
+	compilation (IR) 2.38ms
+	compilation (LCNF base) 33.9ms
+	compilation (LCNF impure) 13.6ms
+	compilation (LCNF mono) 21.1ms
+	congr simp thm 16.9ms
+	elaboration 26.6s
+	fix level params 11.1ms
+	instantiate metavars 0.715ms
+	let-to-have transformation 2.45ms
+	linting 178ms
+	norm_num 7.17s
+	overlappingInstancesLinter 7.39ms
+	parsing 20ms
+	process pre-definitions 116ms
+	ring 405ms
+	share common exprs 185ms
+	simp 47.4ms
+	tactic execution 5.75s
+	tacticAnalysis 46.1ms
+	type checking 142s
+	typeclass inference 1.66s

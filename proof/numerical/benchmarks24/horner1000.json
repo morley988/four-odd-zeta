@@ -1,0 +1,9 @@
+{
+  "label": "horner1000",
+  "file": "FastHornerBenchmark.lean",
+  "exit_code": 0,
+  "wall_seconds": 16.07599041100184,
+  "user_seconds": 14.318422,
+  "system_seconds": 1.819696,
+  "peak_rss_kib": 4594204
+}

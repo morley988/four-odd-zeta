@@ -1,0 +1,147 @@
+FOUR-VALUE LEAN PROOF — ROUND 20
+Uniform asymptotic errors; cumulative contour/basis checkpoint
+2026-10-14
+
+STATUS AND TIMING
+The requested concrete contour/basis verification passed in Round 19 after
+about 93 minutes, within the user's two-hour threshold. Work then continued
+on uniform asymptotic errors under the authorization for up to two more hours.
+The uniform error argument is now verified, with the later numerical
+certificate retained as an explicit hypothesis. The full proposed theorem
+that at least one of zeta(7), zeta(9), zeta(11), zeta(13) is irrational is
+NOT yet verified.
+
+Uniform-error work began: 2026-10-14T05:06:00+00:00
+Full build and audit completed by: 2026-10-14T05:56:34.608980+00:00
+Additional elapsed time, including runtime recovery and audit: 50.6 minutes.
+
+VERIFICATION EVIDENCE
+Lean leanprover/lean4:v4.33.1; mathlib 0df444a360eaa60ab8c11dca51a86af692955474.
+1222 audited theorem declarations across 198 substantive modules.
+This round adds 121 theorems in 30 modules.
+All 168 Round 19 substantive proof modules are byte-for-byte unchanged.
+The full Lake build and per-declaration axiom audit pass. Only propext,
+Classical.choice and Quot.sound are permitted. There are no sorry/admit
+proof holes, native_decide uses or custom axioms in project proof sources.
+The saved logs, key statements, declaration lists and hashes record the checks.
+
+NEWLY VERIFIED UNIFORM ESTIMATES
+Write M=100n, C*=361/200, s=i/M, and zeta(y)=1+(3/5+I)y.
+All estimates refer to the actual analytic functions and concrete basis.
+
+1. Factorials and normalization.
+   The Stirling remainder log(m!)-(m+1/2)log(m)+m lies in [11/12,1]
+   for m>=1. The zero case is covered by a separate uniform main-term bound.
+   After the explicit entropy and constant correction are retained, the
+   target factorial normalization has absolute error at most 5/6 for n>=1.
+   The basis factorial row rate is r(s)=-4s log(2s)+4s, continuous also at 0.
+
+2. Root products and half-unit contour shift.
+   The centered root-product logarithm differs from its root-log integral
+   by an error between the two endpoint logarithms. Scaling is exact.
+   The potential change under the half-step shift is bounded uniformly,
+   including arbitrarily small positive y and the unbounded contour.
+   Consequently, for an explicit constant Cw independent of n and y,
+     log|w_n(gamma_n(My))| <= M G(y) - (13/2)log M
+                              + Cw + (17/2)log(1+y).
+   The actual 45-center basis has the uniform bound
+     2 log|q_i(gamma_n(My)^2)| <= 4i log M - 2log((2i)!)
+         + i P_s(zeta(y)^2) + Cb + 360log(1+y)
+   whenever that basis value is nonzero; the norm/density bounds include zeros.
+
+3. Uniform contour integration.
+   A common integrable majorant, with polynomial growth times exp(-2*pi*y),
+   controls every index. Lower and upper energies are equal by the proved
+   conjugation identities. If the numerical envelope V satisfies the
+   pointwise certificate and has a fixed lower bound, then one constant C
+   works simultaneously for all n>=1 and all admissible i:
+     Energy(n,i) <= C M exp(M*(V(i/M)+r(i/M))).
+   No Laplace asymptotic or unproved integral bound is assumed.
+
+4. Selected minors, basis transfer and row sums.
+   The loss from omitting four indices is bounded explicitly. The factorial
+   minor prefactor, the contour-size prefactor, and the exact triangular
+   basis transfer all have logarithms negligible after division by n^2.
+   The actual floor-sized row sum converges to the integral of every
+   continuous envelope plus r. A direct quadrature-error proof handles the
+   moving last grid point and the extra endpoint term.
+   The factorial contribution integrates exactly to
+     integral_0^C* r(s) ds = -2(C*)^2 log(2C*) + 3(C*)^2.
+
+5. Combined theorem for the ACTUAL analytic square-basis zeta matrix.
+   Given a continuous envelope V on [0,C*], a lower bound, and the numerical
+   pointwise certificate, Lean proves the existence of a single sequence E
+   with E(n)/n^2 -> 0 such that EVERY codimension-four selected minor satisfies
+     |det| <= exp(M^2 A(V) + E(n)),
+     A(V) = integral_0^C* V(s) ds - 2(C*)^2 log(2C*) + 3(C*)^2.
+   The estimate is uniform over the row and column selections. It includes
+   the exact change from the adapted basis to the analytic square basis.
+
+NUMERICAL CERTIFICATE BOUNDARY — STILL OPEN
+The root-log integral is proved equal to the manuscript's explicit primitive
+  J(u,y)=(u/2)log(u^2+y^2)-u+y*arctan(u/y), y>0.
+Thus the remaining pointwise hypothesis is exactly
+  G(y)-2*pi*y+s*P_s(zeta(y)^2) <= V(s),
+with the actual 40 weight rows and 45 centers, not an abstract replacement.
+The concrete certificate interpolant still needs to be instantiated, including
+its continuity/lower bound and the connection of its integral to the stored
+rational trapezoid. Its transcendental grid and tail inequalities remain open.
+A further checked implication gives the rate -11.55706678 if that pointwise
+certificate and the stated rational quadrature upper bound are supplied.
+This implication is NOT a proof that those numerical hypotheses hold.
+
+ARITHMETIC COORDINATE BOUNDARY — STILL OPEN
+Round 19 corrected the analytic coordinates to E_i(x^2); the earlier physical
+arithmetic model used E_i(4x^2). These factors affect the quadratic main rate.
+The analytic coordinate map P(X)->P(X/4), its rank preservation and the actual
+analytic bounds are verified. Existing arithmetic remains valid in its original
+coordinates. An arithmetic adapter for the corrected basis, especially at p=2,
+is still required. The two sides are not yet bounds for the same determinant.
+
+REMAINING WORK FOR THE FULL FOUR-VALUE THEOREM
+- Instantiate and verify the numerical envelope, quadrature, grid and tail certificate.
+- Connect the concrete prime valuations to the corrected analytic coordinates.
+- Prove the global arithmetic allocation/prime-sum lower bound.
+- Assemble the arithmetic and analytic inequalities with nonvanishing to obtain
+  the final irrationality contradiction.
+
+REPRODUCTION AND SCOPE
+From lean/, restore the pinned dependencies and run bash verify.sh. This
+regenerates the build, axiom audit, key statements and verification.json.
+The archive excludes the toolchain and .lake cache. It includes proof source,
+audit data, logs, baseline-preservation hashes and the runtime shim source.
+During this round the earlier session's runtime directory disappeared; it was
+restored from cached archives before the complete build and audit were rerun.
+No verifier or proof-kernel behavior was changed.
+
+NEW MODULES
+FourValueActualBasisUniform.lean: 2 theorem declarations
+FourValueCertificatePotential.lean: 5 theorem declarations
+FourValueContourConjugation.lean: 10 theorem declarations
+FourValueFactorialRowError.lean: 4 theorem declarations
+FourValueLaplaceMajorant.lean: 1 theorem declarations
+FourValueMinorOverhead.lean: 6 theorem declarations
+FourValueNormalizationLog.lean: 6 theorem declarations
+FourValueRateMajorant.lean: 5 theorem declarations
+FourValueRiemannError.lean: 2 theorem declarations
+FourValueRootIntegralShift.lean: 5 theorem declarations
+FourValueRootLogProfile.lean: 6 theorem declarations
+FourValueRowRateIntegral.lean: 4 theorem declarations
+FourValueRowRiemannLimit.lean: 3 theorem declarations
+FourValueScaledRootIntegral.lean: 5 theorem declarations
+FourValueSelectedRateError.lean: 4 theorem declarations
+FourValueShiftedBasisBound.lean: 4 theorem declarations
+FourValueTransferLogError.lean: 5 theorem declarations
+FourValueTransferPolynomialBound.lean: 5 theorem declarations
+FourValueUniformAnalysisComplete.lean: 2 theorem declarations
+FourValueUniformAsymptotics.lean: 2 theorem declarations
+FourValueUniformContourShift.lean: 6 theorem declarations
+FourValueUniformContourSize.lean: 2 theorem declarations
+FourValueUniformDensity.lean: 3 theorem declarations
+FourValueUniformLaplace.lean: 4 theorem declarations
+FourValueUniformMinorBound.lean: 2 theorem declarations
+FourValueUniformStirling.lean: 4 theorem declarations
+FourValueWeightEndpointBounds.lean: 5 theorem declarations
+FourValueWeightLog.lean: 5 theorem declarations
+FourValueWeightScaledBound.lean: 1 theorem declarations
+FourValueWeightUniform.lean: 3 theorem declarations

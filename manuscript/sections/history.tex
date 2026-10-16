@@ -1,0 +1,88 @@
+\subsection{Historical background}
+Euler's evaluation of the even zeta values,
+\[
+ \zeta(2k)=(-1)^{k+1}\frac{B_{2k}(2\pi)^{2k}}{2(2k)!},
+\]
+places their arithmetic in a different setting from that of the odd values;
+see \cite[\S25.6]{DLMF}. Ap\'ery's 1978 discovery, published in
+\cite{Apery}, established the irrationality of $\zeta(3)$ through specially
+structured rational approximations. Beukers subsequently gave an integral
+proof \cite{Beukers}. These arguments illustrate a recurrent principle:
+one must construct an expression that is both analytically small and
+arithmetically constrained, while also proving that it does not vanish.
+The last condition is indispensable, even when strong denominator bounds
+and decay estimates are available.
+
+Rivoal \cite{Rivoal00}, and Ball and Rivoal \cite{BR}, established that
+infinitely many odd zeta values are irrational. More quantitatively, their
+work gives a logarithmically growing lower bound for the dimension over
+$\Q$ of the span of $1,\zeta(3),\zeta(5),\ldots,\zeta(s)$ as the odd
+integer $s$ tends to infinity. This is a linear-independence statement,
+stronger than a corresponding count of irrational entries. Fischler's
+Bourbaki account \cite{Fischler04} explains the connections among rational
+approximation, hypergeometric series, and the irrationality criteria used
+in this development.
+
+Explicit short lists pose a related but distinct problem. Rivoal's
+nine-value result \cite{Rivoal02}, announced in 2001, concerns
+$\zeta(5),\zeta(7),\ldots,\zeta(21)$. Zudilin proved in 2001 that at least
+one of $\zeta(5),\zeta(7),\zeta(9),\zeta(11)$ is irrational
+\cite{Zudilin01}. His later systematic treatment \cite{Zudilin04} develops
+hypergeometric constructions and their arithmetic, including the removal
+of common prime factors. Integral and series representations of such
+linear forms are also developed by Nesterenko \cite{Nesterenko03}.
+
+Subsequent work has pursued both more elementary proofs and stronger
+asymptotic counts. Zudilin \cite{Zudilin18} obtained an elementary proof
+that one of the odd values from $\zeta(5)$ through $\zeta(25)$ is irrational,
+using the prime number theorem and Stirling's formula among its analytic
+ingredients. Fischler, Sprang and Zudilin \cite{FSZ} proved a lower bound
+$2^{(1-\varepsilon)\log s/\log\log s}$ for the number of irrational odd
+zeta values up to $s$, for sufficiently large $s$. Lai and Yu \cite{LY}
+improved this to $(1.192507\ldots-\varepsilon)\sqrt{s/\log s}$.
+Lai's subsequent refinement \cite{Lai26} gives
+$1.284\sqrt{s/\log s}$ among $\zeta(3),\zeta(5),\ldots,\zeta(s-1)$ for
+sufficiently large even $s$, combining the elimination method with
+Zudilin's prime-divisor improvement. These are counts of irrational
+values; they should not be confused with lower bounds of the same size
+for the dimension of their rational span.
+
+The fixed set studied here is $\{\zeta(7),\zeta(9),\zeta(11),\zeta(13)\}$.
+It excludes $\zeta(5)$ and includes $\zeta(13)$, so the result of
+\cite{Zudilin01} alone does not imply the desired conclusion. Nor does an
+asymptotic counting theorem automatically settle this particular short
+interval. The comparison concerns the supports of the assertions, not a
+claim to subsume those earlier theorems. The discussion above records relevant precedents rather than an
+exhaustive priority survey.
+
+\subsection{The determinant construction and its verification}
+The starting point is a factorial-normalized rational function, in the
+tradition of \cite{BR,Zudilin04}. Its fourth Taylor coefficient shifts the
+surviving odd pole orders $3,5,7,9$ to the arguments $7,9,11,13$.
+The present argument uses a growing moment matrix rather than requiring
+one prescribed scalar linear form to be nonzero. A finite Pearson
+classification and a truncated Hankel extension force its rank to be
+within four of its size, uniformly under arbitrary complex substitutions
+for the four target zeta values. One then selects an almost full nonzero
+minor. Uniform estimates for every minor of that size ensure that the
+selection creates no unproved size condition.
+
+On the analytic side, a tilted contour and an explicit bounded-root basis
+give a uniform upper exponent. On the arithmetic side, local square-minor
+valuations are combined by a finite dual inequality; rational boxes control
+all floor values on whole parameter cells. The use of $p$-adic valuations
+here concerns rational numbers and the product formula. The theorem is
+about the classical real zeta function, not a $p$-adic zeta function.
+
+This version incorporates the completed Round~29 reduction and final audit
+\cite{Project}. Lean~4 \cite{Lean4}, Mathlib \cite{Mathlib}, and a pinned
+prime-number-theorem development \cite{PNT} check the mathematical
+implications from explicit finite certificates to the classical zeta
+conclusion. Eight isolated admissions supply the finite numerical families;
+separate programs check their data using exact rational arithmetic and Arb
+ball arithmetic \cite{Arb}. Thus the result has a completed formal reduction
+with externally checked finite inputs. It is not an admission-free Lean
+formalization. Section~\ref{sec:verification} and
+Appendix~\ref{app:reproduction} specify the boundary and reproduction steps.
+
+\subsection{Statement and rates}

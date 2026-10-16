@@ -1,0 +1,12 @@
+# Local tools and generated artifacts
+.venv/
+__pycache__/
+*.pyc
+**/.lake/
+proof/numerical/external26/transcendental_values.txt
+proof/numerical/fullgrid27/grid_arithmetic.txt
+*.restore-tmp
+manuscript/*.aux
+manuscript/*.log
+manuscript/*.out
+manuscript/*.toc

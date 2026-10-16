@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "positive_control": true,
+  "rejected_mutations": [
+    "false_lower",
+    "price_outside_domain",
+    "reversed_interval"
+  ],
+  "optimized_execution_rejected": true
+}

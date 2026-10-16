@@ -1,0 +1,10 @@
+{
+  "file": "transcendental_values.txt",
+  "sha256": "89ce7741b3c7e5ac48d5f0d12c0ac2a07bf6a12ff47e836c5523e91be1429840",
+  "log_count": 5700022,
+  "atan_count": 1200000,
+  "rows": 6900022,
+  "bytes": 400205372,
+  "seconds": 95.26729241200519,
+  "complete": true
+}

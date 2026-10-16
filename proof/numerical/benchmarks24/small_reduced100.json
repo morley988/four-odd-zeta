@@ -1,0 +1,9 @@
+{
+  "label": "small_reduced100",
+  "file": "FastReducedBenchmark.lean",
+  "exit_code": 0,
+  "wall_seconds": 9.53308876799565,
+  "user_seconds": 7.801084,
+  "system_seconds": 1.841013,
+  "peak_rss_kib": 3920464
+}

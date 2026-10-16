@@ -1,0 +1,7 @@
+ROUND28 COMPLETE: Global arithmetic lower bound, 2026-10-15.
+The actual nonzero analytic-coordinate rational minor eventually satisfies log|q_n| >= -11.52(100n)^2 under the hypothetical rationality of zeta(7), zeta(9), zeta(11), zeta(13).
+Conditional mathematical derivation: standard Lean axioms only. Exactly one new isolated finite rational certificate admission; eight marked project admissions total.
+Independent exact-rational verification:171504 cells,3810331 boxes; normalized bound -11.511773493304.
+Axiom audit:1864 declarations. All242 previous Lean source files unchanged.
+See Global_Arithmetic_Report_2026-10-15.txt and lean/global_arithmetic_verification.json.
+The final four-value contradiction is the next stage and is not claimed here.

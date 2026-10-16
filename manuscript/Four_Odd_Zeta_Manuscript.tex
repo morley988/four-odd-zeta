@@ -1,0 +1,289 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!60!black,citecolor=blue!50!black]{hyperref}
+\usepackage{xcolor}
+\hypersetup{pdftitle={A determinant argument for four odd zeta values},pdfsubject={Completed reduction, finite certificates, and historical context}}
+\usepackage{enumitem}
+\setlist{itemsep=3pt,topsep=5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Q}{\mathbb Q}\newcommand{\R}{\mathbb R}\newcommand{\C}{\mathbb C}\newcommand{\Z}{\mathbb Z}\newcommand{\N}{\mathbb N}
+\newcommand{\Res}{\operatorname{Res}}\newcommand{\rank}{\operatorname{rank}}\newcommand{\lc}{\operatorname{lc}}
+\newcommand{\ord}{\operatorname{ord}}\newcommand{\dd}{\,\mathrm d}\newcommand{\eps}{\varepsilon}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\supp}{\operatorname{supp}}
+\DeclareMathOperator*{\liminfN}{lim\,inf}
+\title{A determinant argument for four odd zeta values\\[3pt]\large Completed reduction and finite certificates}
+\author{}
+\date{Revised 15 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We develop a determinant argument concerning the four values
+$\zeta(7)$, $\zeta(9)$, $\zeta(11)$ and $\zeta(13)$, proving that they
+cannot all be rational.  A rational-function moment family
+has a fourth Taylor coefficient involving exactly these four values.
+A finite Pearson-functional classification gives uniform nonvanishing of
+an almost full Hankel minor, including after arbitrary complex substitution
+for the four zeta values.  A tilted contour and an explicitly specified
+bounded-root polynomial basis give an upper exponent for every such minor.
+Local $p$-adic jet estimates give a lower exponent under simultaneous
+rationality.  The numerical parts are reduced to finite, reproducible
+integer/rational and interval-arithmetic certificates, with normalized
+gap $0.03706678$. The mathematical reduction to finite certificates has
+been checked in Lean; eight isolated numerical admissions are independently
+verified by exact rational and rigorous ball-arithmetic computations.
+\end{abstract}
+\noindent\textbf{Verification status.}
+This revision incorporates the completed formal reduction and reproducibility
+audit. The supplied-certificate theorem retains eight explicitly identified
+finite-calculation admissions; it is not an admission-free formalization.
+The manuscript has not undergone independent peer review.
+\clearpage
+\begingroup
+\setcounter{tocdepth}{1}
+\tableofcontents
+\endgroup
+\clearpage
+
+\section{Introduction}\input{sections/history.tex}
+For an integer $s>1$, write $\zeta(s)=\sum_{m=1}^\infty m^{-s}$.
+With the finite certificates specified below, the conclusion is the following.
+\begin{theorem}\label{thm:main}
+At least one of $\zeta(7),\zeta(9),\zeta(11),\zeta(13)$ is irrational.
+\end{theorem}
+The argument is by contradiction.  With $M=100n$, we construct a nonzero
+rational number $D_n$ under the hypothesis that all four values are rational.
+Its definition involves a minor selected from a matrix of dimension
+$N=\floor{361n/2}+1$; the selected row and column sets need not be the same.
+Uniformly in these sets, we obtain
+\begin{align}
+\limsup_{n\to\infty}M^{-2}\log\abs{D_n}
+ &\le A_*=-\frac{577853339}{50000000},\label{eq:main-upper}\\
+\liminf_{n\to\infty}M^{-2}\log\abs{D_n}
+ &\ge P_*=-\frac{288}{25}.\label{eq:main-lower}
+\end{align}
+The arithmetic assertion is stronger than the displayed liminf statement:
+its lower bound holds for every sufficiently large $n$. The exact difference is
+\begin{equation}\label{eq:gap}
+ P_*-A_* = \frac{1853339}{50000000}
+ =0.03706678>0.
+\end{equation}
+The nonvanishing argument is algebraic and uniform in the putative rational
+values.  It avoids any assertion that a particular principal determinant is
+nonzero.  The estimates use every almost full minor, so the choice permitted
+by the rank argument creates no additional size problem.
+
+Sections~\ref{sec:family}--\ref{sec:rank} give the exact family and the
+nonvanishing argument.  Sections~\ref{sec:real}--\ref{sec:real-cert} prove
+and certify the real estimate.  Sections~\ref{sec:local}--\ref{sec:prime}
+give the arithmetic estimate and its certificate. The subsequent sections apply
+the rational product formula and describe verification. All logarithms are natural.  Implied constants
+may depend on the fixed endpoint list and the fixed certificate, but never
+on $n$, on a selected minor, or on a prime in the indicated range.
+
+\section{The rational-function family}\label{sec:family}
+The construction uses the symmetry and partial-fraction mechanism familiar
+from hypergeometric approaches to odd zeta values \cite{Zudilin04}.
+The endpoint tuple and the determinant estimates below are the specific
+inputs of the present argument.
+\subsection{Endpoints and normalization}
+Put
+\begin{equation}\label{eq:endpoints}
+ T=(63,60,58,57,54,52,49,47,44,42),\qquad
+ (a_1,\ldots,a_{15})=n(67,67,67,67,67,T).
+\end{equation}
+Set $b=100n$, $a_0=67n$, and $\beta=\sum_{i=1}^{15}a_i-5b=361n$.
+For any integer $a\ge0$, define
+\[
+ D_a(x)=\prod_{j=-a}^{a}(x+j),\qquad
+ \mathcal N_n=\frac{\prod_{t\in T}(2tn)!}{((33n)!)^{10}}.
+\]
+Our weight is
+\begin{equation}\label{eq:weight}
+ w_n(x)=\mathcal N_n\frac{2xD_b(x)^5}{\prod_{i=1}^{15}D_{a_i}(x)}.
+\end{equation}
+It is odd, has degree $-2\beta-9=-722n-9$, and has no poles outside
+$[-63n,63n]$.  A nonzero integer $j$ in this interval has pole order
+\[
+ o_j=\#\{t\in T:|j|\le tn\}\le10.
+\]
+At the origin the order is nine, due to the explicit factor $x$ in the
+numerator.  The integers $a_0+1,\ldots,b$ are zeros of order five.
+These statements follow by counting the factors $x-j$ in numerator and
+denominator.  In particular, the five copies of $D_{67n}$ cancel the
+numerator zeros throughout the range $|j|\le67n$ before the remaining
+ten denominator factors are counted.
+
+\subsection{Moment functionals and the four zeta values}
+If $\deg P\le\beta+3$ and $0\le h\le4$, define
+\begin{equation}\label{eq:F}
+ F_h(P)=\sum_{m=b+1}^{\infty}[u^h]\{w_n(m+u)P((m+u)^2)\}.
+\end{equation}
+At the maximum permitted degree the rational function inside the braces
+has degree at most $-3$.  Termwise Taylor differentiation up to order four
+is therefore justified by absolute, locally uniform convergence.  The
+fivefold zeros allow the lower summation limit to be replaced by $a_0+1$.
+Write the partial fractions as
+\begin{equation}\label{eq:pf}
+ w_n(x)P(x^2)=\sum_j\sum_{k=1}^{o_j}\frac{c_{k,j}(P)}{(x-j)^k},
+ \qquad B_k(P)=\sum_jc_{k,j}(P),
+\end{equation}
+where the center order is interpreted as nine and missing coefficients
+are zero.  Reflection gives
+$c_{k,-j}=(-1)^{k+1}c_{k,j}$, so $B_k=0$ for even $k$.
+The residue at infinity vanishes, and hence $B_1=0$ as well.
+For $H_m^{(s)}=\sum_{r=1}^m r^{-s}$, with $H_0^{(s)}=0$, set
+\begin{equation}\label{eq:C}
+ C_h(P)=-(-1)^h\sum_{j,k}c_{k,j}(P)
+       \binom{k+h-1}{h}H_{a_0-j}^{(k+h)}.
+\end{equation}
+The apparent $\zeta(1)$ term when $h=0$ cancels because $B_1=0$;
+the finite harmonic formula remains meaningful.  Summing the other
+partial fractions gives
+\begin{equation}\label{eq:zeta-form}
+ F_4(P)=C_4(P)+\sum_{s\in\{7,9,11,13\}}
+                  \binom{s-1}{4}B_{s-4}(P)\zeta(s).
+\end{equation}
+Thus exactly the four target odd zeta values occur.  Each $B_k$ and $C_h$
+takes rational values on $\Q[Y]$.
+
+Under the contrary rationality hypothesis choose $Q\in\N_{>0}$ with
+$Q\zeta(s)\in\Z$ for the four target exponents.  Put $\gamma_s=\zeta(s)$
+at those exponents and $\gamma_s=0$ for the other integers $5\le s\le14$.
+Then
+\begin{equation}\label{eq:arithmetic-form}
+ F_4(P)=\sum_{j,k}c_{k,j}(P)\binom{k+3}{4}
+              \left(\gamma_{k+4}-H_{a_0-j}^{(k+4)}\right).
+\end{equation}
+All harmonic indices lie in $[0,130n]$.  Equation~\eqref{eq:arithmetic-form}
+is an identity in the proper degree range; the terms assigned zero
+$\gamma_s$ have zero total coefficient.  This representation is especially
+useful because its denominator losses can be localized at the poles.
+
+\section{Pearson relations and the initial moment space}\label{sec:pearson}
+\subsection{A difference operator}
+Use $z=2x$ and $X=z^2=4Y$.  The rescaling is a diagonal change of polynomial
+basis and does not affect any rank. It is used only for the Pearson
+argument. All analytic and arithmetic determinants later in the paper use
+$Y=x^2$ and $E_i(Y)$; evaluating $E_i(4x^2)$ would change their normalization.
+The formal corrected-coordinate adapter proves this identification for
+every selected row and column set.  Define
+\begin{align}
+ A(z)&=(z+2b+2)^5\prod_{i=1}^{15}(z-2a_i),\label{eq:A}\\
+ \mathcal Dq(z^2)&=
+ \frac{A(z)q((z+1)^2)-A(-z)q((z-1)^2)}{z}.\label{eq:D}
+\end{align}
+The numerator in~\eqref{eq:D} is odd, so the quotient is an even polynomial.
+The polynomial $A$ is monic of degree twenty, and its next coefficient is
+$10-2\beta$.  Comparing the two highest potentially surviving powers gives
+\begin{equation}\label{eq:D-leading}
+ \deg\mathcal D(X^k)=k+9,\qquad
+ \lc(\mathcal D(X^k))=4(k-\beta+5)
+ \quad(0\le k\le\beta-6).
+\end{equation}
+The restrictions on $k$ ensure that the displayed coefficient is nonzero.
+
+\begin{lemma}\label{lem:pearson}
+The nine functionals
+\begin{equation}\label{eq:nine}
+ B_3,B_5,B_7,B_9,C_0,C_1,C_2,C_3,C_4
+\end{equation}
+annihilate $\mathcal D(X^k)$ for $0\le k\le\beta-6$, after the
+change $X=4Y$.
+\end{lemma}
+\begin{proof}
+Let $g(x)=w_n(x)/x$.  Direct cancellation of consecutive products gives
+\[
+ \frac{g(x+1)}{g(x)}=\frac{A(2x)}{A(-2x-2)}.
+\]
+Consequently, with $H(x)=g(x)A(2x)q((2x+1)^2)$,
+\[
+ w_n(x)\mathcal Dq(4x^2)=\tfrac12\bigl(H(x)-H(x-1)\bigr).
+\]
+For $\deg q=k\le\beta-6$, the degree of $H$ is at most $-2$.
+Summation over $x=b+1+u,b+2+u,\ldots$ telescopes to $-H(b+u)/2$.
+The latter has a zero of order at least five at $u=0$.  It follows that
+the five $F_h$ vanish on the relation.  A rational difference
+$H(x)-H(x-1)$ has zero sum of Laurent coefficients at every fixed pole
+order: translation only permutes the poles.  Thus every $B_k$ vanishes
+on the relation.  The partial-fraction identities for $F_h$ then show
+that the five $C_h$ vanish as well.
+\end{proof}
+
+\subsection{Independence by an endpoint recurrence}
+We prove independence in a slightly larger parameter family, solely to
+make a convenient seed available.  Temporarily let $0\le a_i\le b$ be
+arbitrary integers, with $\beta=\sum a_i-5b\ge6$ and $b>5$.
+The scalar normalization is irrelevant to independence and may be omitted.
+The definition of $C_h$ can use the common summation boundary $b+1$;
+for the target tuple it agrees with~\eqref{eq:C}, since the intervening
+terms have fivefold zeros.
+
+\begin{lemma}\label{lem:independent}
+For every such tuple, the nine functionals in~\eqref{eq:nine} are
+linearly independent on polynomials of degree at most eight.
+\end{lemma}
+\begin{proof}
+If a positive endpoint $a_i$ is decreased by one, the weight is multiplied,
+up to a nonzero scalar, by $Y-a_i^2$.  Therefore the first nine moments
+of each of the functionals are transformed by the same companion matrix
+for multiplication by $Y-a_i^2$.  To compute its determinant, use the
+degree-nine relation $\mathcal D1$ to express the ninth moment in terms
+of the first nine.  The characteristic polynomial of the companion
+matrix is proportional to $\mathcal D1$, in the $X$ coordinate.
+It is nonzero at $X=4a_i^2$, because
+\[
+ (\mathcal D1)(4a_i^2)=-\frac{A(-2a_i)}{2a_i}\ne0.
+\]
+Indeed $A(2a_i)=0$, while $-2a_i$ equals neither $-2b-2$ nor any
+nonnegative root of $A$.  The leading coefficient $4(5-\beta)$ is
+nonzero.  Thus the transformation is invertible whenever the old and
+new tuples remain in the stated range.
+
+Every admissible tuple can be connected to the all-$b$ tuple by increasing
+endpoints one at a time, never decreasing $\beta$.  It suffices to check
+the seed consisting of six endpoints equal to $b$ and nine equal to zero;
+it has $\beta=b$.  Its weight is a nonzero constant times
+$2/(x^8D_b(x))$.  On the monomials $1,Y,\ldots,Y^8$, the four $B$ columns
+have a nonsingular anti-triangular block in the first four rows: their
+successive highest center poles have orders $9,7,5,3$.  These columns
+vanish in the last five rows.
+
+For the last five rows the rational functions are
+$2x^{2\ell}/D_b(x)$, $0\le\ell\le4$.  Let
+$R(x)=(x-b)_{2b}=\prod_{j=-b}^{b-1}(x+j)$.
+There is a unique polynomial $Q_\ell$ in $x(x-1)$ of degree $\ell$ such that
+\begin{equation}\label{eq:seed-antidifference}
+ (x+b)Q_\ell(x)-(x-b)Q_\ell(x+1)=2x^{2\ell}.
+\end{equation}
+To verify existence, apply the left-hand operator to $[x(x-1)]^h$.
+Its output is even of degree $2h$, with leading coefficient $2(b-h)$.
+The resulting triangular system is invertible for $0\le h\le4$.
+In particular $\lc Q_\ell=1/(b-\ell)$.  Division by $D_b(x)$ now shows
+that the sum from $b+1+u$ to infinity equals
+$Q_\ell(b+1+u)/R(b+1+u)$.  The boundary term at infinity vanishes.
+The first five Taylor coefficients of these five functions form an
+invertible matrix: multiplication by $1/R(b+1+u)$ is invertible on
+five-jets, as is substitution of $x(x-1)$ at $x=b+1$, whose derivative
+is $2b+1\ne0$.  The polynomials $Q_0,\ldots,Q_4$ form a basis by their
+nonzero leading coefficients.  This proves the remaining five-by-five
+block invertible, and hence proves independence at the seed and at every
+admissible tuple.
+\end{proof}
+
+\input{sections/finite_rank.tex}
+\input{sections/real_estimate.tex}
+\input{sections/arithmetic.tex}
+\input{sections/conclusion.tex}
+\input{sections/references.tex}
+\end{document}

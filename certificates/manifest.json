@@ -1,0 +1,256 @@
+[
+  {
+    "output": "proof/numerical/external26/transcendental_values.txt",
+    "bytes": 400205372,
+    "sha256": "89ce7741b3c7e5ac48d5f0d12c0ac2a07bf6a12ff47e836c5523e91be1429840",
+    "parts": [
+      {
+        "path": "certificates/transcendental_values.txt.gz.part000",
+        "sha256": "ca91d10f00915edd84c7527ab9de198954cfc1e2d82ddaa4044538766132d0b5"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part001",
+        "sha256": "6eebb215a3524e7c429f2d205bdf32b1c4232dc74bdb65bae73ed6987a80035e"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part002",
+        "sha256": "81f24ed8455836e0bc01ecd28153a944122189e7952fdf824fb0d30d81269e14"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part003",
+        "sha256": "e730b16b9cae9003087d722b7dd11851fdbed4c610d6f6ee35d43cfdbfbac6e9"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part004",
+        "sha256": "3df3319c6a8c950c588c3efa21a639de2fde608e6b6b59b4483bbf0fe6426974"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part005",
+        "sha256": "5df0025e764f13d65ad2dbf6bb842bc1265984e1655146fca931fdac7da3e9f5"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part006",
+        "sha256": "a4138ad842ed35a7e39658fa4f04265e61464a1e944d63cf30bb14a131f7351b"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part007",
+        "sha256": "59d637549983322ddc3d698d5532b94154db6826513a399e2e2fde23f7a1017c"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part008",
+        "sha256": "697f942b2ad3349b20f46bb8df403480b362e60ce8f226114f3e58d7ea4f591a"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part009",
+        "sha256": "69f908ee27c2b824b398d4897f79ed873f50ffa67c0a081f7520390490087c9c"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part010",
+        "sha256": "a62c134a79cd0b05979f2f0991294fd86c75154ef36779069e12f2b077aa54ce"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part011",
+        "sha256": "ddf13adf877623f03fe70799ccf294aea23393c6ce2004684cfd0846fbaafe63"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part012",
+        "sha256": "76ad5c9c646e073255915d9f7929a25719a99e7b52356a34aac2ee3f24c674ae"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part013",
+        "sha256": "7ce22c38442c807138f7315d094b45d283c73d8fd7bd43fe5386bff98d847b06"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part014",
+        "sha256": "dc826a530d739ad827e8f2cb8a6b2574e2581f1728b0e2b9ce46661cc53048f8"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part015",
+        "sha256": "a844ec636a6787b8c73baeb7159ca5356d220852e719cbf0f0d6f5e9efa0dee8"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part016",
+        "sha256": "492150d4aaa62624ee97e7e0d7707eb47d680976ecd84c881065c9190bbe8420"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part017",
+        "sha256": "90479c4f8dc7c271521c37d29993ac45c0991d27ec8bedf42bb90a027914ff76"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part018",
+        "sha256": "96140a98c666ab21d619251c12d285ecb20569d4c4a27c8849aab15955424e5e"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part019",
+        "sha256": "bbf7ca1f082341db73fe0ae5ede40291aee2c9fe7f7bb8cbf252dbbfc30d4520"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part020",
+        "sha256": "46c89f7a4b728b5cd0694a0174f7ae13ba1ecf21a772713958ba14920e700986"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part021",
+        "sha256": "b0fde778124d2b1bf7f5d22a7aeb7349a601a0a4634217fc4e3a1722eabe3962"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part022",
+        "sha256": "56379ca3d750ed83a7b670241b3e0f6a15c77fc7fd3c91c52648e14dd9fb7c1b"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part023",
+        "sha256": "04898c85aa939d20b3a532d871aa8f0e4588555a0a9de1578a62c14a0c1047ac"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part024",
+        "sha256": "201f41eae19cdd708b2944b3922896ea1c9551b7bcfccd6f61d67c7562e06533"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part025",
+        "sha256": "9a9a708a470c2ec1a8ca1c834f9b768c69c12bf3b6f31a9798c2d59530a0cf9a"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part026",
+        "sha256": "da7929296a199c1fd1175c9cfc8c1a22221ef3de2ceddb381744dc4c2e5508f1"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part027",
+        "sha256": "809985483d1db8b75b4bbc444ac0793f4da1d6cee1a9bb56f4b6bfd8d9f5c30b"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part028",
+        "sha256": "b3db91c9b840a6be03aa6e107e4f55610484dd13467a2b72197b62b918e9981e"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part029",
+        "sha256": "5b9996dfa38ae7358ece9a2566bd47413896f7ac8475b60e6a603f02b9b2a35d"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part030",
+        "sha256": "a0e6a68a1c565df8e428ec2c3b33a188d179459089ce6bee84d9304dca59f29d"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part031",
+        "sha256": "0b5fad771d2534472586ffe07baf0d7dbb95f7c74c4b24b9abf3ef18c358e364"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part032",
+        "sha256": "b410632ffbdd401f4dc96fed87d7dc7b439dac28382bbf355ce6d701175c86b1"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part033",
+        "sha256": "bda53a8c35de19b0d5d4745e0179f590da880abb116a6f94f73e5e20a1305d3b"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part034",
+        "sha256": "47c3ceaed63f508e04a4ec7b1f07ecb50ab4a168c8aa1c58cb9452ea848992b8"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part035",
+        "sha256": "65c883056f52e348c735f73d9b364934a11986a7ed404ce2b1b5bce837dca012"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part036",
+        "sha256": "8307d044de86c3028461eea1152f17dd3cd4943be36512babe49feece7e73534"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part037",
+        "sha256": "85f6ab4ef22487011722ba9ca82ec5f0c440a4b54f44dea2c9deb8de8e9681af"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part038",
+        "sha256": "980af56bcbbeeb2e061124e30bb476c0e45e58b19d68f0cfda84a7630f36f74b"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part039",
+        "sha256": "9afa5d97291e98ac366987cd5fdfe1fe80704dbff819e364d29aa35d2c54e754"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part040",
+        "sha256": "8c2ef309db36771be0d74ffc4932368b959b78954f5d33bf13d2d3fe934e521d"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part041",
+        "sha256": "ca16415ea69474df92ca841b065a263bc6353cf2db87caac0bbd4b14f9a6c2a0"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part042",
+        "sha256": "7194881d97f39976f512098762cdc856b24156404e591616249597c3c5754e71"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part043",
+        "sha256": "6655563d3449dfaefcd42636cdb77dcef895023722eb3e8c47f18df42185a4d9"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part044",
+        "sha256": "6094a3716087456e17c01f3ebd70b963003b6b61d001e6211f26ec37269e8b08"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part045",
+        "sha256": "764ebec6f62d0c20f725a00cb2f0242000a7334d29581191f57033fdfe6ef9fa"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part046",
+        "sha256": "dd9d574961ac00231cdade70be11e876078970afb1c1c8cfb2bc8dc905813658"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part047",
+        "sha256": "4f38a9fd5dbf7721becfe86ba40e520e3d6acc7c60c8ff339a94207d97726072"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part048",
+        "sha256": "e5c52fadd09fdde3becc6adabe15cb44ab0f18457bbab9cbfa738df0f49c3bac"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part049",
+        "sha256": "d2e43ae573ae58c5f58d690c90c6f54451a5b9f2115ce9f4960e9245a16adb73"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part050",
+        "sha256": "9a9fcea02a75b008955b1b5e42f32dc171d3c41905ee222a83f82e0aca2e5bfe"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part051",
+        "sha256": "54cea87a1205833ea46e525230ca301affd23854308df8ccb517533737e5c985"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part052",
+        "sha256": "28b05347f65e51b69e718d0101356b36056e0da87d52dc884def42a95ed77ab2"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part053",
+        "sha256": "3f6017c6bff927bc83c34324b9d143c8ef4a0f5915a51a1d57edd624b5ffa239"
+      },
+      {
+        "path": "certificates/transcendental_values.txt.gz.part054",
+        "sha256": "656adfc18ac168ebb800802f68f0549d42350e81aff9b5a4a7fbd1f0dc38d568"
+      }
+    ]
+  },
+  {
+    "output": "proof/numerical/fullgrid27/grid_arithmetic.txt",
+    "bytes": 41400000,
+    "sha256": "5686a27a4e1290d335f04b902b4ce4a7906237cba6473de12341811c399ec5ea",
+    "parts": [
+      {
+        "path": "certificates/grid_arithmetic.txt.gz.part000",
+        "sha256": "0824128540db391ca442104f2dd3ee12cd00463c69c2c42ec9323fe1fd2c7e51"
+      },
+      {
+        "path": "certificates/grid_arithmetic.txt.gz.part001",
+        "sha256": "673759f25805647bace5d4ca3ebf7455ed1749090e6ffffe2851c27d6ceea3be"
+      },
+      {
+        "path": "certificates/grid_arithmetic.txt.gz.part002",
+        "sha256": "5e13ef615d8fc5e2e0d78ccb735c7ced1222df9f57eee5f321ddc3c3c9970d84"
+      },
+      {
+        "path": "certificates/grid_arithmetic.txt.gz.part003",
+        "sha256": "d6acf3713606e08b2eff11f59b2063054f6f71dd8ec989801eb58c575ea6f3ca"
+      },
+      {
+        "path": "certificates/grid_arithmetic.txt.gz.part004",
+        "sha256": "e5c7d393692772517b49ccccb88d33a8d1d87037fabda82b6565b8174113a069"
+      }
+    ]
+  }
+]

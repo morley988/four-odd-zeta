@@ -1,0 +1,26 @@
+{"core_declarations": 1669, "new_declarations": 4, "total": 1677}
+{
+  "status": "PASS",
+  "explicit_assumption_count": 2,
+  "locations": [
+    {
+      "file": "FourValueExternalTranscendental.lean",
+      "line": 94
+    },
+    {
+      "file": "FourValueExternalTranscendental.lean",
+      "line": 100
+    }
+  ],
+  "log_value_count": 5700022,
+  "atan_value_count": 1200000,
+  "total_value_count": 6900022,
+  "only_file": "FourValueExternalTranscendental.lean",
+  "lean_file_sha256": "0e9e8a514f4ae2c1727cf6bbcaef944644ac520897bf77ee3e52cf8b5b53174a",
+  "scope": "Source audit; does not replace numerical checking or kernel axiom audit"
+}
+Traceback (most recent call last):
+  File "/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/../numerical/external26/verify_conditional_checkpoint.py", line 17, in <module>
+    for n in groups['data_definitions']:assert not ax[n],n
+                                               ^^^^^^^^^
+AssertionError: OddZeta.FourValue.External.argument

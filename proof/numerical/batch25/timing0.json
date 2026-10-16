@@ -1,0 +1,21 @@
+{
+  "cell": 0,
+  "modules": [
+    {
+      "module": "FourValueBatchEnclosures",
+      "exit_code": 0,
+      "wall_seconds": 14.94393363600102,
+      "cpu_seconds": 17.325646000000003,
+      "peak_rss_kib": 4471744
+    },
+    {
+      "module": "FourValueBatchFirstCell",
+      "exit_code": 0,
+      "wall_seconds": 31.058461935004743,
+      "cpu_seconds": 32.07359099999999,
+      "peak_rss_kib": 5287956
+    }
+  ],
+  "success": true,
+  "total_wall_seconds": 46.00239557100576
+}

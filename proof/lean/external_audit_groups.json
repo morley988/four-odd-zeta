@@ -1,0 +1,14 @@
+{
+  "conditional_theorems": [
+    "OddZeta.FourValue.External.log_values",
+    "OddZeta.FourValue.External.atan_values",
+    "OddZeta.FourValue.ExternalInterface.log_bound_of_row",
+    "OddZeta.FourValue.ExternalInterface.atan_bound_of_row"
+  ],
+  "data_definitions": [
+    "OddZeta.FourValue.External.values",
+    "OddZeta.FourValue.External.argument",
+    "OddZeta.FourValue.External.lower",
+    "OddZeta.FourValue.External.upper"
+  ]
+}

@@ -1,0 +1,268 @@
+OddZeta.FourValue.analyticContourIntegral_eq_zeta (n : ℕ) (P : Polynomial ℂ) (hP : P.natDegree ≤ 361 * n + 3) :
+  OddZeta.FourValue.analyticContourIntegral n P = (OddZeta.FourValue.analyticZetaFunctional n) P
+OddZeta.FourValue.actualAdaptedZetaMatrix_minor_bound (n : ℕ) (hn : 1 ≤ n) (k : ℕ)
+  (rows cols : Fin k → Fin (OddZeta.FourValue.targetHankelDegree n + 1)) :
+  ‖((OddZeta.FourValue.actualAdaptedZetaMatrix n).submatrix rows cols).det‖ ≤
+    (↑k.factorial * ∏ i, OddZeta.FourValue.analyticContourSize n (OddZeta.FourValue.actualAdaptedBasis n ↑(rows i))) *
+      ∏ j, OddZeta.FourValue.analyticContourSize n (OddZeta.FourValue.actualAdaptedBasis n ↑(cols j))
+OddZeta.FourValue.targetNormalization_uniform_error (n : ℕ) (hn : 1 ≤ n) :
+  |Real.log ‖OddZeta.FourValue.targetNormalization n‖ -
+        (722 * ↑n * Real.log (100 * ↑n) + 100 * ↑n * OddZeta.FourValue.targetNormalizationEntropy +
+          OddZeta.FourValue.targetNormalizationLogCorrection)| ≤
+    5 / 6
+OddZeta.FourValue.centeredRoot_scaled_log_error (a : ℕ) (M : ℝ) (hM : 0 < M) (z : ℂ) (hz : ↑a / M < z.re) :
+  OddZeta.FourValue.rootLogProfile z (↑a / M) ≤
+      Real.log ‖Polynomial.eval (↑M * z) (OddZeta.FourValue.centeredDenominator a)‖ -
+        ((2 * ↑a + 1) * Real.log M + M * OddZeta.FourValue.rootLogIntegral z (↑a / M)) ∧
+    Real.log ‖Polynomial.eval (↑M * z) (OddZeta.FourValue.centeredDenominator a)‖ -
+        ((2 * ↑a + 1) * Real.log M + M * OddZeta.FourValue.rootLogIntegral z (↑a / M)) ≤
+      OddZeta.FourValue.rootLogProfile z (-↑a / M)
+OddZeta.FourValue.analyticWeight_uniform_log_bound (n : ℕ) (hn : 1 ≤ n) (y : ℝ) (hy : 0 < y) :
+  Real.log ‖OddZeta.FourValue.analyticZetaFunction n 1 (OddZeta.FourValue.upperContourRay n (100 * ↑n * y))‖ ≤
+    100 * ↑n * OddZeta.FourValue.targetWeightPotential (OddZeta.FourValue.normalizedContourPoint y) -
+          13 / 2 * Real.log (100 * ↑n) +
+        OddZeta.FourValue.weightUniformConstant +
+      17 / 2 * Real.log (1 + y)
+OddZeta.FourValue.actualAdaptedBasis_uniform_log_bound (n i : ℕ) (hn : 1 ≤ n)
+  (hi : i ≤ OddZeta.FourValue.targetHankelDegree n) (y : ℝ) (hy : 0 ≤ y)
+  (hz :
+    Polynomial.eval (OddZeta.FourValue.upperContourRay n (100 * ↑n * y) ^ 2)
+        (OddZeta.FourValue.actualAdaptedBasis n i) ≠
+      0) :
+  2 *
+      Real.log
+        ‖Polynomial.eval (OddZeta.FourValue.upperContourRay n (100 * ↑n * y) ^ 2)
+            (OddZeta.FourValue.actualAdaptedBasis n i)‖ ≤
+    4 * ↑i * Real.log (100 * ↑n) - 2 * Real.log ↑(2 * i).factorial +
+                ↑i *
+                  OddZeta.FourValue.analyticBasisPotential (OddZeta.FourValue.adaptedWeights n i)
+                    (OddZeta.FourValue.normalizedContourPoint y ^ 2) +
+              90 * Real.log 4 +
+            90 * Real.log 2500 +
+          180 * Real.log 5 +
+        360 * Real.log (1 + y) +
+      500
+OddZeta.FourValue.actualContourEnergy_uniform_laplace (L : ℝ) :
+  ∃ C,
+    0 < C ∧
+      ∀ (n i : ℕ),
+        1 ≤ n →
+          i ≤ OddZeta.FourValue.targetHankelDegree n →
+            ∀ (V : ℝ),
+              L ≤ V →
+                (∀ (y : ℝ), 0 < y → OddZeta.FourValue.contourRate (OddZeta.FourValue.adaptedIndexMass n i) y ≤ V) →
+                  OddZeta.FourValue.contourRayEnergy n (OddZeta.FourValue.actualAdaptedBasis n i)
+                      (OddZeta.FourValue.upperContourRay n) ≤
+                    100 * ↑n * C *
+                      Real.exp
+                        (100 * ↑n * (V + OddZeta.FourValue.factorialRowRate (OddZeta.FourValue.adaptedIndexMass n i)))
+OddZeta.FourValue.actualAnalyticTransferFactor_squared_normalized_log_tendsto_zero :
+  Filter.Tendsto (fun n => Real.log (OddZeta.FourValue.actualAnalyticTransferFactor n ^ 2) / ↑n ^ 2) Filter.atTop
+    (nhds 0)
+OddZeta.FourValue.contourRowAverage_tendsto_integral (f : ℝ → ℝ)
+  (hf : ContinuousOn f (Set.Icc 0 OddZeta.FourValue.basisLimit)) :
+  Filter.Tendsto (OddZeta.FourValue.contourRowAverage f) Filter.atTop
+    (nhds (∫ (s : ℝ) in 0..OddZeta.FourValue.basisLimit, f s))
+OddZeta.FourValue.minorLogOverhead_normalized_tendsto_zero (L D : ℝ) :
+  Filter.Tendsto (fun n => OddZeta.FourValue.minorLogOverhead n L D / ↑n ^ 2) Filter.atTop (nhds 0)
+OddZeta.FourValue.targetWeightPotential_eq_certificateG (y : ℝ) (hy : 0 < y) :
+  OddZeta.FourValue.targetWeightPotential (OddZeta.FourValue.normalizedContourPoint y) =
+    OddZeta.FourValue.certificateG y
+OddZeta.FourValue.analyticZetaMatrix_certificate_asymptotic_bound (V : ℝ → ℝ)
+  (hcontinuous : ContinuousOn V (Set.Icc 0 OddZeta.FourValue.basisLimit)) (L : ℝ)
+  (hlower : ∀ (s : ℝ), 0 ≤ s → s ≤ OddZeta.FourValue.basisLimit → L ≤ V s)
+  (hcertificate :
+    ∀ (s y : ℝ),
+      0 ≤ s →
+        s ≤ OddZeta.FourValue.basisLimit →
+          0 < y →
+            OddZeta.FourValue.certificateG y - 2 * Real.pi * y +
+                s *
+                  OddZeta.FourValue.analyticBasisPotential (OddZeta.FourValue.concreteBasisWeight s)
+                    (OddZeta.FourValue.normalizedContourPoint y ^ 2) ≤
+              V s) :
+  ∃ E,
+    Filter.Tendsto (fun n => E n / ↑n ^ 2) Filter.atTop (nhds 0) ∧
+      ∀ (n : ℕ),
+        1 ≤ n →
+          ∀
+            (rows cols :
+              Fin (OddZeta.FourValue.targetHankelDegree n + 1 - 4) ↪ Fin (OddZeta.FourValue.targetHankelDegree n + 1)),
+            ‖((OddZeta.FourValue.analyticZetaMatrix n).submatrix ⇑rows ⇑cols).det‖ ≤
+              Real.exp ((100 * ↑n) ^ 2 * OddZeta.FourValue.contourExponent V + E n)
+OddZeta.FourValue.analyticZetaMatrix_numerical_rate_of_certificate (V : ℝ → ℝ)
+  (hcontinuous : ContinuousOn V (Set.Icc 0 OddZeta.FourValue.basisLimit)) (L : ℝ)
+  (hlower : ∀ (s : ℝ), 0 ≤ s → s ≤ OddZeta.FourValue.basisLimit → L ≤ V s)
+  (hcertificate :
+    ∀ (s y : ℝ),
+      0 ≤ s →
+        s ≤ OddZeta.FourValue.basisLimit →
+          0 < y →
+            OddZeta.FourValue.certificateG y - 2 * Real.pi * y +
+                s *
+                  OddZeta.FourValue.analyticBasisPotential (OddZeta.FourValue.concreteBasisWeight s)
+                    (OddZeta.FourValue.normalizedContourPoint y ^ 2) ≤
+              V s)
+  (hquadrature :
+    ∫ (s : ℝ) in 0..OddZeta.FourValue.basisLimit, V s ≤ -13277632257660676586509793 / 1024000000000000000000000) :
+  ∃ E,
+    Filter.Tendsto (fun n => E n / ↑n ^ 2) Filter.atTop (nhds 0) ∧
+      ∀ (n : ℕ),
+        1 ≤ n →
+          ∀
+            (rows cols :
+              Fin (OddZeta.FourValue.targetHankelDegree n + 1 - 4) ↪ Fin (OddZeta.FourValue.targetHankelDegree n + 1)),
+            ‖((OddZeta.FourValue.analyticZetaMatrix n).submatrix ⇑rows ⇑cols).det‖ ≤
+              Real.exp ((100 * ↑n) ^ 2 * (-577853339 / 50000000) + E n)
+OddZeta.FourValue.Corrected.rationalAnalyticTest_eq (n : ℕ) (P : Polynomial ℚ) :
+  OddZeta.FourValue.Corrected.rationalAnalyticTest n P =
+    OddZeta.FourValue.rationalPhysicalTest n (OddZeta.FourValue.analyticCoordinate P)
+OddZeta.FourValue.Corrected.selectedResidueMatrix_bad_bound {p : ℕ} [Fact (Nat.Prime p)] (n b : ℕ) (S : Finset ℤ)
+  (r : ℤ) (lambda : Fin 4 → ℚ) {k : ℕ} (rows cols : Fin k → Fin (OddZeta.FourValue.targetHankelDegree n + 1))
+  (hs : 800 * n < p ^ 2) (hp : ¬p ∣ OddZeta.FourValue.rationalPencilDenominator lambda)
+  (hS : ∀ a ∈ S, a ∈ OddZeta.FourValue.poleWindow (100 * n) ∧ (↑p ∣ a - r ∨ ↑p ∣ a + r) ∧ (↑b - a).toNat < p ^ 2) :
+  OddZeta.FourValue.PadicLower p
+    (↑k ^ 2 + (OddZeta.FourValue.targetLocalWeight p n r - 5) * ↑k -
+      OddZeta.FourValue.selectedFactorialCost p n rows cols)
+    (OddZeta.FourValue.Corrected.selectedResidueMatrix n b S lambda rows cols).det
+OddZeta.FourValue.Corrected.selectedResidueMatrix_good_bound {p : ℕ} [Fact (Nat.Prime p)] (n b : ℕ) (S : Finset ℤ)
+  (r : ℤ) (lambda : Fin 4 → ℚ) {k : ℕ} (rows cols : Fin k → Fin (OddZeta.FourValue.targetHankelDegree n + 1))
+  (hs : 800 * n < p ^ 2) (hp : ¬p ∣ OddZeta.FourValue.rationalPencilDenominator lambda)
+  (hS : ∀ a ∈ S, a ∈ OddZeta.FourValue.poleWindow (100 * n) ∧ (↑p ∣ a - r ∨ ↑p ∣ a + r) ∧ (↑b - a).toNat < p) :
+  OddZeta.FourValue.PadicLower p
+    (↑k ^ 2 + OddZeta.FourValue.targetLocalWeight p n r * ↑k - OddZeta.FourValue.selectedFactorialCost p n rows cols)
+    (OddZeta.FourValue.Corrected.selectedResidueMatrix n b S lambda rows cols).det
+OddZeta.FourValue.Corrected.selectedResidueMatrix_singleNode_bound {p : ℕ} [Fact (Nat.Prime p)] (n b : ℕ) (S : Finset ℤ)
+  (r : ℤ) (lambda : Fin 4 → ℚ) {k : ℕ} (rows cols : Fin k → Fin (OddZeta.FourValue.targetHankelDegree n + 1))
+  (hs : 800 * n < p ^ 2) (hp : ¬p ∣ OddZeta.FourValue.rationalPencilDenominator lambda)
+  (hS :
+    ∀ a ∈ S,
+      a ∈ OddZeta.FourValue.poleWindow (63 * n) ∧
+        OddZeta.FourValue.centeredResidueCount p a (63 * n) = 1 ∧ (↑p ∣ a - r ∨ ↑p ∣ a + r) ∧ (↑b - a).toNat < p) :
+  OddZeta.FourValue.PadicLower p
+    (max (↑k ^ 2 + OddZeta.FourValue.targetLocalWeight p n r * ↑k)
+        (↑k * OddZeta.FourValue.targetNormalizationFloor p n) -
+      OddZeta.FourValue.selectedFactorialCost p n rows cols)
+    (OddZeta.FourValue.Corrected.selectedResidueMatrix n b S lambda rows cols).det
+OddZeta.FourValue.Corrected.selectedResidueMatrix_det_zero_capacity {p : ℕ} [Fact (Nat.Prime p)] (n b : ℕ)
+  (S : Finset ℤ) (r : ℤ) (lambda : Fin 4 → ℚ) {k : ℕ}
+  (rows cols : Fin k → Fin (OddZeta.FourValue.targetHankelDegree n + 1)) (hS : ∀ a ∈ S, ↑p ∣ a - r ∨ ↑p ∣ a + r)
+  (hk : OddZeta.FourValue.targetResidueCapacity p n r < k) :
+  (OddZeta.FourValue.Corrected.selectedResidueMatrix n b S lambda rows cols).det = 0
+OddZeta.FourValue.Corrected.rationalFourValueMatrix_selected_partition (n : ℕ) (lambda : Fin 4 → ℚ) {k d : ℕ}
+  (rows cols : Fin k → Fin (OddZeta.FourValue.targetHankelDegree n + 1)) (label : ℤ → Fin d) :
+  (OddZeta.FourValue.Corrected.rationalFourValueMatrix n lambda).submatrix rows cols =
+    ∑ r,
+      OddZeta.FourValue.Corrected.selectedResidueMatrix n (67 * n)
+        ({a ∈ OddZeta.FourValue.poleWindow (67 * n) | label a = r}) lambda rows cols
+OddZeta.FourValue.Corrected.analyticZetaMatrix_selected_rational (n : ℕ) (z : Fin 4 → ℚ)
+  (hz : ∀ (i : Fin 4), riemannZeta (![7, 9, 11, 13] i) = ↑(z i)) {k : ℕ}
+  (rows cols : Fin k → Fin (OddZeta.FourValue.targetHankelDegree n + 1)) :
+  ((OddZeta.FourValue.analyticZetaMatrix n).submatrix rows cols).det =
+    ↑((OddZeta.FourValue.Corrected.rationalFourValueMatrix n fun i => ![15, 70, 210, 495] i * z i).submatrix rows
+          cols).det
+OddZeta.FourValue.Corrected.analyticZeta_nonzero_minor_allPrime (n : ℕ) (hn : 1 ≤ n) (z : Fin 4 → ℚ)
+  (hz : ∀ (i : Fin 4), riemannZeta (![7, 9, 11, 13] i) = ↑(z i)) :
+  ∃ rows cols q,
+    q ≠ 0 ∧
+      ((OddZeta.FourValue.analyticZetaMatrix n).submatrix ⇑rows ⇑cols).det = ↑q ∧
+        ∀ (p : ℕ),
+          Nat.Prime p →
+            ↑(OddZeta.FourValue.targetHankelDegree n + 1 - 4) *
+                (-40 * ↑(Nat.log p (800 * n)) -
+                  ↑(padicValNat p (OddZeta.FourValue.rationalPencilDenominator fun i => ![15, 70, 210, 495] i * z i))) ≤
+              padicValRat p q
+OddZeta.FourValue.Corrected.corrected_two_adic_minor_bound (n : ℕ) (lambda : Fin 4 → ℚ) {k : ℕ}
+  (rows cols : Fin k → Fin (OddZeta.FourValue.targetHankelDegree n + 1)) :
+  OddZeta.FourValue.PadicLower 2
+    (↑k * (-40 * ↑(Nat.log 2 (800 * n)) - ↑(padicValNat 2 (OddZeta.FourValue.rationalPencilDenominator lambda))))
+    ((OddZeta.FourValue.Corrected.rationalFourValueMatrix n lambda).submatrix rows cols).det
+OddZeta.FourValue.Corrected.twoAdicLoss_normalized_tendsto_zero (Q : ℕ) :
+  Filter.Tendsto
+    (fun n =>
+      ↑(OddZeta.FourValue.analyticMinorSize n) * (40 * ↑(Nat.log 2 (800 * n)) + ↑(padicValNat 2 Q)) * Real.log 2 /
+        ↑n ^ 2)
+    Filter.atTop (nhds 0)
+OddZeta.FourValue.Numerical.envelope_continuous : Continuous OddZeta.FourValue.Numerical.envelope
+OddZeta.FourValue.Numerical.envelope_integral :
+  ∫ (x : ℝ) in 0..361 / 200, OddZeta.FourValue.Numerical.envelope x =
+    -13277632257660676586509793 / 1024000000000000000000000
+OddZeta.FourValue.Numerical.envelope_lower (s : ℝ) (hs : 0 ≤ s) (hs1 : s ≤ OddZeta.FourValue.basisLimit) :
+  -9 ≤ OddZeta.FourValue.Numerical.envelope s
+OddZeta.FourValue.Numerical.certificate_tail (s y : ℝ) (w : Fin 45 → ℝ) (hs : 0 ≤ s)
+  (hs1 : s ≤ OddZeta.FourValue.basisLimit) (hy : 5 ≤ y) (hw : ∀ (l : Fin 45), 0 ≤ w l) (hw1 : ∑ l, w l = 1) :
+  OddZeta.FourValue.certificateG y - 2 * Real.pi * y +
+      s * OddZeta.FourValue.analyticBasisPotential w (OddZeta.FourValue.normalizedContourPoint y ^ 2) ≤
+    -9
+OddZeta.FourValue.Numerical.basis_log_cell_bound (l h t : ℝ) (ht : 0 ≤ t) (ht1 : t ≤ 1) (j : Fin 45) (U V : ℝ)
+  (hU0 : ‖OddZeta.FourValue.normalizedContourPoint l ^ 2 - OddZeta.FourValue.analyticCenter j‖ ≤ U)
+  (hU1 : ‖OddZeta.FourValue.normalizedContourPoint h ^ 2 - OddZeta.FourValue.analyticCenter j‖ ≤ U)
+  (hV0 : ‖OddZeta.FourValue.normalizedContourPoint l ^ 2 - star (OddZeta.FourValue.analyticCenter j)‖ ≤ V)
+  (hV1 : ‖OddZeta.FourValue.normalizedContourPoint h ^ 2 - star (OddZeta.FourValue.analyticCenter j)‖ ≤ V)
+  (hUδ : 1 / 50 ≤ U) (hVδ : 1 / 50 ≤ V) :
+  Real.log (OddZeta.FourValue.analyticDistance (OddZeta.FourValue.normalizedContourPoint ((1 - t) * l + t * h) ^ 2) j) ≤
+    Real.log (U + 34 / 25 * (h - l) ^ 2 / 4) + Real.log (V + 34 / 25 * (h - l) ^ 2 / 4)
+OddZeta.FourValue.Numerical.pointwise_of_knots (hknots : OddZeta.FourValue.Numerical.KnotCertificate) (s y : ℝ)
+  (hs : 0 ≤ s) (hs1 : s ≤ OddZeta.FourValue.basisLimit) (hy : 0 < y) :
+  OddZeta.FourValue.certificateG y - 2 * Real.pi * y +
+      s *
+        OddZeta.FourValue.analyticBasisPotential (OddZeta.FourValue.concreteBasisWeight s)
+          (OddZeta.FourValue.normalizedContourPoint y ^ 2) ≤
+    OddZeta.FourValue.Numerical.envelope s
+OddZeta.FourValue.Numerical.numerical_rate_of_finite_certificate
+  (hfinite : OddZeta.FourValue.Numerical.FiniteKnotCertificate) :
+  ∃ E,
+    Filter.Tendsto (fun n => E n / ↑n ^ 2) Filter.atTop (nhds 0) ∧
+      ∀ (n : ℕ),
+        1 ≤ n →
+          ∀
+            (rows cols :
+              Fin (OddZeta.FourValue.targetHankelDegree n + 1 - 4) ↪ Fin (OddZeta.FourValue.targetHankelDegree n + 1)),
+            ‖((OddZeta.FourValue.analyticZetaMatrix n).submatrix ⇑rows ⇑cols).det‖ ≤
+              Real.exp ((100 * ↑n) ^ 2 * (-577853339 / 50000000) + E n)
+OddZeta.FourValue.Transcendental.logInterval_contains (S n : ℕ) (hS : 0 < S) (fuel : ℕ) (q : ℚ)
+  (a : OddZeta.FourValue.Transcendental.QInterval)
+  (h : OddZeta.FourValue.Transcendental.logInterval S n fuel q = some a) : a.Contains (Real.log ↑q)
+OddZeta.FourValue.Transcendental.atanInterval_contains (S n : ℕ) (hS : 0 < S)
+  (P : OddZeta.FourValue.Transcendental.QInterval) (hP : P.Contains Real.pi) (q : ℚ) :
+  (OddZeta.FourValue.Transcendental.atanInterval S n P q).Contains (Real.arctan ↑q)
+OddZeta.FourValue.Transcendental.certificateG_cell (y h δ : ℝ) (hy : 0 < y) (hyh : y ≤ h) (hh : h - y ≤ δ) :
+  OddZeta.FourValue.certificateG y - 2 * Real.pi * y ≤
+    OddZeta.FourValue.certificateG h - 2 * Real.pi * h + OddZeta.FourValue.Transcendental.cellSlope * δ
+OddZeta.FourValue.Transcendental.finite_certificate_of_grid {N : ℕ}
+  (D : OddZeta.FourValue.Transcendental.GridCertificate N) : OddZeta.FourValue.Numerical.FiniteKnotCertificate
+OddZeta.FourValue.Fast.reducedLogInterval_contains (S n : ℕ) (hS : 0 < S) (fuel : ℕ) (q : ℚ)
+  (a : OddZeta.FourValue.Transcendental.QInterval) (h : OddZeta.FourValue.Fast.reducedLogInterval S n fuel q = some a) :
+  a.Contains (Real.log ↑q)
+OddZeta.FourValue.Fast.atanInterval_contains (S n : ℕ) (hS : 0 < S) (P : OddZeta.FourValue.Transcendental.QInterval)
+  (hP : P.Contains Real.pi) (q : ℚ) : (OddZeta.FourValue.Fast.atanInterval S n P q).Contains (Real.arctan ↑q)
+OddZeta.FourValue.Fast.Interval.hornerSeries_contains (S n : ℕ) (hS : 0 < S) (alternating : Bool) (q : ℚ) :
+  OddZeta.FourValue.Fast.Interval.Contains S (OddZeta.FourValue.Fast.Interval.hornerSeries S n alternating q)
+    (∑ j ∈ Finset.range n, OddZeta.FourValue.Fast.Interval.signedTerm alternating j ↑q)
+OddZeta.FourValue.Batch.Cell0.all_knots_on_first_cell (m : ℕ) (hm : m ≤ 41) (y : ℝ) (hy : 0 < y) (hy1 : y ≤ 1 / 10000) :
+  OddZeta.FourValue.certificateG y - 2 * Real.pi * y +
+      OddZeta.FourValue.basisKnot m *
+        OddZeta.FourValue.analyticBasisPotential (OddZeta.FourValue.basisKnotWeight m)
+          (OddZeta.FourValue.normalizedContourPoint y ^ 2) ≤
+    OddZeta.FourValue.Numerical.height m
+OddZeta.FourValue.Batch.Cell5669.all_knots_on_cell (m : ℕ) (hm : m ≤ 41) (y : ℝ) (hy : 0 < y) (hyl : 5669 / 10000 ≤ y)
+  (hy1 : y ≤ 567 / 1000) :
+  OddZeta.FourValue.certificateG y - 2 * Real.pi * y +
+      OddZeta.FourValue.basisKnot m *
+        OddZeta.FourValue.analyticBasisPotential (OddZeta.FourValue.basisKnotWeight m)
+          (OddZeta.FourValue.normalizedContourPoint y ^ 2) ≤
+    OddZeta.FourValue.Numerical.height m
+OddZeta.FourValue.Batch.Cell49999.all_knots_on_cell (m : ℕ) (hm : m ≤ 41) (y : ℝ) (hy : 0 < y) (hyl : 49999 / 10000 ≤ y)
+  (hy1 : y ≤ 5) :
+  OddZeta.FourValue.certificateG y - 2 * Real.pi * y +
+      OddZeta.FourValue.basisKnot m *
+        OddZeta.FourValue.analyticBasisPotential (OddZeta.FourValue.basisKnotWeight m)
+          (OddZeta.FourValue.normalizedContourPoint y ^ 2) ≤
+    OddZeta.FourValue.Numerical.height m
+OddZeta.FourValue.Batch.selected_cells_bound (k : ℕ) (hk : k ∈ OddZeta.FourValue.Batch.certifiedCells) (m : ℕ)
+  (hm : m ≤ 41) (y : ℝ) (hy : 0 < y) (hl : ↑k / 10000 ≤ y) (hh : y ≤ (↑k + 1) / 10000) :
+  OddZeta.FourValue.certificateG y - 2 * Real.pi * y +
+      OddZeta.FourValue.basisKnot m *
+        OddZeta.FourValue.analyticBasisPotential (OddZeta.FourValue.basisKnotWeight m)
+          (OddZeta.FourValue.normalizedContourPoint y ^ 2) ≤
+    OddZeta.FourValue.Numerical.height m

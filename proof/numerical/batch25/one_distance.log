@@ -1,0 +1,27 @@
+BatchOneDistance.lean:24:2: error: Type mismatch
+  distance_checked 0 (Uq j) j (hc j).left (hc j).right
+has type
+  ‖normalizedContourPoint ↑0 ^ 2 - analyticCenter j‖ ≤ ↑(Uq j)
+but is expected to have type
+  ‖normalizedContourPoint 0 ^ 2 - analyticCenter j‖ ≤ U j
+type checking took 345ms
+cumulative profiling times:
+	attribute application 0.182ms
+	compilation (IR) 3.54ms
+	compilation (LCNF base) 34.6ms
+	compilation (LCNF impure) 19.3ms
+	compilation (LCNF mono) 26ms
+	elaboration 157ms
+	fix level params 0.125ms
+	instantiate metavars 0.15ms
+	interpretation 0.0871ms
+	let-to-have transformation 2.34ms
+	linting 82.9ms
+	overlappingInstancesLinter 6.19ms
+	parsing 8.74ms
+	process pre-definitions 6.37ms
+	share common exprs 1.01ms
+	tactic execution 38.5ms
+	tacticAnalysis 21ms
+	type checking 349ms
+	typeclass inference 137ms

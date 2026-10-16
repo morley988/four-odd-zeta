@@ -1,0 +1,16 @@
+OddZeta.FourValue.External.log_values (i : Fin OddZeta.FourValue.External.logCount) :
+  ↑(OddZeta.FourValue.External.lower ↑i) ≤ Real.log ↑(OddZeta.FourValue.External.argument ↑i) ∧
+    Real.log ↑(OddZeta.FourValue.External.argument ↑i) ≤ ↑(OddZeta.FourValue.External.upper ↑i)
+OddZeta.FourValue.External.atan_values (i : Fin OddZeta.FourValue.External.atanCount) :
+  ↑(OddZeta.FourValue.External.lower (OddZeta.FourValue.External.logCount + ↑i)) ≤
+      Real.arctan ↑(OddZeta.FourValue.External.argument (OddZeta.FourValue.External.logCount + ↑i)) ∧
+    Real.arctan ↑(OddZeta.FourValue.External.argument (OddZeta.FourValue.External.logCount + ↑i)) ≤
+      ↑(OddZeta.FourValue.External.upper (OddZeta.FourValue.External.logCount + ↑i))
+OddZeta.FourValue.ExternalInterface.log_bound_of_row (i : Fin OddZeta.FourValue.External.logCount) (q lo hi : ℚ)
+  (hq : OddZeta.FourValue.External.argument ↑i = q) (hl : OddZeta.FourValue.External.lower ↑i = lo)
+  (hu : OddZeta.FourValue.External.upper ↑i = hi) : ↑lo ≤ Real.log ↑q ∧ Real.log ↑q ≤ ↑hi
+OddZeta.FourValue.ExternalInterface.atan_bound_of_row (i : Fin OddZeta.FourValue.External.atanCount) (q lo hi : ℚ)
+  (hq : OddZeta.FourValue.External.argument (OddZeta.FourValue.External.logCount + ↑i) = q)
+  (hl : OddZeta.FourValue.External.lower (OddZeta.FourValue.External.logCount + ↑i) = lo)
+  (hu : OddZeta.FourValue.External.upper (OddZeta.FourValue.External.logCount + ↑i) = hi) :
+  ↑lo ≤ Real.arctan ↑q ∧ Real.arctan ↑q ≤ ↑hi

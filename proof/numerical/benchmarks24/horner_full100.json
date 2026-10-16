@@ -1,0 +1,9 @@
+{
+  "label": "horner_full100",
+  "file": "FastFullBenchmark.lean",
+  "exit_code": 0,
+  "wall_seconds": 11.408141422994959,
+  "user_seconds": 9.66792,
+  "system_seconds": 1.795573,
+  "peak_rss_kib": 3905140
+}

@@ -1,0 +1,21 @@
+FastFullBenchmark.lean:9:60: error: failed to synthesize
+  Decidable
+    (∀ (k : Fin 100),
+      match logInterval (2 ^ 80) 24 16 ((↑↑k + 1) / 37) with
+      | none => False
+      | some a => a.lo ≤ a.hi ∧ a.hi - a.lo ≤ 1 / 10 ^ 18)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+type checking took 4.79s
+cumulative profiling times:
+	attribute application 0.0908ms
+	fix level params 0.0532ms
+	instantiate metavars 0.102ms
+	interpretation 0.069ms
+	overlappingInstancesLinter 2.72ms
+	process pre-definitions 3.15ms
+	share common exprs 0.365ms
+	tactic execution 4.95ms
+	tacticAnalysis 2.07ms
+	type checking 4.79s
+	typeclass inference 59.9ms

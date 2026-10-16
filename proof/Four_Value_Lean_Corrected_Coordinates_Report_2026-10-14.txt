@@ -1,0 +1,98 @@
+FOUR-VALUE LEAN PROOF — ROUND 21
+Corrected-coordinate arithmetic adapter
+2026-10-14
+
+STATUS
+The corrected-coordinate arithmetic adapter is complete and Lean-verified.
+The arithmetic bounds now apply to the same E_i(x^2) matrix and the same
+selected minors as the Round 20 analytic estimates. The full theorem that
+at least one of zeta(7), zeta(9), zeta(11), zeta(13) is irrational remains OPEN.
+
+Elapsed wall time from the request, including runtime/cache restoration:
+28.2 minutes.
+Build and audit completed by 2026-10-14T15:29:27.373332+00:00.
+Most of the initial delay was restoring the pinned Lean and mathlib runtime;
+no approval pause or mathematical obstruction was required.
+
+VERIFICATION EVIDENCE
+Lean leanprover/lean4:v4.33.1; mathlib 0df444a360eaa60ab8c11dca51a86af692955474.
+49 new theorems in 9 modules.
+1271 total audited theorem declarations in 207 substantive modules.
+All 198 Round 20 substantive modules are byte-for-byte unchanged.
+The full Lake build and per-declaration axiom audit pass, allowing only
+propext, Classical.choice, and Quot.sound. No sorry/admit proof holes,
+native_decide uses, or custom axioms occur in the project proof sources.
+
+WHAT THE ADAPTER DOES
+The old physical rational test evaluates P(4x^2). Define the corrected test
+by evaluating P(x^2) instead. Lean proves that this equals the old test
+applied to analyticCoordinate P = P(X/4), after exact cancellation.
+Under the rationality assumption for the four classical zeta values, the
+corrected rational matrix maps entry-by-entry to analyticZetaMatrix n.
+The determinant equality holds for EVERY selected row/column pair, not only
+for a newly selected arithmetic witness. The previously proved analytic
+nonzero minor therefore has a nonzero rational representative q with these
+corrected arithmetic bounds.
+
+LOCAL BOUNDS PRESERVED
+Let m=floor(361n/2), and let a local selected minor have order k. The same
+row/column factorial cost F_p as before is used. Lean proves:
+  bad class: v_p(det) >= k^2 + (w_p(n,r)-5) k - F_p;
+  good class: v_p(det) >= k^2 + w_p(n,r) k - F_p;
+  single-node good class:
+      v_p(det) >= max(k^2+w_p(n,r)k, k nu_p(n)) - F_p.
+As in the preceding checkpoint, the statements use PadicLower to include
+zero determinants, and the large-prime and residue/harmonic hypotheses
+remain explicit. These are proved bounds for the corrected local matrices.
+The residue annihilator now has roots a^2 rather than 4a^2. Its degree is
+unchanged, so the exact residue capacities and vanishing of oversized local
+minors remain valid, including for the central class. The finite pole
+partition at boundary 67n is proved for the corrected selected matrix.
+
+THE PRIME 2 AND THE MAIN RATE
+The potentially expensive coefficientwise substitution X/4 is avoided in
+the valuation proof. Instead, Lean uses the exact factorization, for i>=1,
+  E_i(x^2) = 2/(2i)! * x * product(t=-i+1,...,i-1)(x-t).
+Consecutive integer root counts cancel the factorial valuations. The same
+scaled Laurent bound -3 floor(log_p(800n)) holds for each basis factor,
+including at p=2. Combining both basis factors, the normalized weight,
+and harmonic terms gives, with the fixed pencil denominator Q:
+  entries: PadicLower p (-40 floor(log_p(800n)) - v_p(Q));
+  k-minors: PadicLower p (-k(40 floor(log_p(800n)) + v_p(Q))).
+This includes primes dividing Q.
+
+For the nonzero selected minor k=m+1-4, Lean additionally proves that
+  k(40 floor(log_2(800n)) + v_2(Q)) log(2) / n^2 -> 0.
+Thus the coordinate adapter adds NO quadratic main-rate penalty at 2.
+The large-prime constants and capacities also remain unchanged. This
+removes the coordinate mismatch; it does not establish the remaining global
+prime-sum lower bound or the numerical certificate inequalities.
+
+MAIN NEW THEOREMS
+All names below have prefix OddZeta.FourValue.Corrected.
+- rationalAnalyticTest_eq
+- selectedResidueMatrix_bad_bound / selectedResidueMatrix_good_bound
+- selectedResidueMatrix_singleNode_bound
+- selectedResidueMatrix_det_zero_capacity
+- rationalFourValueMatrix_selected_partition
+- analyticZetaMatrix_selected_rational
+- analyticZeta_nonzero_minor_allPrime
+- corrected_two_adic_minor_bound
+- twoAdicLoss_normalized_tendsto_zero
+
+REMAINING OBLIGATIONS
+1. Instantiate and verify the numerical envelope and its grid, endpoint,
+   tail, and quadrature certificate.
+2. Assemble the global arithmetic allocation and prime-sum lower bound,
+   now using the corrected local matrices.
+3. Combine the resulting bounds with nonvanishing and audit the final
+   classical-zeta irrationality theorem.
+The Round 20 analytic estimate still has its numerical certificate as an
+explicit hypothesis. Nothing in this adapter discharges that hypothesis.
+
+REPRODUCTION
+Restore the pinned dependencies and run bash verify.sh from lean/.
+The archive includes cumulative proof source, build/audit logs, key theorem
+statements, baseline hashes, and verification.json. The toolchain and .lake
+cache are excluded. The runtime compatibility shim is retained only for the
+container environment; it does not change the elaborator or proof kernel.

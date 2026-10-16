@@ -1,0 +1,107 @@
+FOUR-VALUE LEAN PROOF — ROUND 24
+Verified evaluator optimization and kernel benchmarks
+
+RESULT
+The optimized 100-input series benchmark takes 0.743 seconds of kernel type
+checking, versus the preceding Round 23 measurement of 66.7 seconds: about
+89.8 times faster on that benchmark. The precision (scale 2^80), number of
+terms (24), input set k/300 for k:Fin 100, and tested lower-endpoint property
+are unchanged. Algorithms and representation have changed; the benchmark
+is not itself a proof of the full numerical certificate.
+
+A stronger test also passed: 1,000 complete logarithm enclosures and 1,000
+complete arctangent enclosures, each checking lower<=upper and width<=10^-18.
+Kernel times: logarithms 37.500 seconds; arctangents 62.100 seconds.
+Total subprocess wall time including startup/imports: 104.331 seconds.
+Peak resident memory: 6.522 GiB.
+These results establish measured evaluator performance and kernel-checked
+finite tests, not completion of the 50,000-cell certificate.
+
+BENCHMARK PROGRESSION (KERNEL TYPE-CHECKING TIME)
+Round 23 rational recurrence, 100 series inputs: 66.7 seconds.
+Integer recurrence with general interval multiplication, 100: 3.34 seconds.
+Same integer recurrence, 1,000: 41.3 seconds.
+Nonnegative multiplication specialization, 1,000: 13.1 seconds.
+Horner recurrence, 1,000: 10.8 seconds.
+Selected Horner log recurrence, original 100-input test: 0.743 seconds.
+
+For the full 100-log/100-atan endpoint-and-width test:
+Integer power recurrence: 3.01 seconds log + 3.85 seconds atan.
+Horner recurrence: 2.71 seconds log + 4.03 seconds atan.
+Horner improved the log test but did not improve the atan test; the selected
+frontend uses Horner for logarithms and the power recurrence for arctangents.
+These single-run measurements are descriptive, not statistical estimates.
+The 1,000-case full test also spans a wider argument range than the 100-case
+full test; their timing difference is not a pure batch-size comparison.
+
+For 100 small log arguments (k+1)^2/10^8:
+Recursive range reduction: 6.86 seconds.
+Accumulated binary exponent: 5.13 seconds.
+Both tests checked valid ordered endpoints and width<=10^-18.
+
+IMPLEMENTATION AND FORMAL SOUNDNESS
+FourValueFastInterval.lean:
+- Interval endpoints are integer numerators over a shared positive scale.
+- Quotient bounds prove downward division and upward ceiling are sound.
+- Signed addition, negation, division, and general multiplication are proved.
+- A conditional specialization uses only two endpoint products when both
+  intervals have nonnegative lower endpoints; the general case remains valid.
+- Both the power recurrence and Horner recurrence have proved polynomial
+  containment. Rational normalization is absent from their inner loops.
+- Conversion back to the established rational interval interface is proved.
+
+FourValueFastEvaluator.lean:
+- Reuses the established log/atan remainder bounds with the new backend.
+- Logarithms use the verified Horner recurrence; arctangents use the verified
+  power recurrence. Both full evaluators retain containment theorems.
+- The earlier recursive logarithm frontend is retained for comparison.
+
+FourValueFastReduction.lean:
+- Collects the power-of-two exponent before evaluating the logarithms.
+- Encloses log(2) once per input, with a signed scalar multiple, instead of
+  adding its interval at every range-reduction step.
+- The recommended logarithm API is Fast.reducedLogInterval, with theorem
+  reducedLogInterval_contains. Fast.atanInterval is the arctangent API.
+- Failed reduction returns none; it never supplies an uncertified interval.
+
+AUDIT
+26 new theorem declarations in 3 modules.
+1415 cumulative audited declarations in 221 substantive modules.
+Full build and every-declaration axiom audit passed. Only propext,
+Classical.choice and Quot.sound occur. No sorry, admit, custom axiom or
+native_decide is permitted. All 218 Round 23 substantive modules remain
+byte-for-byte unchanged. New benchmark proofs use decide +kernel.
+Lean leanprover/lean4:v4.33.1; mathlib 0df444a360eaa60ab8c11dca51a86af692955474.
+Packaged 2026-10-14T22:22:49.452846+00:00.
+
+TEST SCOPE AND LIMITATIONS
+The simple series timing checks nonnegativity of a computed lower endpoint.
+The stronger tests check both rational endpoints and their width. Generic
+containment theorems separately establish that the true transcendental value
+lies inside every returned enclosure. The 1,000-log arguments are (k+1)/37;
+the 1,000-atan arguments are (k-500)/13, exercising negative arguments,
+quarter-turn and reciprocal reduction. A verified Machin pi enclosure from
+Round 23 supplies the pi endpoints.
+
+A first full-test harness failed to synthesize a Decidable instance for a
+proposition-valued Option match. It was replaced by an explicit Boolean
+Option.any check and then passed. This was an elaboration issue, not a
+failed numerical inequality. Both logs are retained for transparency.
+
+The full concrete GridCertificate 50000 is still uninstantiated. Remaining
+work is to connect the concrete G/K arrays, exact distance bounds and weighted
+knot inequalities to the optimized evaluator, certify the resulting finite
+checks in manageable batches, and apply finite_certificate_of_grid. Whole-
+certificate runtime has not yet been measured; the 90x figure must not be
+applied blindly to that workload. Precision escalation may still be needed
+for endpoint inequalities unusually close to their stored ceilings.
+Global arithmetic lower bounds and the final contradiction also remain.
+No unconditional four-value irrationality theorem is claimed.
+
+REPRODUCTION
+The cumulative archive contains sources, verification logs, prior numerical
+evidence and numerical/benchmarks24 with benchmark sources, logs, timing/RSS
+JSON and earlier implementation snapshots. Run lean/verify.sh with the pinned
+dependencies restored. See numerical/benchmarks24/README.txt for benchmark
+commands and which source corresponds to each historical timing.
+No worker is left running or promised to continue after this checkpoint.

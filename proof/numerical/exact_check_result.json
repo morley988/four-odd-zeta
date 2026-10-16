@@ -1,0 +1,17 @@
+{
+  "status": "all independent integer enclosure checks passed",
+  "lean_kernel_verified": false,
+  "counts": {
+    "G_cells": 50000,
+    "K_cells": 2250000,
+    "distance_ceilings": 4500090
+  },
+  "knots": 42,
+  "integral": "-13277632257660676586509793/1024000000000000000000000",
+  "real_exponent_upper": "-577853339/50000000",
+  "tail_upper": "-3382285507/100000000",
+  "fixed_point_bits": 160,
+  "log_terms": 48,
+  "atan_terms": 72,
+  "seconds": 218.99502515792847
+}

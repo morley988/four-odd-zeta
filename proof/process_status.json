@@ -1,0 +1,16 @@
+{
+  "round": 28,
+  "checkpoint_date": "2026-10-15",
+  "stage": "Global arithmetic lower bound",
+  "stage_complete": true,
+  "explicit_admitted_proofs": 8,
+  "fully_lean_certified": false,
+  "global_arithmetic_lower_bound_assembled": true,
+  "global_lower_rate": "-288/25",
+  "full_four_value_zeta_theorem_verified": false,
+  "audit_declarations": 1864,
+  "remaining": [
+    "final contradiction",
+    "final theorem audit"
+  ]
+}

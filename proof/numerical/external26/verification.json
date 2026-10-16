@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "complete": true,
+  "log_bounds_checked": 5700022,
+  "atan_bounds_checked": 1200000,
+  "total_bounds_checked": 6900022,
+  "sha256": "89ce7741b3c7e5ac48d5f0d12c0ac2a07bf6a12ff47e836c5523e91be1429840",
+  "precision_bits": 256,
+  "python_flint_version": "0.9.0",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "seconds": 26.956209775999014,
+  "method": "Arb outward-rounded ball arithmetic; strict containment in exact rational claimed intervals",
+  "formal_lean_certification": false
+}

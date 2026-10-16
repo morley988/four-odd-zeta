@@ -1,0 +1,86 @@
+INDEPENDENT NUMERICAL CERTIFICATE CHECK — ROUND 22
+
+Scope
+The checker uses Python unbounded integers and fractions. NumPy only loads the
+saved integer arrays: every arithmetic value read from them is converted to a
+Python integer. No floating-point or transcendental-library computation is
+used for its enclosure decisions. This checker is NOT a Lean kernel proof.
+
+Dyadic enclosures
+All interval endpoints are integers in units of 2^-160. Fraction conversion,
+addition, subtraction and rational scalar multiplication round outward. The
+functions are represented by the following classical series with explicit
+remainder bounds.
+
+Logarithm
+Scale the positive rational argument as x=2^e*u, 1<=u<2. Put
+t=(u-1)/(u+1), so 0<=t<=1/3. Then
+ log u=2 sum_{j=0}^{47} t^(2j+1)/(2j+1)+R,
+ 0<=R<=2/(97*3^97*(1-1/9)).
+Compute log2 using the same formula at u=2. The range reduction is exact.
+All powers and polynomial summands are rounded downward. If T=floor(2^160*t)
+and T2=floor(T*T/2^160), the computed (2j+1)-st power underestimates the exact
+power by at most (4j+1) units. This follows inductively from the initial
+one-unit error, a three-unit error bound for T2, and at most one
+new rounding unit per power multiplication. Division by 2j+1 and
+rounding contributes at most one further unit. Thus the total error in twice
+the finite sum is at most 2 sum_{j<N}((4j+1)/(2j+1)+1), which is <=4N^2 for
+N=48. The checker adds this generous integer error allowance and the upward
+rounded geometric remainder. Signed scaling of log2 is outward rounded.
+
+Arctangent and pi
+For 0<=t<=1/2 use 72 terms of the alternating arctangent series. The absolute
+remainder is at most 1/(145*2^145). The same power-error argument applies;
+4*72^2 units bound the accumulated absolute rounding error. Negative arguments
+use oddness. Arguments in (1/2,1] use atan(t)=pi/4+atan((t-1)/(t+1)); arguments
+above 1 use atan(t)=pi/2-atan(1/t). Pi is enclosed by Machin's identity
+ pi=16atan(1/5)-4atan(1/239).
+
+Checks
+For every height-cell right endpoint h=k/10000, evaluate the defining entropy,
+J expressions, pi term, and derivative allowance using these enclosures.
+Check the resulting upper endpoint against the stored G integer. Independently
+reconstruct the rational coordinates of (1+(3/5+i)y)^2 at all 50001 endpoints.
+For each center and its conjugate, check the integer square-root ceiling by
+squaring both it and its predecessor. Include the disk cutoff and the exact
+quadratic interpolation correction 17/5000000000. Evaluate both logarithms
+with the integer-only enclosure, and compare their sum against every stored K
+entry. Independently enclose the infinite-tail constant. Recompute all 42
+knot maxima and their trapezoidal integral using arbitrary-precision integers
+and fractions, and check the final logarithmic rate bound.
+
+Analytic coverage
+The grid covers [0,5]; the tail formula covers [5,infinity). Passage from
+endpoint data to full cells additionally uses the derivative bound and
+quadratic interpolation inequality stated in the recovered manuscript.
+Passage from knot bounds to intermediate degrees uses linear interpolation
+of the masses s*w(s), not linear interpolation of w(s). This file records
+the numerical proof method; it does not assert these steps have all been
+formalized in Lean. The formalization status is recorded separately.
+
+Justification of full-cell coverage for the weight potential
+Write c=1+(3/5)y, and H_a=J(c+a,y)-J(c-a,y). For y>0,
+ H_a'=(3/10)log(Q_plus/Q_minus)+atan((c+a)/y)-atan((c-a)/y),
+where Q_plus=(c+a)^2+y^2 and Q_minus=(c-a)^2+y^2.
+For a=1 both terms are nonnegative. For every denominator endpoint 0<a<1,
+ (1+a)^2 Q_minus-(1-a)^2 Q_plus
+   =4a*((c-1)*(c-a^2)+y^2)>=0.
+Consequently H_a' <= (3/5)log((1+a)/(1-a))+pi/2: the arctangent difference
+lies between zero and pi/2. It follows that (G-2pi*y)' >= -L, where L is the
+positive constant computed and enclosed by the checker. Integrate this
+inequality from y to the right cell endpoint h. Since 0<h-y<=1/10000,
+ G(y)-2pi*y <= G(h)-2pi*h+L/10000.
+The first cell causes no derivative-at-zero issue: the formal target requires
+y>0, and the comparison interval is [y,h], wholly inside the smooth domain.
+
+Justification of the external sharp tail constant
+For |z|>1 the symmetric log integral is 2a log|z| plus an absolutely convergent
+even-power correction, whose absolute value is at most
+ a^3/(3*(|z|^2-1)) for 0<=a<=1. Summing the numerator and denominator
+corrections gives D=(5+sum a_i^3)/3. The two truncated distance logarithms
+for any center are at most 2log(|z|^2+R), with R=14697/5000. Since s<=C,
+4s-2*beta<=0. Using log(1+t)<=t and |z|>=y>=5 gives
+ S+D/24+2*C*R/25-10*pi-2*pi*(y-5).
+The checker independently encloses the constant term by -33.82285507.
+The new Lean tail proof uses a weaker direct norm bound and does not depend
+on this series expansion or on the sharp constant.

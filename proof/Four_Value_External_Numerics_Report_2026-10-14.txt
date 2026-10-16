@@ -1,0 +1,109 @@
+FOUR-VALUE ZETA PROJECT — ROUND 26
+Externally checked transcendental values and isolated Lean assumptions
+
+COMPLETED
+Exported and independently checked every scalar transcendental range for the
+entire 50,000-cell grid: 5,700,022 logarithm ranges and 1,200,000 arctangent ranges,
+6,900,022 total. The isolated ASCII text file is 400,205,372 bytes. Each row gives
+an exact positive rational argument p/q and lower numerator m, with endpoints
+m/10^18 and (m+5)/10^18. All bounds therefore have width 5*10^-18.
+There are 22 shared constant logs, then 114 logs and 24 arctangents per cell.
+
+The standalone checker uses Arb via python-flint 0.9.0, at 256-bit precision.
+It recomputes each value from the text's exact rational argument and requires
+strict containment of the entire outward-rounded Arb ball in the claimed range.
+No sampling, rounded-float comparison, or generator result is accepted as proof
+of containment. The first full run passed in 31.40 seconds;
+the final audit rerun passed in 26.96 seconds. Hardware-dependent
+single-run times are not promises for another machine. The generator took about
+95 seconds at 192-bit precision. The checker is independently runnable, though
+it uses the same Arb library as the generator rather than a second arithmetic
+implementation. Deliberately false-bound and truncated-file tests were rejected.
+
+EXACT TRUST BOUNDARY
+Only lean/FourValueExternalTranscendental.lean contains admitted proofs.
+There are exactly TWO marked blocks, at source lines 94, 100:
+  log_values : the finite family indexed by Fin 5700022;
+  atan_values : the finite family indexed by Fin 1200000.
+Both statements assert lower <= log/arctan(argument) <= upper for actual table
+rows. Neither asserts bounds for arbitrary arguments or arbitrary intervals.
+Two proof blocks cover 6,900,022 scalar range claims; these are different counts.
+
+The common marker suffix is EXTERNAL_TRANSCENDENTAL_VALUE_CERTIFICATION_V1.
+The source audit constructs the full statement match, counts exactly two, checks
+that every source token is on those lines, verifies the expected theorem blocks,
+and rejects extra admissions/custom axioms/native_decide throughout the project.
+No admission of the full grid certificate, arithmetic lower bound, nonvanishing,
+or final irrationality theorem has been introduced.
+
+The same text file is embedded as immutable Lean data by an elaborator that
+constructs ordinary safe definitions, not proof terms. Chunking and named data
+blocks control build memory. The data definitions have no additional axioms;
+rational arithmetic retains standard propext/Classical.choice/Quot.sound.
+The table itself has no axiom dependencies. The two theorem blocks are the sole
+new numerical trust boundary. Its exact content hash is
+89ce7741b3c7e5ac48d5f0d12c0ac2a07bf6a12ff47e836c5523e91be1429840.
+The conditional verification script pins that hash and reruns the independent
+numerical checker, so an altered table cannot silently reuse the saved receipt.
+
+INTEGRATION STATUS
+FourValueExternalInterface imports the proved core and the isolated assumption
+file and supplies log_bound_of_row / atan_bound_of_row. These transfer a selected
+row to desired rational constants once the argument and endpoint equalities are
+proved. The old fully certified three-cell batch is retained unchanged.
+
+Full-grid assembly is NOT complete. Identifying all rows with the analytic grid
+expressions and completing the G/K, distance, and weighted-knot arithmetic are
+still obligations. No blanket certificate assumption hides them. Exploratory
+concrete lookup-proof attempts exceeded the 8 GiB environment limit; they are
+not claimed as successful proofs. The final generic interface builds and keeps
+row-identification equalities explicit. Further batching or separately audited
+external treatment of calculation-only equalities remains implementation work.
+
+AUDIT RESULT
+The conditional Lake build and axiom audit passed. All 1,669 original theorem
+declarations remain byte-for-byte sourced from Round25 and free of sorryAx.
+All original Round25 Lean source files remain unchanged. The new audit covers
+1,677 declarations: the original 1,669, four new theorems (two admitted families
+and two proved adapters), and four data/decoder definitions. Exactly the four
+new theorems depend on sorryAx. No other new axiom dependency is allowed.
+
+This is explicitly a Lean proof interface CONDITIONAL on externally checked
+numerical statements. It is not a fully kernel-certified numerical certificate,
+and the full four-value irrationality theorem remains unfinished. The unchanged
+strict verify.sh still rejects any admitted proofs; use verify_external.sh for
+this deliberately conditional variant. No audit result relabels it unconditional.
+
+REVISED TIME ESTIMATE AFTER THIS CHECKPOINT
+Assuming later calculation-only steps receive similarly isolated, independently
+checked treatment, a provisional remaining budget is about 25–70 hours of active
+work. The components are approximately:
+  full-grid data linkage and remaining numerical/arithmetic interfaces: 3–10 h;
+  global arithmetic allocation and prime-sum lower bound: 12–36 h;
+  final analytic/arithmetic contradiction and theorem integration: 4–12 h;
+  final conditional audit, cleanup and reproducibility: 2–6 h.
+The component total is 21–64 h; 25–70 h allows a modest integration margin.
+The global arithmetic proof remains the largest mathematical uncertainty and
+could exceed that range if a genuine obstruction appears. This is a planning
+estimate, not a measured completion forecast or upper bound.
+
+The former ~30-day figure was the naive serial cost of the old per-cell Lean
+implementation. Under the requested external-calculation policy it is no longer
+the appropriate numerical-work estimate: the entire log/arctan checking run
+already took about half a minute. Merely replacing the transcendental checks
+would not automatically remove all other per-cell proof-assembly costs; the
+revised estimate explicitly assumes the analogous treatment of later purely
+calculational checks that the user proposed. Mathematical arguments remain
+proof obligations and are not silently admitted.
+
+REPRODUCTION
+The standalone Python program and text file suffice for independent checking.
+Install python-flint==0.9.0 and run:
+  python verify_values.py transcendental_values.txt --report verification.json
+Optional: --precision 512, or --sha256 followed by the hash above.
+For the cumulative conditional Lean audit, restore the pinned dependencies and
+run lean/verify_external.sh. Detailed format and commands are in
+numerical/external26/README.txt. Sources, logs, negative controls, original core
+and both prior/full conditional audit evidence are included. Runtime binaries
+and .lake caches are excluded. No worker remains running after this checkpoint.
+Checkpoint: 2026-10-15T01:31:38.053838+00:00

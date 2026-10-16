@@ -1,0 +1,9 @@
+{
+  "label": "final_full1000",
+  "file": "FastFinalFull1000.lean",
+  "exit_code": 0,
+  "wall_seconds": 104.3306696159998,
+  "user_seconds": 98.443967,
+  "system_seconds": 5.459009,
+  "peak_rss_kib": 6839292
+}

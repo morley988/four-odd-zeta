@@ -1,0 +1,220 @@
+\section{Finite Pearson functionals and uniform nonvanishing}\label{sec:rank}
+\subsection{Classification of finite solutions}
+A linear functional on $\C[z]$ is called finite if it factors through
+$\C[z]/(p)$ for some nonzero polynomial $p$.  Equivalently, it is a finite
+sum of evaluation derivatives at finitely many points.  Its local component
+at a point is a jet; multiplication by a polynomial nonzero at that point
+is invertible on the local jet space.  Multiplication by a zero of order
+$d$ lowers a nonzero highest derivative order $h$ to $h-d$, or kills
+the jet if $h<d$.
+
+\begin{proposition}\label{prop:finite-classification}
+For the endpoints~\eqref{eq:endpoints}, the space of finite functionals $U$
+satisfying
+\begin{equation}\label{eq:finite-pearson}
+ U(f(-z))=-U(f(z)),\qquad
+ U\bigl(A(z)q((z+1)^2)\bigr)=0\quad(q\in\C[X])
+\end{equation}
+has dimension seven.  Each solution is supported on the even integers
+between $-134n$ and $134n$ and is determined by its odd center jets of
+orders $1,3,\ldots,13$.
+\end{proposition}
+\begin{proof}
+The polynomials $q((z+1)^2)$ are precisely the polynomials invariant under
+$\tau(z)=-2-z$.  Consequently the second identity says that $AU$ is odd
+under $\tau$.  The first says that $U$ is odd under $\sigma(z)=-z$.
+Away from a zero of $A$, these identities propagate a support point by
+$\sigma\tau(z)=z+2$.  A finite nonempty chain must start at $-a$ and end
+at $a'$ for roots $a,a'$ of $A$, with $a+a'\ge0$.
+
+The roots of $A$ are $-200n-2$ and the positive even integers $2a_i$.
+A pair involving the negative root has negative sum, since $2a_i\le134n$.
+Thus both endpoints arise from positive roots.  Every chain lies on the
+even integer lattice, in the indicated interval, and crosses zero.
+There can be no finite cycle under translation by two over $\C$.
+
+On the nonnegative half-lattice, the local equation at consecutive points
+can be written as equality of the translated jets obtained by multiplying
+at $2j$ by $A(z)$ and at $2j+2$ by $A(-z)$.  The latter factor is a unit
+because $A(-2j-2)\ne0$ for $0\le j\le67n$.  Thus a center jet determines
+every later jet uniquely.  Its highest order decreases by the multiplicity
+of each positive root crossed.  There are fifteen such roots counted with
+multiplicity.  A highest center order below fifteen is killed by the
+terminal endpoint; an order at least fifteen survives and cannot yield
+finite support.  Oddness allows only odd orders, giving exactly
+$1,3,\ldots,13$.  Conversely, each such center jet propagates and
+terminates; reflection provides the negative half and satisfies the same
+local equations.  This proves both the dimension and the claimed
+parametrization.  In particular, the five coincident roots at $134n$
+lower the order by five; distinctness is not assumed.
+\end{proof}
+
+\begin{proposition}\label{prop:finite-restrictions}
+For $\ell_U(P)=U(zP(z^2))$, the restrictions of all solutions in
+Proposition~\ref{prop:finite-classification} to polynomials of degree at
+most eight are exactly
+\begin{equation}\label{eq:finite-span}
+ \operatorname{span}_{\C}\{B_3,B_5,B_7,B_9,C_1,C_3\}.
+\end{equation}
+Here and below the fixed change $X=4Y$ is understood.  This subspace has
+dimension six and contains no functional with nonzero $C_4$ coordinate
+in the basis~\eqref{eq:nine}.
+\end{proposition}
+\begin{proof}
+The even rational function $g(z)=w_n(z/2)/z$ satisfies
+\[
+ g(z+2)/g(z)=A(z)/A(-z-2)
+\]
+and has a center pole of order ten.  At every even integer use the same
+even Laurent germ in the local coordinate.  Internal residues of $g$
+times any such germ satisfy the local Pearson propagation equation.
+The germs $1,u^2,u^4,u^6,u^8$ give, after multiplication of the test
+polynomial by $z$, nonzero scalar multiples of $B_1,B_3,B_5,B_7,B_9$.
+Their highest center derivative orders are $9,7,5,3,1$.
+Nonnegative-power germs are merely local data; a globally defined
+periodic function with these exact germs is not required.
+
+Two further choices are the globally periodic kernels
+$(\pi/2)^2\csc^2(\pi z/2)$ and $(\pi/2)^4\csc^4(\pi z/2)$.
+Their highest center derivative orders are eleven and thirteen.  Hence
+the seven residue functionals just described form a basis of the finite
+solution space, by their distinct highest center orders.
+
+It remains to identify the two additional restrictions.  This is most
+transparent in the physical $x$ coordinate.  Put
+\[
+ K_2(x)=\pi^2\csc^2(\pi x),\qquad
+ K_4(x)=\pi^4\csc^4(\pi x).
+\]
+Their principal parts at an integer are respectively $u^{-2}$ and
+$u^{-4}+(2\pi^2/3)u^{-2}$.  Integrate
+$w_n(x)P(x^2)K_h(x)$ on expanding rectangles with vertical sides
+at half-integers.  For $\deg P\le8$, rational decay makes the vertical
+integrals tend to zero, while the horizontal integrals decay
+exponentially.  The sum of all residues is therefore zero.  The zeros
+of order five at $a_0<|m|\le b$ remove every intervening residue.
+At the remaining external integers reflection doubles the positive
+half of the sum.  Thus the two internal residue functionals, in this
+coordinate, are
+\begin{equation}\label{eq:kernel-residues}
+ -2F_1(P),\qquad -2F_3(P)-\frac{4\pi^2}{3}F_1(P).
+\end{equation}
+Internal residues must include every integer $|m|\le a_0$, even when
+$w_n$ is regular there: the trigonometric kernel still has a pole.
+In particular the nodes $63n<|m|\le67n$ cannot be omitted.
+
+The partial-fraction formula expresses $F_1$ and $F_3$ as $C_1$ and
+$C_3$, respectively, plus linear combinations of the four nonzero $B$
+directions.  Only even zeta values occur in these combinations, and
+their values are irrelevant to the span.  Also $B_1=0$ in the proper
+range.  Equation~\eqref{eq:kernel-residues} is triangular with nonzero
+coefficients on $C_1,C_3$.  Lemma~\ref{lem:independent} now proves the
+dimension and the final exclusion assertion.
+\end{proof}
+
+\subsection{A truncated Hankel extension lemma}
+Hankel rank is closely related to binary apolarity. The following standard
+consequence is included with
+its degree bookkeeping, since a possible root at infinity matters here.
+\begin{lemma}\label{lem:hankel}
+Let $\ell$ be a nonzero linear functional on $\C[X]_{\le2m}$, and
+suppose its middle Hankel matrix $(\ell(X^{i+j}))_{0\le i,j\le m}$
+has rank $r\le m$.  There is a nonzero polynomial $p$ of degree
+$s\le r$ and a functional $\widetilde\ell$ on $\C[X]$, annihilated
+by $p$, which agrees with $\ell$ through degree $2m-r+s$.
+For $s=0$ this means agreement with the zero functional.
+\end{lemma}
+\begin{proof}
+Write $m_j=\ell(X^j)$ and homogenize the moments to the binary form
+\[
+ f(U,V)=\sum_{j=0}^{2m}\binom{2m}{j}m_jU^{2m-j}V^j.
+\]
+Its catalecticant maps have Hankel matrices in the divided-power
+normalization.  The apolar ideal of a binary form is a complete
+intersection with generator degrees $d,2m+2-d$, where $d\le m+1$;
+see \cite[Proposition 1.7]{BS}.  Its Hilbert function in degree $m$
+is $d$, so $d=r$ when the middle rank is at most $m$.  The case where
+$f$ is a pure power has the same conclusion directly, with $r=1$.
+
+A degree-$r$ homogeneous annihilator, dehomogenized, is a polynomial
+$p(X)=\sum_{j=0}^sp_jX^j$ with $s\le r$ and $p_s\ne0$.  Its
+catalecticant equations are
+\[
+ \sum_{j=0}^sp_jm_{j+k}=0\qquad(0\le k\le2m-r).
+\]
+Extend the first $s$ moments by this recurrence.  The resulting
+functional is annihilated by $p$, and the displayed equations force
+agreement through degree $2m-r+s$.  If $s=0$, those equations say
+directly that all moments in the asserted range are zero.  The drop
+$r-s$ is exactly what permits homogeneous factors at infinity; no
+flat-extension assumption has been inserted. The Lean development proves
+the needed short-annihilator and recurrence-extension statements directly;
+it does not assume an apolarity theorem as an external axiom.
+\end{proof}
+
+\begin{theorem}\label{thm:rank}
+Let $m\ge4$ and $2m\le\beta+3$.  For arbitrary complex numbers
+$c_3,c_5,c_7,c_9$, put $\ell=C_4+\sum c_jB_j$.  Then
+\[
+ \rank(\ell(Y^{i+j}))_{0\le i,j\le m}\ge(m+1)-4.
+\]
+\end{theorem}
+\begin{proof}
+Assume the contrary, so its rank $r$ is at most $m-4$.
+Apply Lemma~\ref{lem:hankel}, and put $e=r-s$.  The extension agrees
+through degree $2m-e\ge m+4\ge8$.  It cannot be zero by
+Lemma~\ref{lem:independent}, so $s>0$.
+Define a functional on $\C[z]$ by
+\[
+ U(f)=\widetilde\ell\left(\frac{f(z)-f(-z)}{2z}\right),
+\]
+reading the even quotient as a polynomial in $X=z^2$.  It is odd and
+annihilated by $p(z^2)$, and therefore factors through an algebra of
+dimension $2s$.  Let $W(q)=U(A(z)q((z+1)^2))$.
+By definition, $W(q)=\widetilde\ell(\mathcal Dq)/2$.
+For $0\le k\le2s-1$,
+\[
+ \deg\mathcal D(X^k)\le2s+8\le2m-(r-s),
+\]
+since $2m-r-s\ge2(m-r)\ge8$.  These moments vanish by agreement
+with $\ell$ and Lemma~\ref{lem:pearson}.  Multiplication by
+$(z+1)^2$ in $\C[z]/(p(z^2))$ is an endomorphism of a
+$2s$-dimensional space.  Cayley--Hamilton extends the vanishing to
+every $k\ge0$.  Hence $U$ is a finite Pearson solution.  Its first
+nine induced moments agree with $\ell$, contradicting
+Proposition~\ref{prop:finite-restrictions}, since the $C_4$ coordinate
+of $\ell$ is one.
+\end{proof}
+
+\subsection{Selection of a nonzero minor}
+Put
+\begin{equation}\label{eq:N-K}
+ M=100n,\qquad C=\frac{361}{200},\qquad
+ N=\floor{361n/2}+1,\qquad K=N-4.
+\end{equation}
+Then $2N-2\le\beta$ and $(N-1)/M\le C$.  We leave the final
+few permissible polynomial degrees unused to retain the latter exact
+inequality.  Define
+\begin{equation}\label{eq:E}
+ E_0(Y)=1,\qquad
+ E_i(Y)=\frac{2\prod_{h=0}^{i-1}(Y-h^2)}{(2i)!}\quad(i\ge1).
+\end{equation}
+These form a basis in every initial degree range.  Moreover
+\begin{equation}\label{eq:E-integer}
+ E_i(x^2)=\binom{x+i}{2i}+\binom{x+i-1}{2i}\quad(i\ge1),
+\end{equation}
+an identity of polynomials, so $E_i(x^2)$ is integer-valued on $\Z$.
+One can verify~\eqref{eq:E-integer} by adding the two factorial products:
+their common factors give $2x^2\prod_{h=1}^{i-1}(x^2-h^2)/(2i)!$.
+Generalized binomial coefficients at negative integer arguments are
+integers as well.
+
+Apply Theorem~\ref{thm:rank} to~\eqref{eq:zeta-form}.  The matrix
+$(F_4(E_iE_j))_{0\le i,j<N}$ has rank at least $K$.  Hence there
+exist sets $I,J\subset\{0,\ldots,N-1\}$ of cardinality $K$ for which
+\begin{equation}\label{eq:minor}
+ D_n=\det\bigl(F_4(E_iE_j)\bigr)_{i\in I,j\in J}\ne0.
+\end{equation}
+Under simultaneous rationality it belongs to $\Q$.  The rest of the
+argument bounds all these minors uniformly; it imposes no condition
+on the chosen $I,J$.

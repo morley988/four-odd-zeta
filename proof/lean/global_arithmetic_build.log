@@ -1,0 +1,418 @@
+BUILD FourValueGlobalArithmeticRate
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueGlobalArithmeticRate.lean:38:23: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_zero, sub_zero, Grid.rate, Rat.cast_sum, Rat.cast_mul, Rat.cast_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueGlobalArithmeticRate.lean:37:5: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'OddZeta.FourValue.ArithmeticCertificate.Grid.eventual_log_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+BUILD FourValueGlobalArithmeticLower
+'OddZeta.FourValue.ArithmeticCertificate.global_arithmetic_lower_of_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+BUILD FourValueExternalGlobalArithmetic
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueExternalGlobalArithmetic.lean:11:8: warning: declaration uses `sorry`
+BUILD FourValueGlobalArithmeticComplete
+'OddZeta.FourValue.ArithmeticCertificate.external_grid_certificate' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'OddZeta.FourValue.ArithmeticCertificate.global_arithmetic_lower' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+
+BUILD FourValueTranscendental
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueTranscendental.lean:27:38: warning: This simp argument is unused:
+  Nat.cast_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [atanPoly, sum_range_succ, Nat.cast_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueTranscendental.lean:27:52: warning: This simp argument is unused:
+  Nat.cast_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [atanPoly, sum_range_succ, Nat.cast_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueTranscendental.lean:30:44: warning: This simp argument is unused:
+  Pi.pow_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.cast_add, Nat.cast_mul, Nat.cast_ofNat, Nat.cast_one, Nat.add_sub_cancel, mul_one, id_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueTranscendental.lean:33:6: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueTranscendental.lean:88:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueTranscendental.lean:110:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueTranscendentalInterval
+BUILD FourValueFastInterval
+BUILD FourValueFastEvaluator
+BUILD FourValueFastReduction
+BUILD FourValueTranscendentalChecks
+BUILD FourValueTranscendentalCells
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueTranscendentalCells.lean:19:83: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueTranscendentalCells.lean:29:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueTranscendentalCells.lean:131:64: warning: This simp argument is unused:
+  f
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueTranscendentalCells.lean:131:54: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueNumericalCells
+BUILD FourValueNumericalSpline
+BUILD FourValueNumericalSegments
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalSegments.lean:7:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueNumericalTail
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalTail.lean:46:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueNumericalBridge
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:24:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:30:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:36:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:42:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:48:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:54:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:60:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:66:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:72:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:78:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:84:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:90:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:96:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:102:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:108:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:114:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:120:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:126:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:132:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:138:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:144:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:150:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:156:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:162:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:168:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:174:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:180:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:186:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:192:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:198:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:204:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:210:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:216:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:222:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:228:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:234:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:240:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:246:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:252:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:258:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueNumericalBridge.lean:264:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueTranscendentalGrid
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueTranscendentalGrid.lean:9:38: warning: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+BUILD FourValueBatchTools
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueBatchTools.lean:64:70: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueBatchTools.lean:73:127: warning: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueBatchTools.lean:73:123: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueBatchTools.lean:73:137: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueBatchTools.lean:80:127: warning: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueBatchTools.lean:80:123: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueBatchTools.lean:80:137: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+BUILD FourValueBatchEnclosures
+BUILD FourValueBatchFirstCell
+tactic execution of Mathlib.Tactic.normNum took 3.59s
+ring took 428ms
+tactic execution of Mathlib.Tactic.linarith took 824ms
+share common exprs took 169ms
+type checking took 411ms
+type checking took 12.8s
+type checking took 13.1s
+type checking took 13.4s
+type checking took 13.7s
+type checking took 13.8s
+type checking took 14s
+type checking took 16.2s
+type checking took 22.7s
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueBatchFirstCell.lean:64:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'OddZeta.FourValue.Batch.Cell0.all_knots_on_first_cell' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 22.7s
+cumulative profiling times:
+	attribute application 0.202ms
+	compilation (IR) 3.27ms
+	compilation (LCNF base) 22.5ms
+	compilation (LCNF impure) 14.1ms
+	compilation (LCNF mono) 17ms
+	congr simp thm 12.5ms
+	elaboration 22.9s
+	fix level params 7.62ms
+	instantiate metavars 0.72ms
+	let-to-have transformation 1.61ms
+	linting 189ms
+	norm_num 5.93s
+	overlappingInstancesLinter 11.1ms
+	parsing 16.4ms
+	process pre-definitions 100ms
+	ring 428ms
+	share common exprs 173ms
+	simp 159ms
+	tactic execution 4.71s
+	tacticAnalysis 51.3ms
+	type checking 120s
+	typeclass inference 1.4s
+BUILD FourValueBatchEnclosures5669
+BUILD FourValueBatchCell5669
+tactic execution of Mathlib.Tactic.normNum took 3.98s
+ring took 388ms
+tactic execution of Mathlib.Tactic.linarith took 880ms
+share common exprs took 209ms
+type checking took 377ms
+type checking took 14s
+type checking took 14.3s
+type checking took 14.6s
+type checking took 14.9s
+type checking took 15.1s
+type checking took 15.2s
+type checking took 17.3s
+type checking took 24.2s
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueBatchCell5669.lean:64:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'OddZeta.FourValue.Batch.Cell5669.all_knots_on_cell' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 24.3s
+cumulative profiling times:
+	attribute application 0.271ms
+	compilation (IR) 2.59ms
+	compilation (LCNF base) 26.2ms
+	compilation (LCNF impure) 16.2ms
+	compilation (LCNF mono) 23.5ms
+	congr simp thm 13.2ms
+	elaboration 24.6s
+	fix level params 13.1ms
+	instantiate metavars 0.99ms
+	let-to-have transformation 3.98ms
+	linting 226ms
+	norm_num 6.55s
+	overlappingInstancesLinter 11.7ms
+	parsing 16.7ms
+	process pre-definitions 107ms
+	ring 388ms
+	share common exprs 214ms
+	simp 41.2ms
+	tactic execution 5.21s
+	tacticAnalysis 53.2ms
+	type checking 130s
+	typeclass inference 1.56s
+BUILD FourValueBatchEnclosures49999
+BUILD FourValueBatchCell49999
+norm_num took 398ms
+tactic execution of Mathlib.Tactic.normNum took 3.82s
+typeclass inference of CharZero took 168ms
+norm_num took 160ms
+norm_num took 124ms
+norm_num took 113ms
+norm_num took 160ms
+norm_num took 119ms
+ring took 776ms
+typeclass inference of OfNat took 158ms
+tactic execution of Mathlib.Tactic.linarith took 1.6s
+share common exprs took 332ms
+type checking took 412ms
+type checking took 16.5s
+type checking took 16.9s
+type checking took 17.2s
+type checking took 17.5s
+type checking took 17.6s
+type checking took 17.8s
+type checking took 20.9s
+type checking took 27.5s
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueBatchCell49999.lean:64:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'OddZeta.FourValue.Batch.Cell49999.all_knots_on_cell' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 27.6s
+cumulative profiling times:
+	attribute application 0.236ms
+	compilation (IR) 1.51ms
+	compilation (LCNF base) 23.6ms
+	compilation (LCNF impure) 13.8ms
+	compilation (LCNF mono) 17.7ms
+	congr simp thm 12.6ms
+	elaboration 27.9s
+	fix level params 8.42ms
+	instantiate metavars 0.806ms
+	let-to-have transformation 2.04ms
+	linting 177ms
+	norm_num 7.42s
+	overlappingInstancesLinter 6.5ms
+	parsing 17.3ms
+	process pre-definitions 107ms
+	ring 776ms
+	share common exprs 336ms
+	simp 45.5ms
+	tactic execution 5.85s
+	tacticAnalysis 47.1ms
+	type checking 152s
+	typeclass inference 1.74s
+BUILD FourValueBatch
+BUILD FourValueTranscendentalEvaluator
+BUILD ReusedContourTools
+'OddZeta.ContourTools.gamma_reflection_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OddZeta.ContourTools.four_integrations_by_parts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.integral_boundary_rect_eq_zero_of_differentiableOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+BUILD FourValue
+BUILD FourValueExternalTranscendental
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueExternalTranscendental.lean:91:8: warning: declaration uses `sorry`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueExternalTranscendental.lean:97:8: warning: declaration uses `sorry`
+BUILD FourValueExternalInterface
+BUILD FourValueFullGridExpressions
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueFullGridExpressions.lean:5:5: warning: Ambiguous namespace `Transcendental`: it is interpreted as `_root_.OddZeta.FourValue.Transcendental` because this `open` occurs inside `namespace OddZeta.FourValue.FullGrid`, while `_root_.Transcendental` is silently not opened. Specify the namespace unambiguously, e.g. `_root_.OddZeta.FourValue.Transcendental`. The warning can sometimes also be addressed by moving the `open` outside of the surrounding `namespace`.
+
+Note: This linter can be disabled with `set_option linter.ambiguousOpen false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueFullGridExpressions.lean:94:1: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueFullGridExpressions.lean:98:1: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+BUILD FourValueFullGridData
+BUILD FourValueExternalArithmetic
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueExternalArithmetic.lean:10:8: warning: declaration uses `sorry`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueExternalArithmetic.lean:14:8: warning: declaration uses `sorry`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueExternalArithmetic.lean:18:8: warning: declaration uses `sorry`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueExternalArithmetic.lean:27:8: warning: declaration uses `sorry`
+/workspace/scratch/515466fd757b/work/Four_Value_Lean_Round20/lean/FourValueExternalArithmetic.lean:32:8: warning: declaration uses `sorry`
+BUILD FourValueFullGrid

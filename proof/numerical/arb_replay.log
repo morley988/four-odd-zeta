@@ -1,0 +1,11 @@
+{"stage": "Arb cell bounds", "cell": 5000, "total": 50000, "seconds": 2.9084599018096924}
+{"stage": "Arb cell bounds", "cell": 10000, "total": 50000, "seconds": 5.538567543029785}
+{"stage": "Arb cell bounds", "cell": 15000, "total": 50000, "seconds": 7.959290027618408}
+{"stage": "Arb cell bounds", "cell": 20000, "total": 50000, "seconds": 10.366212844848633}
+{"stage": "Arb cell bounds", "cell": 25000, "total": 50000, "seconds": 12.904240369796753}
+{"stage": "Arb cell bounds", "cell": 30000, "total": 50000, "seconds": 15.318880558013916}
+{"stage": "Arb cell bounds", "cell": 35000, "total": 50000, "seconds": 17.689847946166992}
+{"stage": "Arb cell bounds", "cell": 40000, "total": 50000, "seconds": 20.133278846740723}
+{"stage": "Arb cell bounds", "cell": 45000, "total": 50000, "seconds": 22.578869819641113}
+{"stage": "Arb cell bounds", "cell": 50000, "total": 50000, "seconds": 24.996987342834473}
+{"complete": true, "B": 100, "a": ["67/100", "67/100", "67/100", "67/100", "67/100", "63/100", "3/5", "29/50", "57/100", "27/50", "13/25", "49/100", "47/100", "11/25", "21/50"], "r": 5, "q": 15, "beta": "361/100", "C": "361/200", "kappa": "3/5", "delta": "1/50", "weight_den": 100000000, "grid_den": 10000, "Ymax": 5, "scale": 100000000, "dist_scale": 10000000000, "precision_bits": 128, "derivative_lower_bound_magnitude": "[41.778906245086140106264814312156883 +/- 4.55e-34]", "root_modulus_bound": "14697/5000", "tail_upper": "-3382285507/100000000", "integral_upper": "-13277632257660676586509793/1024000000000000000000000", "real_exponent_upper": "-577853339/50000000", "decimal_real_upper": -11.55706678, "grid_sha256": "8cbf761acbbd5ab44fb90f42bdb0eadd0bdd498cdbe10628c862da6ed66f6dea", "seconds": 27.5729079246521, "status": "Certified numerical upper bound; depends on the contour deformation, bounded-root basis transfer and asymptotic lemmas stated in the proof note."}

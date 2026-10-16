@@ -1,0 +1,346 @@
+\section{Local arithmetic of the minors}\label{sec:local}
+Assume simultaneous rationality and fix the positive common denominator
+$Q$ in~\eqref{eq:arithmetic-form}. We normalize $v_p(p)=1$ and allow
+$v_p(0)=+\infty$ in lower-bound statements. Arithmetic improvements for
+hypergeometric linear forms exploit prime divisibility beyond a naive common
+denominator; see \cite{Zudilin04,Viola03}. Here the relevant gain is at the
+level of square minors of local moment matrices.
+
+\subsection{A bound valid at every prime}
+Put $L_p=\lfloor\log_p(800n)\rfloor$.
+\begin{lemma}\label{lem:small-primes}
+Every entry in the matrix defining~\eqref{eq:minor} satisfies
+\begin{equation}\label{eq:small-entry}
+ v_p(F_4(E_iE_j))\ge-40L_p-v_p(Q).
+\end{equation}
+Consequently $v_p(D_n)\ge-40KL_p-Kv_p(Q)$.
+\end{lemma}
+\begin{proof}
+We keep the Laurent order in the estimate rather than bounding all
+coefficients separately. At each pole, substitute $x=a+p^{L_p}u$.
+All nonzero root differences under consideration have absolute value at
+most $800n$. For each prime power $p^e\le800n$, the centered root counts
+and the factorial floors in the normalization give a lower bound $-30$
+for the weight contribution. Indeed a centered count of radius $b$ differs
+from $2b/p^e$ by at most one, and the linear terms cancel against the
+normalization floors; the ten normalization floor differences lose at most
+ten and the five numerator and fifteen denominator counts lose at most
+twenty. The explicit factor $x$ has nonnegative contribution. Summing over
+$e$ gives the scaled Laurent bound $-30L_p$ for $w_n$.
+
+For $i=j+1\ge1$ the exact factorization
+\[
+ E_i(x^2)=\frac{2xD_j(x)}{(2j+2)!}
+\]
+shows that each basis factor loses at most $3L_p$. At each prime power,
+the centered count for $D_j$ minus the factorial floor is at least $-3$;
+the factor $x$ again contributes nonnegatively. The constant basis vector
+requires no loss. It follows that the coefficient of $(x-a)^{-k}$ in
+$w_n(x)E_i(x^2)E_j(x^2)$ has valuation at least $(-36+k)L_p$.
+The harmonic factor of order $k+4$ has valuation at least
+$-(k+4)L_p$, since its summation indices are at most $800n$.
+The fixed rational zeta coefficients cost at most $v_p(Q)$.
+Thus each local summand has valuation at least $-40L_p-v_p(Q)$.
+Summation over poles preserves the lower bound. Expanding a $K$-square
+determinant gives the last assertion.
+\end{proof}
+This bound, including higher prime powers, will be used on the whole
+omitted interval $p\le n/20$. It replaces the earlier, weaker small-prime
+estimate in the initial manuscript.
+
+\subsection{Nonzero residue classes}
+Let $p>\sqrt{800n}$.  Eventually such primes do not divide $Q$.
+All factorial arguments, root differences, harmonic indices, and
+basis factorial arguments are then below $p^2$.  Put
+\begin{align}
+ \nu_p&=\sum_{t\in T}\floor{2tn/p}-10\floor{33n/p},\label{eq:nu}\\
+ c_a(r)&=\floor{(a+r)/p}+\floor{(a-r)/p}+1,\notag\\
+ \lambda_r&=\nu_p+5c_b(r)-\sum_{i=1}^{15}c_{a_i}(r),\label{eq:lambda}\\
+ c_r&=\sum_{t\in T}c_{tn}(r),\qquad 1\le r<p/2.\label{eq:capacity}
+\end{align}
+The number $c_a(r)$ counts the integers in $[-a,a]$ congruent to $r$
+modulo $p$.  The two $x$-classes $r,-r$ form one class for $Y=x^2$.
+Group the partial-fraction expression~\eqref{eq:arithmetic-form}
+accordingly, obtaining a local functional and its bilinear moment
+matrix $M_r$.
+
+\begin{lemma}\label{lem:local-entry}
+The rank of $M_r$ is at most $c_r$.  In the translated monomial basis,
+\begin{equation}\label{eq:entry-bad}
+ v_p\bigl(M_r((Y-r^2)^i,(Y-r^2)^j)\bigr)
+       \ge\lambda_r+i+j-4.
+\end{equation}
+Let $j_{\max}$ be the largest absolute actual pole in this class.
+If $p>a_0+j_{\max}$, the right side improves to
+$\lambda_r+i+j+1$.  If in addition there is only one positive
+$Y$-node, every entry in an integral polynomial basis has valuation
+at least $\nu_p$.
+\end{lemma}
+\begin{proof}
+At each positive absolute pole $j$, the local expression is a linear
+combination of derivatives of $P(Y)$ at $Y=j^2$, of orders below $o_j$.
+The paired negative pole gives the same $Y$-node.  The sum of these
+jet lengths in the class is precisely $c_r$: counting the $r$ class
+in the symmetric interval already accounts for both possible signs
+of the positive representative.  This proves the rank bound, without
+an extra factor of two.
+
+For the entry estimate set $x=r+pu$, or $x=-r+pu$ at the opposite
+class.  Factoring out the powers of $p$ from the numerator and
+denominator of $w_n$ gives $p^{\lambda_r}$ times a rational function
+whose scaled Laurent coefficients at the relevant poles are integral.
+Factors not in this residue class are units; distinct scaled poles
+have unit differences because the unscaled differences have absolute
+value less than $p^2$.  The explicit factor $x$ is a unit as well.
+Moreover $x^2-r^2$ has a factor $p$ in these coordinates.
+Thus for a polynomial factor $(Y-r^2)^{i+j}$, an order-$k$ Laurent
+coefficient in the original $x$ coordinate has valuation at least
+$\lambda_r+i+j+k$.  The bracket in~\eqref{eq:arithmetic-form}
+loses at most $k+4$ powers of $p$, which proves~\eqref{eq:entry-bad}.
+
+In a good class, namely $p>a_0+j_{\max}$, all harmonic indices are
+less than $p$; the brackets are integral.  Every Laurent order is at
+least one, giving the improved entry estimate.  Finally, in a good
+single-node class, remove the pole factor at that node from the
+already cancelled denominator.  All its remaining factors are
+$p$-units at the node.  The numerator is an integral polynomial times
+$\mathcal N_n$, so all its Laurent coefficients have valuation at
+least $v_p(\mathcal N_n)=\nu_p$.  Integral polynomial multiplication
+preserves this bound, and so do the good harmonic weights.
+\end{proof}
+
+\begin{lemma}\label{lem:local-minor}
+Every $m$-minor of $M_r$, in any polynomial family with integral
+monomial coefficients, has valuation at least $f_r(m)$, where
+\begin{equation}\label{eq:costs}
+ f_r(m)=
+ \begin{cases}
+ m^2+(\lambda_r-5)m,&\text{class not good},\\
+ m^2+\lambda_rm,&\text{good, more than one node},\\
+ \max\{m^2+\lambda_rm,\nu_pm\},&\text{good, one node}.
+ \end{cases}
+\end{equation}
+The domain is $0\le m\le c_r$; larger minors vanish.
+Each displayed integer cost function is convex.
+\end{lemma}
+\begin{proof}
+For an $m$-minor in the translated monomial basis, selected exponents
+on either side are distinct nonnegative integers, with sum at least
+$m(m-1)/2$.  Summing~\eqref{eq:entry-bad} along a permutation gives
+\[
+ m(\lambda_r-4)+m(m-1)=m^2+(\lambda_r-5)m.
+\]
+The good estimate adds $5m$.  The single-node entry bound gives the
+additional lower bound $m\nu_p$.  Translation is integral and
+unitriangular; Cauchy--Binet transfers each lower bound to every
+integral polynomial family.  The rank statement follows from
+Lemma~\ref{lem:local-entry}.  Quadratic costs have increasing marginal
+increments, and the maximum of the displayed quadratic and affine
+costs is convex, including on their integer domains.
+\end{proof}
+
+\subsection{A finite dual bound}
+The determinant of a sum of local matrices is expanded by assigning its
+columns to residue classes and then applying Laplace expansion to the
+corresponding groups of rows. Each term is a product of local square minors
+of sizes $m_r$, with $\sum_r m_r=K$. For any integer $t$ define
+\[
+ H_r(t)=\max_{0\le m\le c_r}\{tm-f_r(m)\}.
+\]
+Then $f_r(m)\ge tm-H_r(t)$ for every admissible $m$, and hence
+\begin{equation}\label{eq:dual}
+ v_p(D_n)\ge tK-\sum_r H_r(t)-F_p,\qquad
+ F_p=\sum_{i\in I}v_p((2i)!)+\sum_{j\in J}v_p((2j)!).
+\end{equation}
+The factorial cost is applied once after combining the classes. For odd
+$p$ the factor two in~\eqref{eq:E} is a unit. This argument needs only a
+feasible dual bound, not an optimizer or a proof of optimality.
+The class $r=0$ and classes on partition boundaries are included below by
+an explicit coarse penalty. Thus no residue class is silently discarded.
+
+The local estimates are initially made for integral numerator polynomials.
+The change from translated monomials to those polynomials is integral;
+Cauchy--Binet preserves the lower bound. The subsequent division by the
+selected row and column factorials gives exactly $F_p$ in~\eqref{eq:dual}.
+All of this takes place in the physical variable $Y=x^2$, the same variable
+as in the analytic determinant.
+
+\section{Finite arithmetic cells and the prime sum}\label{sec:prime}
+\subsection{Uniform rational boxes}
+Use the scale
+\[
+ u=p/n,\qquad v=r/n,\qquad \widehat C=361/2,
+\]
+so the certified prime range is $1/20<u\le361$. Let
+$\mathcal A=(100,67,63,60,58,57,54,52,49,47,44,42)$.
+For a rational cell $(l,h]$, partition $[0,h/2]$ into finitely many
+rational boxes $[a_B,b_B]$. The actual residue range $[0,u/2]$ is contained
+in this interval. For each endpoint $A\in\mathcal A$, the box stores integer
+bounds $L_A^\pm,U_A^\pm$ satisfying, at all four corners,
+\begin{equation}\label{eq:corner}
+ L_A^\pm u\le A\pm v\le(U_A^\pm+1)u,
+ \qquad (u,v)\in\{l,h\}\times\{a_B,b_B\}.
+\end{equation}
+Each difference in these inequalities is affine in $(u,v)$, so the bounds
+hold throughout the rectangle. For $a_B<v<b_B$, the nonzero coefficient
+of $v$ makes the upper inequality strict. Thus
+\[
+ L_A^\pm\le\left\lfloor\frac{A\pm v}{u}\right\rfloor\le U_A^\pm
+ \quad(l\le u\le h,\ a_B<v<b_B).
+\]
+This is the corner-to-interval step; a midpoint evaluation would not suffice.
+Write $c_A^-=L_A^++L_A^-+1$ and $c_A^+=U_A^++U_A^-+1$.
+Normalization floors give an integer $\nu^-\le\nu_p$ valid on the cell.
+The box stores integers $c_B,\lambda_B,\nu_B$ such that
+\begin{align*}
+ c_B&\ge\sum_{A\in T}c_A^+,&
+ \lambda_B&\le\nu^-+5c_{100}^- -5c_{67}^+-\sum_{A\in T}c_A^+,
+ &\nu_B&\le\nu^-.
+\end{align*}
+A good-class flag is permitted only when the corresponding pole-location
+inequalities hold at every corner. They imply that all harmonic indices
+are less than $p$ for an interior residue. A single-node flag additionally
+requires $U_{63}^++U_{63}^-\le0$. For a nonempty class this leaves only one
+node. These sufficient tests may sacrifice sharpness but never presume
+that a classification at one sample point persists across the cell.
+
+Let $g_B(m)$ be the cost~\eqref{eq:costs} formed with the box's lower
+parameters and its certified flags. Choose a cell price $t\in\Z$ with
+$|t|\le20000$ and nonnegative integers $H_B$ satisfying
+\begin{equation}\label{eq:box-dual}
+ tm-H_B\le g_B(m)\qquad(0\le m\le c_B,\ m\in\Z).
+\end{equation}
+A quadratic cost $m^2+am$ reduces this check to the endpoints and integers
+nearest $(t-a)/2$. For a cost $\max(m^2+am,\nu m)$, split at
+$m=\nu-a$ and check the kink as well. On each resulting interval the
+function $tm-g_B(m)$ is either affine or a concave quadratic. This proves
+that the finite candidate checks used by the verifier control every
+integer $m$ in the stated domain.
+
+\subsection{Boundary residues and the factorial staircase}
+There are at most one more boundary points than boxes. For $u\ge1/20$,
+every centered count needed here is at most $4002$, every residue capacity
+is at most $40020$, and the local weight is at least $-100000$.
+Consequently the cost is bounded below by $m^2-100005m$, and for
+$|t|\le20000$, $0\le m\le40020$,
+\[
+ tm-10^{12}\le m^2-100005m.
+\]
+The fixed penalty $10^{12}$ therefore covers each boundary class, including
+$r=0$. This deliberately generous constant affects only an error of lower
+asymptotic order.
+
+The number of residues in an interior box is at most
+$n(b_B-a_B)+1$. Since $H_B\ge0$, summing the box penalties gives
+\[
+ \sum_r H_r(t)\le n\sum_B(b_B-a_B)H_B+R_c,\qquad
+ R_c=10^{12}(J_c+1)+\sum_BH_B,
+\]
+where $J_c$ is the number of boxes in the cell. Put $k=\lfloor361/l\rfloor$.
+For $u>l$, and $800n<p^2$, the full factorial cost satisfies
+\begin{equation}\label{eq:factorial-cost}
+ F_p\le n\left(361k-\frac{lk(k+1)}2\right)+2k.
+\end{equation}
+To see this, enlarge the selected index sets to all $0\le i<N$ and
+write $\lfloor2i/p\rfloor$ as the number of positive integers $j$ with
+$jp\le2i$. There are at most $k$ levels; the number of indices at level
+$j$ is at most $(361n-jp)/2+1$. Sum these counts on both sides of the
+minor and use $p>ln$.
+
+If the cell lower value $L_c\in\Q$ satisfies
+\begin{equation}\label{eq:cell-lower}
+ L_c\le t\widehat C-\sum_B(b_B-a_B)H_B
+                   -361k+\frac{lk(k+1)}2,
+\end{equation}
+then $|K-\widehat Cn|\le4$, together with~\eqref{eq:dual}, gives
+\begin{equation}\label{eq:cell-valuation}
+ v_p(D_n)\ge nL_c-E_c,\qquad E_c=R_c+4|t|+2k.
+\end{equation}
+This holds whenever $l<p/n\le h$, $800n<p^2$, $p\nmid Q$, and the
+minor is nonzero. In particular it holds throughout the certified prime
+range for $n\ge320000$ and $n\ge20Q$.
+
+\subsection{The exact arithmetic certificate}
+The data file \path{numerical/global28/arithmetic_cells.txt} gives
+$171{,}504$ adjacent rational cells covering $(1/20,361]$, together with
+their integer prices and claimed rational lower values. The verifier
+reconstructs $3{,}810{,}331$ boxes, including zero-capacity boxes, and
+checks~\eqref{eq:corner}--\eqref{eq:cell-lower} in exact rational arithmetic.
+Each cell-integral contribution is rounded downward at scale $10^{-8}$.
+The verified sum is bounded below by
+\begin{equation}\label{eq:padic-cert}
+ \sum_c(h_c-l_c)L_c\ge
+ -\frac{1434459186663}{12500000}
+ =-114756.73493304>-114800.
+\end{equation}
+The Lean finite predicate requires only the weaker last lower bound
+$-114800$. It also requires the exact cell count, ordered endpoints,
+adjacency, finite box inequalities, and price bounds.
+Its validity is the single externally checked arithmetic-grid admission.
+The transfer from that finite predicate to~\eqref{eq:cell-valuation} is
+proved in Lean.
+
+\subsection{Chebyshev functions and omitted primes}
+Define
+\[
+ \theta(x)=\sum_{p\le x}\log p,\qquad
+ \psi(x)=\sum_{p^a\le x}\log p.
+\]
+The prime number theorem gives $\theta(x)\sim x$ and $\psi(x)\sim x$;
+the formal proof uses the pinned development \cite{PNT}. For each fixed
+cell,
+\[
+ \frac{\theta(h_cn)-\theta(l_cn)}n\longrightarrow h_c-l_c.
+\]
+Only finitely many such limits are needed. This avoids a limiting
+optimization problem or an exchange of a prime sum with an unknown
+continuous minimizer.
+
+For $T\le X$, expanding $\psi$ by prime powers gives
+\begin{equation}\label{eq:omitted-primes}
+ \sum_{p\le T}\lfloor\log_pX\rfloor\log p
+ \le\psi(X)-\theta(X)+\theta(T).
+\end{equation}
+Indeed the first power contributes $\theta(T)$, and the higher powers
+form a sub-sum of $\psi(X)-\theta(X)$. Lemma~\ref{lem:small-primes}
+therefore bounds the omitted-prime loss by
+\[
+ 40K\{\psi(800n)-\theta(800n)+\theta(n/20)\}.
+\]
+After division by $(100n)^2$, this tends to
+\begin{equation}\label{eq:small-allowance}
+ \frac{40(361/2)}{10000\cdot20}=\frac{361}{10000}=0.0361.
+\end{equation}
+The higher powers contribute zero to this normalized limit. Above $361n$
+all relevant factorial arguments, root differences and harmonic indices
+are less than $p$; hence the determinant is $p$-integral apart from the
+fixed denominator $Q$. Eventually these primes do not divide $Q$ either.
+Over all primes the denominator cost is at most $K\log Q=O(n)$.
+
+\subsection{The eventual global lower bound}
+Let $E_G=1+\sum_c|E_c|$, a fixed constant. Combining the preceding
+bounds with the rational product formula yields
+\begin{align}
+ \log|D_n|\ge{}&n\sum_c L_c\{\theta(h_cn)-\theta(l_cn)\}
+                   -E_G\theta(361n)\notag\\
+ &-40K\{\psi(800n)-\theta(800n)+\theta(n/20)\}
+                   -K\log Q.\label{eq:global-log-bound}
+\end{align}
+The cell-boundary convention is $(l_c,h_c]$, so each prime is counted
+exactly once. The fixed error and fixed-denominator terms are $o(n^2)$.
+Thus the finite predicate gives
+\begin{equation}\label{eq:prime-liminf}
+ \liminf_{n\to\infty}\frac{\log|D_n|}{(100n)^2}
+ \ge\frac{-114800-361}{10000}=-11.5161.
+\end{equation}
+The actual checked sum in~\eqref{eq:padic-cert} gives the stronger numerical
+value $-1438971686663/125000000000=-11.511773493304$ after the same allowance.
+For the final theorem it suffices to use the strict slack in
+$-11.5161>-11.52$. We obtain, for every sufficiently large $n$,
+\begin{equation}\label{eq:P-certified}
+ \log|D_n|\ge P_*(100n)^2,\qquad P_*=-\frac{288}{25}=-11.52.
+\end{equation}
+The cutoff may depend on $Q$ and the fixed certificate constants; no
+numerical value for it is asserted. This is the arithmetic rate used in
+the completed proof. The stronger midpoint-allocation rate printed in
+the 12 October manuscript is superseded and is not used here.

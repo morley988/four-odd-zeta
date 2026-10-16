@@ -1,0 +1,12 @@
+{
+  "endpoint_tuple_equal": true,
+  "normalization_endpoints_equal": true,
+  "centers_equal": true,
+  "weights_equal": true,
+  "knots_equal": true,
+  "counts": [
+    45,
+    40,
+    42
+  ]
+}

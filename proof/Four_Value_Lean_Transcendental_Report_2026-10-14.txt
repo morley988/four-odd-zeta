@@ -1,0 +1,98 @@
+FOUR-VALUE LEAN PROOF — ROUND 23
+Transcendental enclosures and finite-grid soundness
+
+STATUS: REQUESTED NUMERICAL CERTIFICATE STAGE IS STILL INCOMPLETE
+This checkpoint adds verified enclosure machinery and closes the analytic
+weight-potential whole-cell comparison. It does not instantiate the concrete
+full-grid certificate. FiniteKnotCertificate remains a hypothesis of the
+numerical rate theorem. Neither this stage nor the final irrationality
+statement is claimed complete.
+
+NEW VERIFIED RESULTS
+45 new theorem declarations in six modules:
+
+FourValueTranscendental.lean
+- Arctangent polynomial remainder derivative and uniform absolute error
+  |atan(x)-P_n(x)| <= |x|^(2n+1), proved by a derivative bound.
+- Two-sided logarithm series enclosure and exact rational counterparts.
+- Rational endpoint-check interfaces; arctangent quarter-turn and inverse
+  reductions; Machin pi enclosure; logarithm power-of-two and inverse reductions.
+
+FourValueTranscendentalChecks.lean
+- Concrete kernel-checked bounds for log(2), atan(1/5), atan(1/239), and pi.
+  All are proved from the rational series and remainder bounds, not external
+  floating-point values. The Machin pi interval is
+  [314159265358979323844,314159265358979323864]/10^20.
+
+FourValueTranscendentalCells.lean
+- Exact derivatives of J along the contour and of its symmetric differences.
+- Nonnegativity for the numerator term; denominator derivative bounds from
+  the quadratic-ratio inequality and arctangent range.
+- The exact slope L=(3/5)*sum_i log((1+a_i)/(1-a_i))+19*pi/2 is nonnegative.
+- G(y)-2*pi*y <= G(h)-2*pi*h+L*delta whenever 0<y<=h and h-y<=delta.
+  This includes the first cell without differentiation at zero.
+
+FourValueTranscendentalGrid.lean
+- A finite grid covers every point in (0,5].
+- GridCertificate N records only finitely indexed endpoint and table
+  inequalities: G bounds, cutoff-distance bounds, logarithm bounds and
+  weighted knot maxima.
+- Any instance of GridCertificate N implies the existing
+  Numerical.FiniteKnotCertificate, using the whole-cell proof and the
+  previously verified quadratic contour geometry.
+- No concrete instance of GridCertificate 50000 has been constructed.
+
+FourValueTranscendentalInterval.lean
+- Rational interval arithmetic soundness for addition, subtraction, signed
+  scaling, multiplication and floor/ceiling outward rounding.
+- A rounded recurrence for odd-power polynomial sums, with soundness proved
+  inductively. There is no unproved allowance for accumulated rounding error.
+
+FourValueTranscendentalEvaluator.lean
+- Executable rounded logarithm and arctangent series evaluators with proved
+  real-valued containment.
+- Logarithm range reduction returns Option; an exhausted or invalid
+  computation cannot supply an enclosure. Every successful result is sound.
+- Arctangent reduction covers arbitrary rational arguments, given a valid
+  interval for pi.
+
+COMPUTATIONAL LIMITATION OBSERVED
+A kernel-checked benchmark of 100 distinct rational arguments k/300, with
+24 series terms and rounding scale 2^80, passed. Lean reported 66.7 seconds
+in type checking; an intermediate process snapshot showed about 4.87 GB
+resident memory. This benchmark checks nonnegativity of the computed lower
+endpoints; it is not the numerical certificate itself. Its source and the
+observed results are in numerical/IntervalBenchmark.lean and
+numerical/interval_benchmark.txt.
+
+The high-level rational implementation is not yet a practical way to check
+millions of endpoint enclosures. Completing the requested stage still needs
+both a scalable kernel-checking implementation (for example a verified integer
+backend or compact arithmetic proof certificates) and the concrete finite
+data/inequality instance connected to the existing G/K arrays and witness.
+No external checker result has been promoted to a Lean assumption or axiom.
+The previously successful Arb replay and independent integer-only verification
+are retained as numerical evidence, not misreported as formal verification.
+
+FORMAL AUDIT
+Lean leanprover/lean4:v4.33.1; mathlib 0df444a360eaa60ab8c11dca51a86af692955474.
+1389 audited theorem declarations in 218 substantive modules.
+Full Lake build and every-declaration axiom audit pass. Only propext,
+Classical.choice and Quot.sound are allowed. Source scan reports no proof
+holes, custom axioms or native_decide. All 212 Round 22 substantive modules
+are byte-for-byte unchanged. Logs, source hashes and verification.json are
+included. Checkpoint packaged at 2026-10-14T21:39:40.718251+00:00.
+
+REMAINING PROJECT WORK
+1. Instantiate and kernel-check the concrete finite grid certificate; apply
+   finite_certificate_of_grid to discharge FiniteKnotCertificate.
+2. Global arithmetic allocation/prime-sum lower bound.
+3. Final irrationality contradiction and unconditional theorem audit.
+The established conditional numerical rate remains -11.55706678.
+
+REPRODUCTION
+Restore the pinned Lean/mathlib dependencies and run bash lean/verify.sh
+from this archive's project root (the script changes to its own directory).
+The archive includes cumulative sources and numerical evidence, excluding
+the toolchain and build caches. All declared verification flags retain the
+above incomplete-stage boundary. No background continuation is promised.

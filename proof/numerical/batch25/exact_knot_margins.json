@@ -1,0 +1,20 @@
+[
+  {
+    "cell": 0,
+    "minimum_exact_knot_margin": "39398297309229849/32000000000000000000",
+    "minimizing_knot": 23,
+    "final_knot_margin": "726562480854805691/2000000000000000000"
+  },
+  {
+    "cell": 5669,
+    "minimum_exact_knot_margin": "0",
+    "minimizing_knot": 41,
+    "final_knot_margin": "0"
+  },
+  {
+    "cell": 49999,
+    "minimum_exact_knot_margin": "52282172902524314437/2000000000000000000",
+    "minimizing_knot": 41,
+    "final_knot_margin": "52282172902524314437/2000000000000000000"
+  }
+]

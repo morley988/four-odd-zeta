@@ -1,0 +1,11 @@
+{"cell": 5000, "seconds": 20.85324192047119}
+{"cell": 10000, "seconds": 42.30206036567688}
+{"cell": 15000, "seconds": 62.310994148254395}
+{"cell": 20000, "seconds": 80.55624198913574}
+{"cell": 25000, "seconds": 100.49591326713562}
+{"cell": 30000, "seconds": 120.34320425987244}
+{"cell": 35000, "seconds": 137.2389121055603}
+{"cell": 40000, "seconds": 154.9519579410553}
+{"cell": 45000, "seconds": 174.3175253868103}
+{"cell": 50000, "seconds": 198.1806981563568}
+{"status": "all independent integer enclosure checks passed", "lean_kernel_verified": false, "counts": {"G_cells": 50000, "K_cells": 2250000, "distance_ceilings": 4500090}, "knots": 42, "integral": "-13277632257660676586509793/1024000000000000000000000", "real_exponent_upper": "-577853339/50000000", "tail_upper": "-3382285507/100000000", "fixed_point_bits": 160, "log_terms": 48, "atan_terms": 72, "seconds": 218.99502515792847}

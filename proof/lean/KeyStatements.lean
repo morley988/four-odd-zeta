@@ -1,0 +1,58 @@
+import FourValue
+
+#check OddZeta.FourValue.analyticContourIntegral_eq_zeta
+#check OddZeta.FourValue.actualAdaptedZetaMatrix_minor_bound
+#check OddZeta.FourValue.targetNormalization_uniform_error
+#check OddZeta.FourValue.centeredRoot_scaled_log_error
+#check OddZeta.FourValue.analyticWeight_uniform_log_bound
+#check OddZeta.FourValue.actualAdaptedBasis_uniform_log_bound
+#check OddZeta.FourValue.actualContourEnergy_uniform_laplace
+#check OddZeta.FourValue.actualAnalyticTransferFactor_squared_normalized_log_tendsto_zero
+#check OddZeta.FourValue.contourRowAverage_tendsto_integral
+#check OddZeta.FourValue.minorLogOverhead_normalized_tendsto_zero
+#check OddZeta.FourValue.targetWeightPotential_eq_certificateG
+#check OddZeta.FourValue.analyticZetaMatrix_certificate_asymptotic_bound
+#check OddZeta.FourValue.analyticZetaMatrix_numerical_rate_of_certificate
+
+-- Round 21: arithmetic in the corrected analytic coordinates.
+#check OddZeta.FourValue.Corrected.rationalAnalyticTest_eq
+#check OddZeta.FourValue.Corrected.selectedResidueMatrix_bad_bound
+#check OddZeta.FourValue.Corrected.selectedResidueMatrix_good_bound
+#check OddZeta.FourValue.Corrected.selectedResidueMatrix_singleNode_bound
+#check OddZeta.FourValue.Corrected.selectedResidueMatrix_det_zero_capacity
+#check OddZeta.FourValue.Corrected.rationalFourValueMatrix_selected_partition
+#check OddZeta.FourValue.Corrected.analyticZetaMatrix_selected_rational
+#check OddZeta.FourValue.Corrected.analyticZeta_nonzero_minor_allPrime
+#check OddZeta.FourValue.Corrected.corrected_two_adic_minor_bound
+#check OddZeta.FourValue.Corrected.twoAdicLoss_normalized_tendsto_zero
+
+#check OddZeta.FourValue.Numerical.envelope_continuous
+
+#check OddZeta.FourValue.Numerical.envelope_integral
+
+#check OddZeta.FourValue.Numerical.envelope_lower
+
+#check OddZeta.FourValue.Numerical.certificate_tail
+
+#check OddZeta.FourValue.Numerical.basis_log_cell_bound
+
+#check OddZeta.FourValue.Numerical.pointwise_of_knots
+
+#check OddZeta.FourValue.Numerical.numerical_rate_of_finite_certificate
+
+#check OddZeta.FourValue.Transcendental.logInterval_contains
+#check OddZeta.FourValue.Transcendental.atanInterval_contains
+#check OddZeta.FourValue.Transcendental.certificateG_cell
+#check OddZeta.FourValue.Transcendental.finite_certificate_of_grid
+
+#check OddZeta.FourValue.Fast.reducedLogInterval_contains
+#check OddZeta.FourValue.Fast.atanInterval_contains
+#check OddZeta.FourValue.Fast.Interval.hornerSeries_contains
+
+#check OddZeta.FourValue.Batch.Cell0.all_knots_on_first_cell
+
+#check OddZeta.FourValue.Batch.Cell5669.all_knots_on_cell
+
+#check OddZeta.FourValue.Batch.Cell49999.all_knots_on_cell
+
+#check OddZeta.FourValue.Batch.selected_cells_bound

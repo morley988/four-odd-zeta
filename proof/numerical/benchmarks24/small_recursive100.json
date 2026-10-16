@@ -1,0 +1,9 @@
+{
+  "label": "small_recursive100",
+  "file": "FastSmallBenchmark.lean",
+  "exit_code": 0,
+  "wall_seconds": 10.43570121099765,
+  "user_seconds": 8.985038,
+  "system_seconds": 1.476346,
+  "peak_rss_kib": 4131924
+}

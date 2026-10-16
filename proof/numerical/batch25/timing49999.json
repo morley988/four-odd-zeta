@@ -1,0 +1,21 @@
+{
+  "cell": 49999,
+  "modules": [
+    {
+      "module": "FourValueBatchEnclosures49999",
+      "exit_code": 0,
+      "wall_seconds": 23.573709227006475,
+      "cpu_seconds": 26.278947000000002,
+      "peak_rss_kib": 4537004
+    },
+    {
+      "module": "FourValueBatchCell49999",
+      "exit_code": 0,
+      "wall_seconds": 29.71610412899463,
+      "cpu_seconds": 30.429858999999993,
+      "peak_rss_kib": 5287096
+    }
+  ],
+  "success": true,
+  "total_wall_seconds": 53.289813356001105
+}

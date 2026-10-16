@@ -1,0 +1,12 @@
+[
+  {
+    "test": "wrong_bound",
+    "correctly_rejected": true,
+    "message": "FAIL or inconclusive at row 0: L(63/50) in [10000000000000000000/10^18,10000000000000000005/10^18]; Arb=[0.2311117209633866292770924293776792918053630023300693939828030247708168518043 +/- 5.01e-77]"
+  },
+  {
+    "test": "truncated",
+    "correctly_rejected": true,
+    "message": "Wrong record count 1, expected 6900022"
+  }
+]

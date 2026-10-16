@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "test": "false_G_upper",
+      "rejected": true,
+      "reason": "G bound 0"
+    },
+    {
+      "test": "false_knot_upper",
+      "rejected": true,
+      "reason": "knot bound 0/0"
+    },
+    {
+      "test": "false_log_pair",
+      "rejected": true,
+      "reason": "pair bound 0/0"
+    },
+    {
+      "test": "wrong_log_argument",
+      "rejected": true,
+      "reason": "J identity 0/0"
+    },
+    {
+      "test": "false_distance_radius",
+      "rejected": true,
+      "reason": "cutoffs 0/0"
+    }
+  ],
+  "scope": "Deliberately corrupted inputs; transient test-only hashes allow testing numerical rejection after the hash guard."
+}

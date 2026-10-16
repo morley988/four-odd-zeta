@@ -1,0 +1,217 @@
+\section{The product-formula contradiction}\label{sec:contradiction}
+For a nonzero rational $q$, unique factorization gives
+$q=\pm\prod_pp^{v_p(q)}$, with only finitely many nonzero exponents.
+Thus
+\begin{equation}\label{eq:product-formula}
+ \log|q|=\sum_pv_p(q)\log p.
+\end{equation}
+This is the arithmetic obstruction to a nonzero rational expression being
+too small relative to its denominators and divisibility. The same general
+principle underlies rational-approximation proofs such as
+\cite{Apery,Beukers}; here it is applied to a selected determinant.
+
+Assume all four target zeta values are rational. The rank argument selects
+$D_n\in\Q\setminus\{0\}$, and the corrected-coordinate identification
+makes it exactly the minor estimated analytically. For sufficiently large
+$n\ge1$, the arithmetic estimate~\eqref{eq:P-certified} and the uniform
+analytic estimate~\eqref{eq:uniform-upper} imply
+\[
+ P_*(100n)^2\le\log|D_n|\le A_*(100n)^2+E_n,
+ \qquad E_n/n^2\longrightarrow0.
+\]
+Taking $n$ large enough that $E_n<n^2$ gives
+\[
+ \frac{1853339}{5000}n^2=370.6678n^2
+ \le E_n<n^2,
+\]
+which is impossible. This proves Theorem~\ref{thm:main}, using the finite
+certificates described above. Neither the argument nor its formalization
+identifies which of the four values is irrational, proves irrationality
+of an individual value, or establishes a three-value assertion.
+
+The normalized separation is exactly
+\[
+ P_*-A_* =\frac{1853339}{50000000}=0.03706678.
+\]
+It compares asymptotic rates normalized by $(100n)^2$; it is not an error
+bound for a numerical approximation to a zeta value or a determinant.
+The proof needs an eventual cutoff, not its explicit numerical size.
+
+\section{Formal verification and finite computations}\label{sec:verification}
+\subsection{The theorem and its explicit hypotheses}
+The final formal comparison takes a finite arithmetic grid $G$ with
+predicate $G.\mathrm{Valid}$ and an analytic finite-knot certificate as
+explicit hypotheses. All transitions from those hypotheses to
+irrationality are checked in Lean~4 \cite{Lean4}. The two principal
+explicit-hypothesis declarations, in namespace
+\path{OddZeta.FourValue}, are
+\begin{quote}\small
+\path{not_all_rational_of_certificates} and
+\path{irrational_one_of_four_of_certificates}.
+\end{quote}
+They occur in \path{FourValueFinalContradiction.lean}.
+Their audited axiom dependencies are contained in
+\texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound};
+neither depends on \texttt{sorryAx}.
+
+The module \path{FourValueFinal.lean} supplies the finite certificates
+through the isolated interfaces below. Its final declaration is
+\begin{quote}\small
+\path{OddZeta.FourValue.irrational_zeta7_or_zeta9_or_zeta11_or_zeta13}.
+\end{quote}
+It states the disjunction of Mathlib's \texttt{Irrational} predicates for
+the real parts of the four classical \texttt{riemannZeta} values.
+The proved lemmas \path{realZeta_cast} and \path{realZeta_eq_re} identify
+these with $\sum_{m=1}^\infty m^{-k}$ for $k>1$.
+Thus the conclusion concerns the usual real zeta values. The supplied
+wrapper depends on \texttt{sorryAx}, precisely because the numerical
+interfaces have not been replaced by Lean proof terms.
+
+\subsection{The eight admitted finite families}
+There are eight marked proof admissions in three project files, not eight
+unproved asymptotic arguments. Each family is finite and has explicit data
+and an independently runnable verifier.
+\begin{center}\small
+\begin{tabular}{p{.43\textwidth}cp{.40\textwidth}}
+\toprule Interface file & Number & Finite content\\\midrule
+\path{FourValueExternalTranscendental.lean}&2&Logarithm and arctangent interval enclosures.\\[5pt]
+\path{FourValueExternalArithmetic.lean}&5&Rational identities and inequalities connecting the analytic grid to the knot bounds.\\[5pt]
+\path{FourValueExternalGlobalArithmetic.lean}&1&Existence of the finite arithmetic grid satisfying its exact rational predicate.\\
+\bottomrule
+\end{tabular}
+\end{center}
+The source audit checks the marked locations and pinned statement hashes.
+The log/arctangent checker uses outward-rounded Arb balls at 256-bit
+precision and verifies containment in the claimed rational intervals
+\cite{Arb}. The other two checkers use arbitrary-precision exact integer
+and rational arithmetic. No optimizer output or floating-point sampling
+is accepted as a substitute for these checks.
+
+The completed reproduction run verified the following quantities.
+\begin{center}\small
+\begin{tabular}{p{.33\textwidth}p{.57\textwidth}}
+\toprule Check & Verified coverage\\\midrule
+Transcendental table & $5{,}700{,}022$ logarithm bounds and $1{,}200{,}000$ arctangent bounds.\\[4pt]
+Analytic full grid & $50{,}000$ cells and $2{,}100{,}000$ knot checks, together with the exact argument, distance, cutoff and log-pair inequalities.\\[4pt]
+Arithmetic grid & $171{,}504$ cells and $3{,}810{,}331$ reconstructed boxes, including zero-capacity boxes.\\
+\bottomrule
+\end{tabular}
+\end{center}
+All checks passed. The software checks establish the finite inputs
+externally; they do not remove the admitted dependencies in Lean.
+The proofs of contour convergence, rank, selected-minor transfer, valuation
+assembly, boundary allowances, prime-sum limits and the final contradiction
+are outside these finite admissions.
+
+\subsection{Audit scope and dependencies}
+The final axiom audit covers $1{,}873$ named declarations. Among the nine
+new declarations in the final integration, only the three supplied-certificate
+conclusions depend on \texttt{sorryAx}. The explicit-certificate comparison
+has no such dependency. The prime-number-theorem source contains two
+unrelated admitted declarations in its Wiener module; the audited
+conditional global lower-bound theorem does not depend on them.
+
+The build uses Lean 4.33.1, a pinned Mathlib revision \cite{Mathlib}, and
+\texttt{PrimeNumberTheoremAnd} \cite{PNT}. The reproduction script completed
+end to end, including fresh numerical checks and a fresh axiom audit.
+It reused valid compiled artifacts and is not an empty-cache rebuild of
+every historical source. An interrupted earlier run is recorded separately;
+its partial log is not treated as successful verification. The final
+archive was extracted independently and all 528 manifest entries matched.
+
+The manuscript is an exposition of the construction and its verification
+boundary. The exact formal statements, numerical predicates and data are
+in the companion Round~29 package \cite{Project}. Formal checking verifies
+those statements; editorial correspondence with the exposition and
+independent mathematical review remain distinct responsibilities.
+
+\appendix
+\section{Exact polynomial-basis witness}\label{app:witness}
+The following tables reproduce the finite witness used for the real
+bound. Centers are indexed from 1. Every omitted weight is zero,
+and every displayed weight numerator is divided by $10^8$. Row $j$
+belongs to $s_j=C(2j+1)/80$, with $j$ indexed from 0. The first mass
+vector at $s=0$ is zero; the terminal mass vector at $s=C$ uses row 39.
+The radius is $1/50$, and the ray slope is $3/5$.
+The corresponding data file is
+\path{numerical/replay/round7_basis_witness.json} in the proof package.
+\input{sections/witness_tables.tex}
+
+\section{Source map and reproducibility}\label{app:reproduction}
+\subsection{Principal formal modules}
+Paths in this table are relative to the proof package's \texttt{lean/}
+directory. The table identifies entry points rather than every dependency.
+\begin{longtable}{p{.45\textwidth}p{.47\textwidth}}
+\toprule Module & Role\\\midrule\endhead
+\path{FourValueUniformNonvanishing.lean}&Uniform rank and nonzero-minor selection.\\[4pt]
+\path{FourValueCorrectedZeta.lean}&Classical zeta identity in the corrected coordinates.\\[4pt]
+\path{FourValueCorrectedAssembly.lean}&Entrywise and selected-determinant identification.\\[4pt]
+\path{FourValueNumericalBridge.lean}&Analytic bound with one uniform $o(n^2)$ error.\\[4pt]
+\path{FourValueFullGrid.lean}&Finite knot certificate supplied from the isolated numerical interfaces.\\[4pt]
+\path{FourValueGlobalCosts.lean}&Finite dual valuation inequality for the actual corrected matrix.\\[4pt]
+\path{FourValueArithmeticCertificate.lean}&Rational box and cell predicates.\\[4pt]
+\path{FourValueGlobalPrimeSum.lean}&Product formula and finite weighted Chebyshev sum.\\[4pt]
+\path{FourValueGlobalArithmeticRate.lean}&Limit and eventual arithmetic rate.\\[4pt]
+\path{FourValueGlobalArithmeticLower.lean}&Nonzero selected rational minor under rationality.\\[4pt]
+\path{FourValueFinalContradiction.lean}&Final comparison and real-series identification.\\[4pt]
+\path{FourValueFinal.lean}&Supplied-certificate classical zeta conclusion.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Reproducing the proof-package checks}
+Use the companion \path{Four_Value_Lean_Round29.zip}, not the superseded
+Round~8 programs. The source package for this manuscript contains the TeX
+files and the final report; the much larger proof package contains the
+Lean sources, numerical tables and checkers. From the extracted proof
+package root, first check the delivered bytes, then install the pinned
+Python dependency and run:
+\begin{verbatim}
+sha256sum --check SHA256_MANIFEST.txt
+python3 -m pip install python-flint==0.9.0
+bash numerical/final29/reproduce.sh
+\end{verbatim}
+Lean must be installed using \path{lean/lean-toolchain}. The script obtains
+the dependency cache, reruns all three numerical verifiers, builds the
+final dependency chain and runs the axiom audit. It clears old success
+records before starting and regenerates the combined numerical summary
+from the new reports. A failed command stops the run.
+
+The finite data can also be checked separately:
+\begin{verbatim}
+python3 numerical/external26/verify_values.py \
+  numerical/external26/transcendental_values.txt \
+  --report numerical/external26/verification_round29.json
+python3 numerical/fullgrid27/verify_grid.py \
+  --out numerical/fullgrid27/verification_round29.json
+python3 numerical/global28/verify_arithmetic.py
+\end{verbatim}
+Use normal Python execution, not \texttt{python -O}, which disables
+assertions. A packaged-evidence and source audit is available as
+\begin{verbatim}
+python3 numerical/final29/audit_final.py finish
+\end{verbatim}
+That last command inspects recorded evidence; it does not itself rerun
+Lean or the numerical verifiers.
+
+The pinned revisions are
+\begin{quote}\small
+Lean: \texttt{leanprover/lean4:v4.33.1}.\\
+Mathlib: \path{0df444a360eaa60ab8c11dca51a86af692955474}.\\
+PrimeNumberTheoremAnd:
+\path{650d31264be65f4cd6e70c45d8b25d86d482a761}.
+\end{quote}
+The exact dependency manifest, data hashes, logs and admission markers are
+included in the proof archive. Replacing the eight finite admissions by
+Lean proofs would be a further kernel-certification task, not a missing
+step in the conditional mathematical reduction.
+
+\subsection{Reproducing this manuscript}
+From the manuscript-source directory, run twice:
+\begin{verbatim}
+pdflatex -interaction=nonstopmode -halt-on-error \
+  Four_Odd_Zeta_Manuscript.tex
+\end{verbatim}
+The source includes the section files, bibliography and exact witness
+tables. Historical claims are supported by the references below;
+\cite{Project} is the internal computational record and is not presented
+as an independently published research article.

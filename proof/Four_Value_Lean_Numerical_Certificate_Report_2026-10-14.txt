@@ -1,0 +1,109 @@
+FOUR-VALUE LEAN PROOF — ROUND 22
+Numerical certificate verification checkpoint
+2026-10-14
+
+STATUS: NUMERICAL CHECKS PASS; LEAN STAGE PARTIALLY COMPLETE
+The recovered numerical certificate passes both an exact replay of the
+original Arb program and a new independent integer-only enclosure checker.
+The envelope, its integral, degree interpolation, basis cell geometry and a
+sufficient infinite-tail bound are now proved in Lean.
+
+The finite transcendental enclosures have NOT yet been proved in Lean.
+FiniteKnotCertificate remains an explicit hypothesis of the new analytic
+rate theorem. No Python result is imported as an axiom, and no unconditional
+numerical-rate theorem is claimed. Therefore the requested numerical stage
+is NOT fully closed in Lean. The full four-value irrationality theorem is
+also not yet verified. No numerical discrepancy or counterexample was found.
+
+CHECKED NUMERICAL RESULTS
+The recovered program was rerun on all 50,000 height cells of width 1/10000
+covering [0,5]. Every stored G and K entry, every knot bound, every certificate
+field except elapsed time, and the original grid SHA256 were reproduced:
+8cbf761acbbd5ab44fb90f42bdb0eadd0bdd498cdbe10628c862da6ed66f6dea
+The numerical replay took about 28 seconds.
+
+The new checker uses Python arbitrary-precision integers and fractions with
+160-bit dyadic enclosures, 48 logarithm-series terms and 72 arctangent-series
+terms. Its transcendental enclosure arithmetic calls no floating-point,
+Arb, or other transcendental-library routines. NumPy loads stored arrays only.
+The integer-only run checked:
+  50,000 weight-potential cell bounds;
+  2,250,000 basis-potential cell bounds;
+  4,500,090 exact distance square-root ceilings;
+  all 42 knot maxima, the infinite-tail constant, and the exact quadrature.
+The completed saved run took 219.0 seconds.
+
+Both routes give exactly
+  integral V = -13277632257660676586509793 / 1024000000000000000000000;
+  analytic rate upper bound = -577853339 / 50000000 = -11.55706678;
+  sharp external tail constant <= -3382285507 / 100000000.
+The integer checker independently recomputes all weighted maxima using
+unbounded integers, avoiding reliance on the original int64 dot products.
+Its method note gives outward-rounding error allowances, series remainders,
+range reduction, the whole-cell derivative argument and tail coverage.
+This is a separate mathematical/computational verification, not Lean kernel
+verification of that checker or of those numerical inequalities.
+
+SOURCE IDENTITY
+The numerical witness agrees exactly with the Lean source tables: 45 centers,
+40 weight rows, 42 knots, all denominator endpoints, and the factorial
+normalization endpoints. The existing proof connecting root-log integrals to
+the J expression remains unchanged. The actual masses s*w(s), rather than the
+normalized weights w(s), are interpolated between knots.
+
+NEW LEAN RESULTS
+1. The continuous envelope is an explicit finite sum of clipped linear ramps.
+   Lean proves the exact integral stated above; quadrature is no longer a
+   hypothesis of the resulting numerical-rate theorem.
+2. All 41 segment formulas are proved. They connect that envelope to the
+   existing basisKnot/basisInterval definitions and mass interpolation.
+   The envelope is bounded below by -9 throughout [0,361/200].
+3. The infinite tail is proved directly for y>=5, for any nonnegative weight
+   vector summing to one and any 0<=s<=361/200. The full rate expression is
+   <=-9. Because every knot height is >=-9, this closes the required tail
+   without assuming the sharper external Arb constant.
+   The proof uses norm bounds, elementary logarithm inequalities and pi>3;
+   it does not assume a numerical log or arctangent enclosure.
+4. The actual squared contour has quadratic interpolation error
+   <=(34/25)*(h-l)^2/4. Lean proves the corresponding cutoff-distance and
+   logarithmic basis-cell bounds from endpoint distance upper bounds.
+5. Given FiniteKnotCertificate on 0<y<=5, Lean combines the tail, mass
+   interpolation, continuity, lower bound and exact integral with Round 20
+   to give the rate -11.55706678 for EVERY selected codimension-four minor,
+   with one error E(n) satisfying E(n)/n^2 -> 0.
+
+FORMAL VERIFICATION EVIDENCE
+Lean leanprover/lean4:v4.33.1; mathlib 0df444a360eaa60ab8c11dca51a86af692955474.
+73 new theorem declarations in 5 modules.
+1344 total audited theorems in 212 substantive modules.
+All 207 Round 21 substantive modules are byte-for-byte unchanged.
+The complete Lake build and per-declaration axiom audit pass, allowing only
+propext, Classical.choice and Quot.sound. No sorry, admit, native_decide,
+or custom axiom occurs in the proof sources. The source hashes, successful
+build log, audit log and verification.json accompany the checkpoint.
+Build/audit checkpoint packaged at 2026-10-14T20:28:34.210933+00:00.
+
+PRECISE REMAINING FORMAL OBLIGATIONS
+The finite interval 0<y<=5 still needs Lean-certified transcendental enclosure
+proofs and their connection to the stored cell bounds and knot maxima.
+This includes the weight-potential cell comparison, endpoint logarithm and
+arctangent bounds (including the pi enclosure), and a kernel-checked finite
+verification of the required inequalities. The independent Python checker
+supplies evidence and an exact-arithmetic algorithm, but not a Lean proof.
+
+After that, the global arithmetic allocation/prime-sum lower bound and the
+final irrationality contradiction remain. The corrected-coordinate adapter
+from Round 21 is preserved in full. No smaller-set search was launched.
+
+FILES AND REPRODUCTION
+Four_Value_Lean_Round22.zip contains the cumulative Lean project, all previous
+proof stages, new numerical modules, verification evidence and this report.
+The numerical/ directory contains the unchanged recovered Arb program,
+original and regenerated grids, witness, independent checker, source-identity
+audit, method note, environment record, reproduction commands and logs.
+Run numerical/reproduce.sh for numerical checks and lean/verify.sh for Lean.
+The standard Lean project uses its pinned toolchain and mathlib dependency;
+the runtime toolchain itself and build caches are not included in the archive.
+
+All work processes are checked before the response; no background continuation
+is promised by this checkpoint.
