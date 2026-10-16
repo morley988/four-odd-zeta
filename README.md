@@ -52,4 +52,4 @@ This is the result of an AI & Lean experiment carried out by Morley Davidson usi
 
 ## Citation and licensing
 
-Author attribution and license selection are pending the repository owner's decision (tentatively MIT for the code and CC BY 4.0 for the manuscript and documentation); no new license grant is made by this import. Use a specific commit when referring to this development version. A formal `CITATION.cff` and release tag will be added after the bibliographic details are confirmed. Third-party dependencies retain their own licenses and notices.
+Original code is licensed under the [MIT License](LICENSE-MIT). The manuscript and original documentation are licensed under [CC BY 4.0](LICENSE-CC-BY-4.0). See [Licensing](LICENSE.md) for scope and attribution requirements. Use a specific commit when referring to this development version. A formal `CITATION.cff` and release tag will be added after the bibliographic details are confirmed. Third-party dependencies retain their own licenses and notices.
